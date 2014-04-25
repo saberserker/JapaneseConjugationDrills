@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F191A80E190A1794004836F2 /* FPNViewBorderColorizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F191A80D190A1794004836F2 /* FPNViewBorderColorizer.m */; };
+		F191A812190A2050004836F2 /* FPNAllRomanjiForKana.m in Sources */ = {isa = PBXBuildFile; fileRef = F191A811190A2050004836F2 /* FPNAllRomanjiForKana.m */; };
+		F191A817190AFD4E004836F2 /* FPNQuizSelectorTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F191A816190AFD4E004836F2 /* FPNQuizSelectorTableVC.m */; };
 		F1EA9B0A1906CCD4007F9F5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EA9B091906CCD4007F9F5C /* Foundation.framework */; };
 		F1EA9B0C1906CCD4007F9F5C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EA9B0B1906CCD4007F9F5C /* CoreGraphics.framework */; };
 		F1EA9B0E1906CCD4007F9F5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EA9B0D1906CCD4007F9F5C /* UIKit.framework */; };
@@ -22,6 +25,8 @@
 		F1EA9B2E1906CCD4007F9F5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EA9B0D1906CCD4007F9F5C /* UIKit.framework */; };
 		F1EA9B361906CCD4007F9F5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1EA9B341906CCD4007F9F5C /* InfoPlist.strings */; };
 		F1EA9B381906CCD4007F9F5C /* mudamudaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA9B371906CCD4007F9F5C /* mudamudaTests.m */; };
+		F1EA9B421906CD0D007F9F5C /* katakana.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1EA9B411906CD0D007F9F5C /* katakana.plist */; };
+		F1EA9B4719070201007F9F5C /* FPNMultipleChoiceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA9B4619070201007F9F5C /* FPNMultipleChoiceVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F191A80C190A1794004836F2 /* FPNViewBorderColorizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNViewBorderColorizer.h; path = Views/FPNViewBorderColorizer.h; sourceTree = "<group>"; };
+		F191A80D190A1794004836F2 /* FPNViewBorderColorizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNViewBorderColorizer.m; path = Views/FPNViewBorderColorizer.m; sourceTree = "<group>"; };
+		F191A810190A2050004836F2 /* FPNAllRomanjiForKana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNAllRomanjiForKana.h; path = Models/FPNAllRomanjiForKana.h; sourceTree = "<group>"; };
+		F191A811190A2050004836F2 /* FPNAllRomanjiForKana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNAllRomanjiForKana.m; path = Models/FPNAllRomanjiForKana.m; sourceTree = "<group>"; };
+		F191A814190AFCE3004836F2 /* FPNMultipleChoiceQuizGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FPNMultipleChoiceQuizGenerator.h; path = Protocols/FPNMultipleChoiceQuizGenerator.h; sourceTree = "<group>"; };
+		F191A815190AFD4E004836F2 /* FPNQuizSelectorTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNQuizSelectorTableVC.h; path = ViewControllers/FPNQuizSelectorTableVC.h; sourceTree = "<group>"; };
+		F191A816190AFD4E004836F2 /* FPNQuizSelectorTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNQuizSelectorTableVC.m; path = ViewControllers/FPNQuizSelectorTableVC.m; sourceTree = "<group>"; };
 		F1EA9B061906CCD4007F9F5C /* mudamuda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mudamuda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EA9B091906CCD4007F9F5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F1EA9B0B1906CCD4007F9F5C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,6 +67,9 @@
 		F1EA9B331906CCD4007F9F5C /* mudamudaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mudamudaTests-Info.plist"; sourceTree = "<group>"; };
 		F1EA9B351906CCD4007F9F5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F1EA9B371906CCD4007F9F5C /* mudamudaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mudamudaTests.m; sourceTree = "<group>"; };
+		F1EA9B411906CD0D007F9F5C /* katakana.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = katakana.plist; path = assets/katakana.plist; sourceTree = "<group>"; };
+		F1EA9B4519070201007F9F5C /* FPNMultipleChoiceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNMultipleChoiceVC.h; path = ViewControllers/FPNMultipleChoiceVC.h; sourceTree = "<group>"; };
+		F1EA9B4619070201007F9F5C /* FPNMultipleChoiceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNMultipleChoiceVC.m; path = ViewControllers/FPNMultipleChoiceVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +96,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F191A80B190A1765004836F2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F191A80C190A1794004836F2 /* FPNViewBorderColorizer.h */,
+				F191A80D190A1794004836F2 /* FPNViewBorderColorizer.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F191A80F190A201F004836F2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F191A810190A2050004836F2 /* FPNAllRomanjiForKana.h */,
+				F191A811190A2050004836F2 /* FPNAllRomanjiForKana.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F191A813190AFCBE004836F2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F191A814190AFCE3004836F2 /* FPNMultipleChoiceQuizGenerator.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		F1EA9AFD1906CCD4007F9F5C = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +155,11 @@
 		F1EA9B0F1906CCD4007F9F5C /* mudamuda */ = {
 			isa = PBXGroup;
 			children = (
+				F191A813190AFCBE004836F2 /* Protocols */,
+				F191A80F190A201F004836F2 /* Models */,
+				F191A80B190A1765004836F2 /* Views */,
+				F1EA9B44190701D9007F9F5C /* ViewControllers */,
+				F1EA9B431906CD13007F9F5C /* assets */,
 				F1EA9B181906CCD4007F9F5C /* FPNAppDelegate.h */,
 				F1EA9B191906CCD4007F9F5C /* FPNAppDelegate.m */,
 				F1EA9B1B1906CCD4007F9F5C /* Main_iPhone.storyboard */,
@@ -153,6 +199,25 @@
 				F1EA9B341906CCD4007F9F5C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F1EA9B431906CD13007F9F5C /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				F1EA9B411906CD0D007F9F5C /* katakana.plist */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+		F1EA9B44190701D9007F9F5C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F1EA9B4519070201007F9F5C /* FPNMultipleChoiceVC.h */,
+				F1EA9B4619070201007F9F5C /* FPNMultipleChoiceVC.m */,
+				F191A815190AFD4E004836F2 /* FPNQuizSelectorTableVC.h */,
+				F191A816190AFD4E004836F2 /* FPNQuizSelectorTableVC.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +300,7 @@
 				F1EA9B201906CCD4007F9F5C /* Main_iPad.storyboard in Resources */,
 				F1EA9B251906CCD4007F9F5C /* Images.xcassets in Resources */,
 				F1EA9B1D1906CCD4007F9F5C /* Main_iPhone.storyboard in Resources */,
+				F1EA9B421906CD0D007F9F5C /* katakana.plist in Resources */,
 				F1EA9B141906CCD4007F9F5C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,7 +320,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F191A812190A2050004836F2 /* FPNAllRomanjiForKana.m in Sources */,
+				F1EA9B4719070201007F9F5C /* FPNMultipleChoiceVC.m in Sources */,
+				F191A817190AFD4E004836F2 /* FPNQuizSelectorTableVC.m in Sources */,
 				F1EA9B231906CCD4007F9F5C /* FPNViewController.m in Sources */,
+				F191A80E190A1794004836F2 /* FPNViewBorderColorizer.m in Sources */,
 				F1EA9B161906CCD4007F9F5C /* main.m in Sources */,
 				F1EA9B1A1906CCD4007F9F5C /* FPNAppDelegate.m in Sources */,
 			);
@@ -391,10 +461,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mudamuda/mudamuda-Prefix.pch";
 				INFOPLIST_FILE = "mudamuda/mudamuda-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "BAEE1F3A-F3B0-4033-B1F8-E0D17E34D810";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -404,10 +476,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mudamuda/mudamuda-Prefix.pch";
 				INFOPLIST_FILE = "mudamuda/mudamuda-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "BAEE1F3A-F3B0-4033-B1F8-E0D17E34D810";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -471,6 +545,7 @@
 				F1EA9B3D1906CCD4007F9F5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F1EA9B3E1906CCD4007F9F5C /* Build configuration list for PBXNativeTarget "mudamudaTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +554,7 @@
 				F1EA9B401906CCD4007F9F5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

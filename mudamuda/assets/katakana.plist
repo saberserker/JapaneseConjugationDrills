@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>all</key>
+	<key>basic</key>
 	<dict>
 		<key>a</key>
 		<string>ア</string>
@@ -24,12 +24,6 @@
 		<string>ケ</string>
 		<key>ko</key>
 		<string>コ</string>
-		<key>kya</key>
-		<string>キャ</string>
-		<key>kyu</key>
-		<string>キュ</string>
-		<key>kyo</key>
-		<string>キョ</string>
 		<key>sa</key>
 		<string>サ</string>
 		<key>shi</key>
@@ -40,12 +34,6 @@
 		<string>セ</string>
 		<key>so</key>
 		<string>ソ</string>
-		<key>sha</key>
-		<string>シャ</string>
-		<key>shu</key>
-		<string>シュ</string>
-		<key>sho</key>
-		<string>ショ</string>
 		<key>ta</key>
 		<string>タ</string>
 		<key>chi</key>
@@ -56,12 +44,6 @@
 		<string>テ</string>
 		<key>to</key>
 		<string>ト</string>
-		<key>cha</key>
-		<string>チャ</string>
-		<key>chu</key>
-		<string>チュ</string>
-		<key>cho</key>
-		<string>チョ</string>
 		<key>na</key>
 		<string>ナ</string>
 		<key>ni</key>
@@ -72,12 +54,6 @@
 		<string>ネ</string>
 		<key>no</key>
 		<string>ノ</string>
-		<key>nya</key>
-		<string>ニャ</string>
-		<key>nyu</key>
-		<string>ニュ</string>
-		<key>nyo</key>
-		<string>ニョ</string>
 		<key>ha</key>
 		<string>ハ</string>
 		<key>hi</key>
@@ -88,12 +64,6 @@
 		<string>ヘ</string>
 		<key>ho</key>
 		<string>ホ</string>
-		<key>hya</key>
-		<string>ヒャ</string>
-		<key>hyu</key>
-		<string>ヒュ</string>
-		<key>hyo</key>
-		<string>ヒョ</string>
 		<key>ma</key>
 		<string>マ</string>
 		<key>mi</key>
@@ -104,12 +74,6 @@
 		<string>メ</string>
 		<key>mo</key>
 		<string>モ</string>
-		<key>mya</key>
-		<string>ミャ</string>
-		<key>myu</key>
-		<string>ミュ</string>
-		<key>myo</key>
-		<string>ミョ</string>
 		<key>ya</key>
 		<string>ヤ</string>
 		<key>yu</key>
@@ -126,20 +90,15 @@
 		<string>レ</string>
 		<key>ro</key>
 		<string>ロ</string>
-		<key>rya</key>
-		<string>リャ</string>
-		<key>ryu</key>
-		<string>リュ</string>
-		<key>ryo</key>
-		<string>リョ</string>
 		<key>wa</key>
 		<string>ワ</string>
-		<key>wi</key>
-		<string>ヰ</string>
-		<key>we</key>
-		<string>ヱ</string>
 		<key>wo</key>
 		<string>ヲ</string>
+		<key>n</key>
+		<string>ン</string>
+	</dict>
+	<key>marked</key>
+	<dict>
 		<key>ga</key>
 		<string>ガ</string>
 		<key>gi</key>
@@ -150,28 +109,16 @@
 		<string>ゲ</string>
 		<key>go</key>
 		<string>ゴ</string>
-		<key>gya</key>
-		<string>ギャ</string>
-		<key>gyu</key>
-		<string>ギュ</string>
-		<key>gyo</key>
-		<string>ギョ</string>
 		<key>za</key>
 		<string>ザ</string>
 		<key>ji</key>
-		<string>ヂ</string>
+		<string>ジ</string>
 		<key>zu</key>
 		<string>ヅ</string>
 		<key>ze</key>
 		<string>ゼ</string>
 		<key>zo</key>
 		<string>ゾ</string>
-		<key>ja</key>
-		<string>ヂャ</string>
-		<key>ju</key>
-		<string>ヂュ</string>
-		<key>jo</key>
-		<string>ヂョ</string>
 		<key>da</key>
 		<string>ダ</string>
 		<key>de</key>
@@ -188,12 +135,6 @@
 		<string>ベ</string>
 		<key>bo</key>
 		<string>ボ</string>
-		<key>bya</key>
-		<string>ビャ</string>
-		<key>byu</key>
-		<string>ビュ</string>
-		<key>byo</key>
-		<string>ビョ</string>
 		<key>pa</key>
 		<string>パ</string>
 		<key>pi</key>
@@ -204,6 +145,72 @@
 		<string>ペ</string>
 		<key>po</key>
 		<string>ポ</string>
+	</dict>
+	<key>double</key>
+	<dict>
+		<key>kya</key>
+		<string>キャ</string>
+		<key>kyu</key>
+		<string>キュ</string>
+		<key>kyo</key>
+		<string>キョ</string>
+		<key>sha</key>
+		<string>シャ</string>
+		<key>shu</key>
+		<string>シュ</string>
+		<key>sho</key>
+		<string>ショ</string>
+		<key>cha</key>
+		<string>チャ</string>
+		<key>chu</key>
+		<string>チュ</string>
+		<key>cho</key>
+		<string>チョ</string>
+		<key>nya</key>
+		<string>ニャ</string>
+		<key>nyu</key>
+		<string>ニュ</string>
+		<key>nyo</key>
+		<string>ニョ</string>
+		<key>hya</key>
+		<string>ヒャ</string>
+		<key>hyu</key>
+		<string>ヒュ</string>
+		<key>hyo</key>
+		<string>ヒョ</string>
+		<key>mya</key>
+		<string>ミャ</string>
+		<key>myu</key>
+		<string>ミュ</string>
+		<key>myo</key>
+		<string>ミョ</string>
+		<key>rya</key>
+		<string>リャ</string>
+		<key>ryu</key>
+		<string>リュ</string>
+		<key>ryo</key>
+		<string>リョ</string>
+	</dict>
+	<key>marked+double</key>
+	<dict>
+		<key>gya</key>
+		<string>ギャ</string>
+		<key>gyu</key>
+		<string>ギュ</string>
+		<key>gyo</key>
+		<string>ギョ</string>
+		<key>ja</key>
+		<string>ジャ</string>
+		<key>ju</key>
+		<string>ジュ</string>
+		<key>jo</key>
+		<string>ジョ</string>
+		<key>bya</key>
+		<string>ビャ</string>
+		<key>byu</key>
+		<string>ビュ</string>
+		<key>byo</key>
+		<string>ビョ</string>
 		<key>pya</key>
 		<string>ピャ</string>
 		<key>pyu</key>

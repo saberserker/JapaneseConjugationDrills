@@ -10,6 +10,7 @@
 		F191A80E190A1794004836F2 /* FPNViewBorderColorizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F191A80D190A1794004836F2 /* FPNViewBorderColorizer.m */; };
 		F191A812190A2050004836F2 /* FPNAllRomanjiForKana.m in Sources */ = {isa = PBXBuildFile; fileRef = F191A811190A2050004836F2 /* FPNAllRomanjiForKana.m */; };
 		F191A817190AFD4E004836F2 /* FPNQuizSelectorTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F191A816190AFD4E004836F2 /* FPNQuizSelectorTableVC.m */; };
+		F191A819190B3877004836F2 /* hiragana.plist in Resources */ = {isa = PBXBuildFile; fileRef = F191A818190B3877004836F2 /* hiragana.plist */; };
 		F1EA9B0A1906CCD4007F9F5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EA9B091906CCD4007F9F5C /* Foundation.framework */; };
 		F1EA9B0C1906CCD4007F9F5C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EA9B0B1906CCD4007F9F5C /* CoreGraphics.framework */; };
 		F1EA9B0E1906CCD4007F9F5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EA9B0D1906CCD4007F9F5C /* UIKit.framework */; };
@@ -47,6 +48,7 @@
 		F191A814190AFCE3004836F2 /* FPNMultipleChoiceQuizGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FPNMultipleChoiceQuizGenerator.h; path = Protocols/FPNMultipleChoiceQuizGenerator.h; sourceTree = "<group>"; };
 		F191A815190AFD4E004836F2 /* FPNQuizSelectorTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNQuizSelectorTableVC.h; path = ViewControllers/FPNQuizSelectorTableVC.h; sourceTree = "<group>"; };
 		F191A816190AFD4E004836F2 /* FPNQuizSelectorTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNQuizSelectorTableVC.m; path = ViewControllers/FPNQuizSelectorTableVC.m; sourceTree = "<group>"; };
+		F191A818190B3877004836F2 /* hiragana.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = hiragana.plist; path = assets/hiragana.plist; sourceTree = "<group>"; };
 		F1EA9B061906CCD4007F9F5C /* mudamuda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mudamuda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EA9B091906CCD4007F9F5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F1EA9B0B1906CCD4007F9F5C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				F1EA9B411906CD0D007F9F5C /* katakana.plist */,
+				F191A818190B3877004836F2 /* hiragana.plist */,
 			);
 			name = assets;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				F1EA9B201906CCD4007F9F5C /* Main_iPad.storyboard in Resources */,
 				F1EA9B251906CCD4007F9F5C /* Images.xcassets in Resources */,
 				F1EA9B1D1906CCD4007F9F5C /* Main_iPhone.storyboard in Resources */,
+				F191A819190B3877004836F2 /* hiragana.plist in Resources */,
 				F1EA9B421906CD0D007F9F5C /* katakana.plist in Resources */,
 				F1EA9B141906CCD4007F9F5C /* InfoPlist.strings in Resources */,
 			);

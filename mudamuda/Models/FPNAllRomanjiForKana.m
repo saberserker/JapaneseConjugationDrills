@@ -15,7 +15,7 @@
     return retval;
 }
 
--(void)generateMultipleChoice:(void (^)(NSString* question, NSString* correctAnswer, NSArray* wrongAnswers))callback {
+-(void)generateMultipleChoice:(void (^)(NSString* question, NSArray* wrongAnswers))callback {
     //generate a pool of stuff to pull from
     NSDictionary* katakana = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"katakana" ofType:@"plist"]];
     NSDictionary* hiragana = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"hiragana" ofType:@"plist"]];
@@ -31,26 +31,33 @@
     if (self.practiceMode & kKatakanaDouble) [bag addEntriesFromDictionary:katakana[@"double"]];
     if (self.practiceMode & kKatakanaMarkedDouble) [bag addEntriesFromDictionary:katakana[@"marked+double"]];
 
-
-    NSMutableArray* randomSelection = [[NSMutableArray alloc] initWithArray:[bag allKeys]];
+    NSMutableArray* randomKeys = [[NSMutableArray alloc] initWithArray:[bag allKeys]];
     
-    for (int i = 0; i < 7; i++) {
-        int r = arc4random_uniform(randomSelection.count);
-        [randomSelection exchangeObjectAtIndex:i withObjectAtIndex:r];
+    for (int i = 0; i < randomKeys.count; i++) {
+        int r = arc4random_uniform(randomKeys.count);
+        [randomKeys exchangeObjectAtIndex:i withObjectAtIndex:r];
     }
-    NSString* cK = randomSelection[0];
-    NSString* cV = bag[randomSelection[0]];
-    
     bool keysAreAnswers = arc4random() % 2 == 0;
     
     if (keysAreAnswers) {
-        callback(cV,cK,[randomSelection subarrayWithRange:NSMakeRange(1, 5)]);
+        callback(bag[randomKeys[0]],randomKeys);
     } else {
-        NSMutableArray* incorrect = [NSMutableArray new];
-        for (id key in [randomSelection subarrayWithRange:NSMakeRange(1,5)]) {
-            [incorrect addObject:bag[key]];
+        NSMutableArray* possibleAnswers = [NSMutableArray new];
+        for (id key in randomKeys) {
+            if (![possibleAnswers containsObject:bag[key]]) {
+                [possibleAnswers addObject:bag[key]];
+            }
         }
-        callback(cK,cV,incorrect);
+        callback(randomKeys[0],possibleAnswers);
     }
+}
+
+-(BOOL)is:(NSString*)answer correctforQuestion:(NSString*) question {
+    NSMutableString* a = [[NSMutableString alloc] initWithString:answer];
+    NSMutableString* b = [[NSMutableString alloc] initWithString:question];
+    CFStringTransform((__bridge CFMutableStringRef)a,NULL,kCFStringTransformToLatin,NO);
+    CFStringTransform((__bridge CFMutableStringRef)b,NULL,kCFStringTransformToLatin,NO);
+    
+    return [a isEqualToString:b];
 }
 @end

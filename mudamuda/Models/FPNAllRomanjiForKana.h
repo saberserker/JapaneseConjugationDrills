@@ -28,7 +28,7 @@ typedef enum {
 
 +(FPNAllRomanjiForKana*)quizWithType:(KanaType)kType;
 
--(void)generateMultipleChoice:(void (^)(NSString* question, NSString* correctAnswer, NSArray* wrongAnswers))callback;
+-(void)generateMultipleChoice:(void (^)(NSString* question, NSArray* wrongAnswers))callback;
 
 @end
 

@@ -10,5 +10,6 @@
 
 @protocol FPNMultipleChoiceQuizGenerator <NSObject>
 @required
--(void)generateMultipleChoice:(void (^)(NSString* question, NSString* correctAnswer, NSArray* wrongAnswers))callback;
+-(void)generateMultipleChoice:(void (^)(NSString* question, NSArray* wrongAnswers))callback;
+-(BOOL)is:(NSString*)answer correctforQuestion:(NSString*) question;
 @end

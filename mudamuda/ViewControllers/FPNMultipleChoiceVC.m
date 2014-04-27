@@ -12,8 +12,6 @@
 @interface FPNMultipleChoiceVC ()
 @property (weak, nonatomic) IBOutlet UITextView *questionView;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *answerButton;
-
-@property (strong, nonatomic) NSString* correctAnswer;
 @end
 
 @implementation FPNMultipleChoiceVC
@@ -42,15 +40,13 @@ static BOOL correctAnswerSelected;
         [randomButtons exchangeObjectAtIndex:i withObjectAtIndex:arc4random_uniform(randomButtons.count)];
     }
     
-    [self.quizGenerator generateMultipleChoice:^(NSString *question, NSString *correctAnswer, NSArray *wrongAnswers) {
-        self.correctAnswer = correctAnswer;
+    [self.quizGenerator generateMultipleChoice:^(NSString *question, NSArray *possibleAnswers) {
         self.questionView.text = question;
         [self.questionView setFont:[UIFont boldSystemFontOfSize:120]];
         [self.questionView setTextAlignment:NSTextAlignmentCenter];
 
-        [((UIButton*)randomButtons[0]) setTitle:correctAnswer forState:UIControlStateNormal];
-        for (int i = 0; i < MIN(wrongAnswers.count, randomButtons.count-1); i++) {
-           [((UIButton*)randomButtons[i+1]) setTitle:((NSString*)wrongAnswers[i]) forState:UIControlStateNormal];
+        for (int i = 0; i < MIN(possibleAnswers.count, randomButtons.count); i++) {
+           [((UIButton*)randomButtons[i]) setTitle:((NSString*)possibleAnswers[i]) forState:UIControlStateNormal];
         }
     }];
 }
@@ -82,7 +78,7 @@ static BOOL correctAnswerSelected;
         return;
     }
     
-    if ([sender.titleLabel.text isEqualToString: self.correctAnswer]) {
+    if ([self.quizGenerator is:sender.titleLabel.text correctforQuestion: self.questionView.text]) {
         sender.backgroundColor = [UIColor greenColor];
         correctAnswerSelected = YES;
     } else {

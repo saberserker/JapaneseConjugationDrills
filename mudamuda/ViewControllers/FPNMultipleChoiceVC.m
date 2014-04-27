@@ -23,15 +23,28 @@
     for (UIButton* b in self.answerButton) {
         [b addTarget:self action:@selector(answerPushed:) forControlEvents:UIControlEventTouchUpInside];
     }
+    srand48(time(0));
+    [self setupThemeColors];
     
     [self setupQuestions];
+}
+
+- (void) setupThemeColors {
+    CGFloat themeHue = drand48();
+    self.questionView.backgroundColor = [UIColor colorWithHue:themeHue saturation:0.4 brightness:0.8 alpha:1];
+    self.questionView.layer.borderColor = [UIColor colorWithHue:themeHue saturation:0.8 brightness:0.7 alpha:1].CGColor;
+    for (UIButton* button in self.answerButton) {
+        button.backgroundColor = [UIColor colorWithHue:themeHue saturation:0.2 brightness:0.95 alpha:1];
+        button.layer.borderColor = [UIColor colorWithHue:themeHue saturation:0.7 brightness:0.7 alpha:1].CGColor;
+    }
+    self.view.backgroundColor = [UIColor colorWithHue:themeHue saturation:0.6 brightness:0.5 alpha:1];
 }
 
 static BOOL correctAnswerSelected;
 - (void) setupQuestions {
     //set buttons to original state
     for (UIButton* b in self.answerButton) {
-        b.backgroundColor = [UIColor whiteColor];
+//        b.backgroundColor = [UIColor whiteColor];
     }
     correctAnswerSelected = false;
     
@@ -59,6 +72,7 @@ static BOOL correctAnswerSelected;
         for (UIView* sv in self.view.subviews) {
             sv.layer.transform = flattened3d;
         }
+        [self setupThemeColors];
     } completion:^(BOOL finished) {
         [self setupQuestions];
         CATransform3D flattenedover3d = flattened3d;

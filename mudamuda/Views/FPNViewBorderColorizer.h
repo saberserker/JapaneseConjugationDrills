@@ -11,5 +11,5 @@
 @interface FPNViewBorderColorizer : UIView
 @property (nonatomic,strong) UIColor * templateBorderColor;
 @property (strong, nonatomic) IBOutletCollection(UIView) NSArray *coloredViews;
-
+-(void) colorWithHue:(CGFloat)hue;
 @end

@@ -8,10 +8,12 @@
 
 #import "FPNMultipleChoiceVC.h"
 #import "FPNAllRomanjiForKana.h"
+#import "FPNQuizAnswerButton.h"
+#import "FPNViewBorderColorizer.h"
 
 @interface FPNMultipleChoiceVC ()
 @property (weak, nonatomic) IBOutlet UITextView *questionView;
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *answerButton;
+@property (strong, nonatomic) IBOutletCollection(FPNQuizAnswerButton) NSArray *answerButton;
 @end
 
 @implementation FPNMultipleChoiceVC
@@ -33,19 +35,21 @@
     CGFloat themeHue = drand48();
     self.questionView.backgroundColor = [UIColor colorWithHue:themeHue saturation:0.4 brightness:0.8 alpha:1];
     self.questionView.layer.borderColor = [UIColor colorWithHue:themeHue saturation:0.8 brightness:0.7 alpha:1].CGColor;
-    for (UIButton* button in self.answerButton) {
-        button.backgroundColor = [UIColor colorWithHue:themeHue saturation:0.2 brightness:0.95 alpha:1];
-        button.layer.borderColor = [UIColor colorWithHue:themeHue saturation:0.7 brightness:0.7 alpha:1].CGColor;
+    for (FPNQuizAnswerButton* button in self.answerButton) {
+        [button resetButtonWithHue:themeHue];
     }
-    self.view.backgroundColor = [UIColor colorWithHue:themeHue saturation:0.6 brightness:0.5 alpha:1];
+//    self.view.backgroundColor = [UIColor colorWithHue:themeHue saturation:0.6 brightness:0.5 alpha:1];
+    
+    FPNViewBorderColorizer* background = (FPNViewBorderColorizer*)self.view;
+    [background colorWithHue:themeHue];
 }
 
 static BOOL correctAnswerSelected;
 - (void) setupQuestions {
     //set buttons to original state
-    for (UIButton* b in self.answerButton) {
-//        b.backgroundColor = [UIColor whiteColor];
-    }
+//    for (UIButton* b in self.answerButton) {
+////        b.backgroundColor = [UIColor whiteColor];
+//    }
     correctAnswerSelected = false;
     
     NSMutableArray* randomButtons = [[NSMutableArray alloc] initWithArray:self.answerButton];
@@ -86,17 +90,17 @@ static BOOL correctAnswerSelected;
     }];
 }
 
-- (IBAction)answerPushed: (UIButton*) sender {
+- (IBAction)answerPushed: (FPNQuizAnswerButton*) sender {
     if (correctAnswerSelected) {
         [self setupQuestionsWithAnimation];
         return;
     }
     
     if ([self.quizGenerator is:sender.titleLabel.text correctforQuestion: self.questionView.text]) {
-        sender.backgroundColor = [UIColor greenColor];
+        [sender buttonLooksRight];
         correctAnswerSelected = YES;
     } else {
-        sender.backgroundColor = [UIColor redColor];
+        [sender buttonLooksWrong];
     }
 }
 

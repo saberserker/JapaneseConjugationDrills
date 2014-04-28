@@ -38,7 +38,8 @@
     for (FPNQuizAnswerButton* button in self.answerButton) {
         [button resetButtonWithHue:themeHue];
     }
-//    self.view.backgroundColor = [UIColor colorWithHue:themeHue saturation:0.6 brightness:0.5 alpha:1];
+
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithHue:themeHue saturation:0.8 brightness:0.5 alpha:1];
     
     FPNViewBorderColorizer* background = (FPNViewBorderColorizer*)self.view;
     [background colorWithHue:themeHue];
@@ -69,6 +70,10 @@ static BOOL correctAnswerSelected;
 }
 
 - (void) setupQuestionsWithAnimation {
+    for (FPNQuizAnswerButton* b in self.answerButton) {
+        [b shadowOpacityTo:0.5 from:0];
+    }
+    
     CATransform3D flattened3d = CATransform3DIdentity;
     flattened3d.m22 = 0.001;
     flattened3d.m24 = -0.000005;
@@ -77,6 +82,7 @@ static BOOL correctAnswerSelected;
             sv.layer.transform = flattened3d;
         }
         [self setupThemeColors];
+
     } completion:^(BOOL finished) {
         [self setupQuestions];
         CATransform3D flattenedover3d = flattened3d;
@@ -86,6 +92,9 @@ static BOOL correctAnswerSelected;
             [UIView animateWithDuration:0.4 animations:^{
                 sv.layer.transform = CATransform3DIdentity;
             }];
+        }
+        for (FPNQuizAnswerButton* b in self.answerButton) {
+            [b shadowOpacityTo:0 from:0.5];
         }
     }];
 }

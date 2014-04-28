@@ -12,4 +12,6 @@
 -(void) resetButtonWithHue:(CGFloat)hue;
 -(void) buttonLooksWrong;
 -(void) buttonLooksRight;
+
+-(void) shadowOpacityTo:(CGFloat)alpha from:(CGFloat)fromAlpha;
 @end

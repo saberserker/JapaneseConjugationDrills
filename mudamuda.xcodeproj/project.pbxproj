@@ -276,6 +276,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = FreezedPeanuts;
 				TargetAttributes = {
+					F1EA9B051906CCD4007F9F5C = {
+						DevelopmentTeam = 9BPXK53826;
+					};
 					F1EA9B291906CCD4007F9F5C = {
 						TestTargetID = F1EA9B051906CCD4007F9F5C;
 					};
@@ -472,11 +475,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mudamuda/mudamuda-Prefix.pch";
 				INFOPLIST_FILE = "mudamuda/mudamuda-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BAEE1F3A-F3B0-4033-B1F8-E0D17E34D810";
+				PROVISIONING_PROFILE = "5A5F6F54-2D45-4FA0-8562-EA0EFBA25370";
+				SDKROOT = iphoneos7.1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -487,11 +492,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mudamuda/mudamuda-Prefix.pch";
 				INFOPLIST_FILE = "mudamuda/mudamuda-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BAEE1F3A-F3B0-4033-B1F8-E0D17E34D810";
+				PROVISIONING_PROFILE = "5A5F6F54-2D45-4FA0-8562-EA0EFBA25370";
+				SDKROOT = iphoneos7.1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

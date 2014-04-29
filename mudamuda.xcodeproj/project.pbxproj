@@ -32,6 +32,7 @@
 		F1EA9B381906CCD4007F9F5C /* mudamudaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA9B371906CCD4007F9F5C /* mudamudaTests.m */; };
 		F1EA9B421906CD0D007F9F5C /* katakana.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1EA9B411906CD0D007F9F5C /* katakana.plist */; };
 		F1EA9B4719070201007F9F5C /* FPNMultipleChoiceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA9B4619070201007F9F5C /* FPNMultipleChoiceVC.m */; };
+		F1FD428A190F68FB00D83483 /* UIViewController+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FD4289190F68FB00D83483 /* UIViewController+Colors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		F1EA9B411906CD0D007F9F5C /* katakana.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = katakana.plist; path = assets/katakana.plist; sourceTree = "<group>"; };
 		F1EA9B4519070201007F9F5C /* FPNMultipleChoiceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNMultipleChoiceVC.h; path = ViewControllers/FPNMultipleChoiceVC.h; sourceTree = "<group>"; };
 		F1EA9B4619070201007F9F5C /* FPNMultipleChoiceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNMultipleChoiceVC.m; path = ViewControllers/FPNMultipleChoiceVC.m; sourceTree = "<group>"; };
+		F1FD4288190F68FB00D83483 /* UIViewController+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Colors.h"; path = "ViewControllers/UIViewController+Colors.h"; sourceTree = "<group>"; };
+		F1FD4289190F68FB00D83483 /* UIViewController+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Colors.m"; path = "ViewControllers/UIViewController+Colors.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +240,8 @@
 				F1EA9B4619070201007F9F5C /* FPNMultipleChoiceVC.m */,
 				F191A815190AFD4E004836F2 /* FPNQuizSelectorTableVC.h */,
 				F191A816190AFD4E004836F2 /* FPNQuizSelectorTableVC.m */,
+				F1FD4288190F68FB00D83483 /* UIViewController+Colors.h */,
+				F1FD4289190F68FB00D83483 /* UIViewController+Colors.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -346,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1FD428A190F68FB00D83483 /* UIViewController+Colors.m in Sources */,
 				F191A812190A2050004836F2 /* FPNAllRomanjiForKana.m in Sources */,
 				F191A81C190DC4EE004836F2 /* FPNQuizAnswerButton.m in Sources */,
 				F1EA9B4719070201007F9F5C /* FPNMultipleChoiceVC.m in Sources */,

@@ -11,6 +11,7 @@
 #import "FPNMultipleChoiceVC.h"
 #import "FPNAllRomanjiForKana.h"
 #import "FPNHangulQuizGenerator.h"
+#import "UIViewController+Colors.h"
 
 @interface FPNQuizSelectorTableVC ()
 @property (nonatomic,strong) NSArray * cellNames;
@@ -45,6 +46,13 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    [self setRandomThemeColor];
+    self.view.backgroundColor = [UIColor colorWithHue:self.themeColor saturation:0.5 brightness:0.8 alpha:1];
+
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -68,6 +76,11 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"quizSelect" forIndexPath:indexPath];
     cell.textLabel.text = self.cellNames[indexPath.row];
+    
+    CGFloat min = 0.8;
+    CGFloat ds  = 0.4 / [self tableView:tableView numberOfRowsInSection:0];
+    CGFloat final = min - ds * indexPath.row;
+    cell.backgroundColor = [UIColor colorWithHue:self.themeColor saturation:(final + 1) / 2 brightness:final alpha:1];
     return cell;
 }
 

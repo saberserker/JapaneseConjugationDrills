@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (Tools)
-@property (nonatomic, strong) CAGradientLayer* childGradient;
 -(void) shadowOpacityTo:(CGFloat)alpha from:(CGFloat)fromAlpha;
 @end

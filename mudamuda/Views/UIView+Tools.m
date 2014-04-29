@@ -10,11 +10,10 @@
 #import <objc/runtime.h>
 
 @implementation UIView (Tools)
-@dynamic childGradient;
 
 //color gradient methods
 -(CAGradientLayer*)lazyGradient {
-    CAGradientLayer* gradient = objc_getAssociatedObject(self, @selector(childGradient));
+    CAGradientLayer* gradient = [self.layer valueForKey:@"FPNchildGradient"];
     if (gradient == nil) {
         gradient = [[CAGradientLayer alloc] init];
         gradient.startPoint = CGPointMake(0.5, 0);
@@ -28,19 +27,23 @@
         UIColor* start = [UIColor colorWithWhite:0 alpha:1];
         UIColor* end = [UIColor colorWithWhite:0 alpha:1];
         gradient.colors = [NSArray arrayWithObjects:(id)start.CGColor, (id)end.CGColor,nil];
-        objc_setAssociatedObject(self, @selector(childGradient), gradient, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return gradient;
 }
 
 -(void) shadowOpacityTo:(CGFloat)alpha from:(CGFloat)fromAlpha{
-    [[self lazyGradient] removeAllAnimations];
+    CAGradientLayer* gradient = [self lazyGradient];
+    [UIView performWithoutAnimation:^{
+        gradient.frame = self.bounds;
+    }];
+    
+    [gradient removeAllAnimations];
     CABasicAnimation *flash = [CABasicAnimation animationWithKeyPath:@"opacity"];
     flash.fromValue = [NSNumber numberWithFloat:fromAlpha];
     flash.toValue = [NSNumber numberWithFloat:alpha];
     flash.duration = 0.4;
     flash.removedOnCompletion = NO;
-    [[self lazyGradient] addAnimation:flash forKey:@"shadowAni"];
+    [gradient addAnimation:flash forKey:@"shadowAni"];
 }
 
 @end

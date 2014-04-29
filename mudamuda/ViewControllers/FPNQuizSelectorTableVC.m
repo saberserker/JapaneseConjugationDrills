@@ -10,6 +10,7 @@
 #import "FPNMultipleChoiceQuizGenerator.h"
 #import "FPNMultipleChoiceVC.h"
 #import "FPNAllRomanjiForKana.h"
+#import "FPNHangulQuizGenerator.h"
 
 @interface FPNQuizSelectorTableVC ()
 @property (nonatomic,strong) NSArray * cellNames;
@@ -30,11 +31,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.cellNames = @[ @"Hiragana Basic", @"Hiragana Marked", @"Hiragana Doubled", @"Hiragana Basic and Marked", @"Hiragana All", @"Katakana Basic", @"Katakana Marked", @"Katakana Doubled", @"Katakana Basic and Marked", @"Katakana All", @"Everything Kana"];
+    self.cellNames = @[ @"Hiragana Basic", @"Hiragana Marked", @"Hiragana Doubled", @"Hiragana Doubled and Marked", @"Hiragana All", @"Katakana Basic", @"Katakana Marked", @"Katakana Doubled", @"Katakana Doubled and Marked", @"Katakana All", @"Everything Kana",@"Hangul Parts"];
     self.quizGenerator = @[[FPNAllRomanjiForKana quizWithType: kHiraganaBasic],
                            [FPNAllRomanjiForKana quizWithType: kHiraganaMarked],
                            [FPNAllRomanjiForKana quizWithType: kHiraganaDouble],
-                           [FPNAllRomanjiForKana quizWithType: kHiraganaMarkedDouble],[FPNAllRomanjiForKana quizWithType: kHiraganaAll],[FPNAllRomanjiForKana quizWithType: kKatakanaBasic],[FPNAllRomanjiForKana quizWithType: kKatakanaMarked],[FPNAllRomanjiForKana quizWithType: kKatakanaDouble],[FPNAllRomanjiForKana quizWithType: kKatakanaMarkedDouble],[FPNAllRomanjiForKana quizWithType: kKatakanaAll],[FPNAllRomanjiForKana quizWithType: kKanaAll]];
+                           [FPNAllRomanjiForKana quizWithType: kHiraganaMarkedDouble],[FPNAllRomanjiForKana quizWithType: kHiraganaAll],[FPNAllRomanjiForKana quizWithType: kKatakanaBasic],[FPNAllRomanjiForKana quizWithType: kKatakanaMarked],[FPNAllRomanjiForKana quizWithType: kKatakanaDouble],[FPNAllRomanjiForKana quizWithType: kKatakanaMarkedDouble],[FPNAllRomanjiForKana quizWithType: kKatakanaAll],[FPNAllRomanjiForKana quizWithType: kKanaAll], [FPNHangulQuizGenerator new]];
 
     
     // Uncomment the following line to preserve selection between presentations.

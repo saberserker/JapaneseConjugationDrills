@@ -10,6 +10,7 @@
 #import "FPNAllRomanjiForKana.h"
 #import "FPNQuizAnswerButton.h"
 #import "FPNViewBorderColorizer.h"
+#import "UIView+Tools.h"
 
 @interface FPNMultipleChoiceVC ()
 @property (weak, nonatomic) IBOutlet UITextView *questionView;
@@ -47,10 +48,6 @@
 
 static BOOL correctAnswerSelected;
 - (void) setupQuestions {
-    //set buttons to original state
-//    for (UIButton* b in self.answerButton) {
-////        b.backgroundColor = [UIColor whiteColor];
-//    }
     correctAnswerSelected = false;
     
     NSMutableArray* randomButtons = [[NSMutableArray alloc] initWithArray:self.answerButton];
@@ -70,16 +67,13 @@ static BOOL correctAnswerSelected;
 }
 
 - (void) setupQuestionsWithAnimation {
-    for (FPNQuizAnswerButton* b in self.answerButton) {
-        [b shadowOpacityTo:0.5 from:0];
-    }
-    
     CATransform3D flattened3d = CATransform3DIdentity;
     flattened3d.m22 = 0.001;
     flattened3d.m24 = -0.000005;
     [UIView animateWithDuration:0.4 animations:^{
         for (UIView* sv in self.view.subviews) {
             sv.layer.transform = flattened3d;
+            [sv shadowOpacityTo:0.5 from:0];
         }
         [self setupThemeColors];
 
@@ -92,9 +86,7 @@ static BOOL correctAnswerSelected;
             [UIView animateWithDuration:0.4 animations:^{
                 sv.layer.transform = CATransform3DIdentity;
             }];
-        }
-        for (FPNQuizAnswerButton* b in self.answerButton) {
-            [b shadowOpacityTo:0 from:0.5];
+            [sv shadowOpacityTo:0 from:0.5];
         }
     }];
 }

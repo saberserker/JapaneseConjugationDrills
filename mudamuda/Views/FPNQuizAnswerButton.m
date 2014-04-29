@@ -24,36 +24,7 @@
     self.layer.borderColor = [UIColor colorWithHue:hue saturation:0.7 brightness:0.7 alpha:1].CGColor;
 }
 
-//color gradient methods
--(CAGradientLayer*)lazyGradient {
-    if (self.gradient == nil) {
-        self.gradient = [[CAGradientLayer alloc] init];
-        self.gradient.startPoint = CGPointMake(0.5, 0);
-        self.gradient.endPoint = CGPointMake(0.5, 1);
-        self.gradient.frame = self.bounds;
-        self.gradient.cornerRadius = self.layer.cornerRadius;
-        self.gradient.opacity = 0;
-        [self.layer addSublayer:self.gradient];
-        
-        UIColor* start = [UIColor colorWithWhite:0 alpha:1];
-        UIColor* end = [UIColor colorWithWhite:0 alpha:1];
-        self.gradient.colors = [NSArray arrayWithObjects:(id)start.CGColor, (id)end.CGColor,nil];
-    }
-    return self.gradient;
-}
-
--(void) shadowOpacityTo:(CGFloat)alpha from:(CGFloat)fromAlpha{
-    [[self lazyGradient] removeAllAnimations];
-    CABasicAnimation *flash = [CABasicAnimation animationWithKeyPath:@"opacity"];
-    flash.fromValue = [NSNumber numberWithFloat:fromAlpha];
-    flash.toValue = [NSNumber numberWithFloat:alpha];
-    flash.duration = 0.4;
-    flash.removedOnCompletion = NO;
-    [[self lazyGradient] addAnimation:flash forKey:@"shadowAni"];
-}
-
 //color static appearances
-
 -(void) buttonLooksWrong {
     CGFloat hue = 0;
     self.backgroundColor = [UIColor colorWithHue:hue saturation:0.7 brightness:0.95 alpha:0.5];

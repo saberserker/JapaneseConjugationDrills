@@ -14,6 +14,7 @@
 		F191A81C190DC4EE004836F2 /* FPNQuizAnswerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F191A81B190DC4EE004836F2 /* FPNQuizAnswerButton.m */; };
 		F1CB90CF190EAEA2004BFC47 /* hangul.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1CB90CE190EAEA2004BFC47 /* hangul.plist */; };
 		F1CB90D2190F4865004BFC47 /* FPNHangulQuizGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CB90D1190F4865004BFC47 /* FPNHangulQuizGenerator.m */; };
+		F1CB90D5190F4EE9004BFC47 /* UIView+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CB90D4190F4EE9004BFC47 /* UIView+Tools.m */; };
 		F1EA9B0A1906CCD4007F9F5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EA9B091906CCD4007F9F5C /* Foundation.framework */; };
 		F1EA9B0C1906CCD4007F9F5C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EA9B0B1906CCD4007F9F5C /* CoreGraphics.framework */; };
 		F1EA9B0E1906CCD4007F9F5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EA9B0D1906CCD4007F9F5C /* UIKit.framework */; };
@@ -57,6 +58,8 @@
 		F1CB90CE190EAEA2004BFC47 /* hangul.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = hangul.plist; path = assets/hangul.plist; sourceTree = "<group>"; };
 		F1CB90D0190F4865004BFC47 /* FPNHangulQuizGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNHangulQuizGenerator.h; path = Models/FPNHangulQuizGenerator.h; sourceTree = "<group>"; };
 		F1CB90D1190F4865004BFC47 /* FPNHangulQuizGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNHangulQuizGenerator.m; path = Models/FPNHangulQuizGenerator.m; sourceTree = "<group>"; };
+		F1CB90D3190F4EE9004BFC47 /* UIView+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Tools.h"; path = "Views/UIView+Tools.h"; sourceTree = "<group>"; };
+		F1CB90D4190F4EE9004BFC47 /* UIView+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Tools.m"; path = "Views/UIView+Tools.m"; sourceTree = "<group>"; };
 		F1EA9B061906CCD4007F9F5C /* mudamuda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mudamuda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EA9B091906CCD4007F9F5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F1EA9B0B1906CCD4007F9F5C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -113,6 +116,8 @@
 				F191A80D190A1794004836F2 /* FPNViewBorderColorizer.m */,
 				F191A81A190DC4EE004836F2 /* FPNQuizAnswerButton.h */,
 				F191A81B190DC4EE004836F2 /* FPNQuizAnswerButton.m */,
+				F1CB90D3190F4EE9004BFC47 /* UIView+Tools.h */,
+				F1CB90D4190F4EE9004BFC47 /* UIView+Tools.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -349,6 +354,7 @@
 				F1EA9B231906CCD4007F9F5C /* FPNViewController.m in Sources */,
 				F191A80E190A1794004836F2 /* FPNViewBorderColorizer.m in Sources */,
 				F1EA9B161906CCD4007F9F5C /* main.m in Sources */,
+				F1CB90D5190F4EE9004BFC47 /* UIView+Tools.m in Sources */,
 				F1EA9B1A1906CCD4007F9F5C /* FPNAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

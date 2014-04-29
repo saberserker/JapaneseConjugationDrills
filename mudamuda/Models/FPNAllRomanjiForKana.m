@@ -8,6 +8,11 @@
 
 #import "FPNAllRomanjiForKana.h"
 
+@interface FPNAllRomanjiForKana ()
+@property (nonatomic,strong) NSString* correctAnswer;
+@end
+
+
 @implementation FPNAllRomanjiForKana
 +(FPNAllRomanjiForKana*)quizWithType:(KanaType)kType {
     FPNAllRomanjiForKana* retval = [[FPNAllRomanjiForKana alloc] init];
@@ -41,6 +46,7 @@
     
     if (keysAreAnswers) {
         callback(bag[randomKeys[0]],randomKeys);
+        self.correctAnswer = randomKeys[0];
     } else {
         NSMutableArray* possibleAnswers = [NSMutableArray new];
         for (id key in randomKeys) {
@@ -49,15 +55,11 @@
             }
         }
         callback(randomKeys[0],possibleAnswers);
+        self.correctAnswer = bag[randomKeys[0]];
     }
 }
 
 -(BOOL)is:(NSString*)answer correctforQuestion:(NSString*) question {
-    NSMutableString* a = [[NSMutableString alloc] initWithString:answer];
-    NSMutableString* b = [[NSMutableString alloc] initWithString:question];
-    CFStringTransform((__bridge CFMutableStringRef)a,NULL,kCFStringTransformToLatin,NO);
-    CFStringTransform((__bridge CFMutableStringRef)b,NULL,kCFStringTransformToLatin,NO);
-    
-    return [a isEqualToString:b];
+    return [answer isEqualToString:self.correctAnswer];
 }
 @end

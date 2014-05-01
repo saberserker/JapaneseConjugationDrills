@@ -11,6 +11,7 @@
 #import "FPNQuizAnswerButton.h"
 #import "FPNViewBorderColorizer.h"
 #import "UIView+Tools.h"
+#import "UIViewController+Colors.h"
 
 @interface FPNMultipleChoiceVC ()
 @property (weak, nonatomic) IBOutlet UITextView *questionView;
@@ -28,19 +29,16 @@
     }
     srand48(time(0));
     [self setupThemeColors];
-    
     [self setupQuestions];
 }
 
 - (void) setupThemeColors {
-    CGFloat themeHue = drand48();
+    CGFloat themeHue = self.themeColor;
     self.questionView.backgroundColor = [UIColor colorWithHue:themeHue saturation:0.4 brightness:0.8 alpha:1];
     self.questionView.layer.borderColor = [UIColor colorWithHue:themeHue saturation:0.8 brightness:0.7 alpha:1].CGColor;
     for (FPNQuizAnswerButton* button in self.answerButton) {
         [button resetButtonWithHue:themeHue];
     }
-
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithHue:themeHue saturation:0.8 brightness:0.5 alpha:1];
     
     FPNViewBorderColorizer* background = (FPNViewBorderColorizer*)self.view;
     [background colorWithHue:themeHue];
@@ -75,6 +73,7 @@ static BOOL correctAnswerSelected;
             sv.layer.transform = flattened3d;
             [sv shadowOpacityTo:0.5 from:0];
         }
+        [self setRandomThemeColorChangeWithDelta:0.1];
         [self setupThemeColors];
 
     } completion:^(BOOL finished) {

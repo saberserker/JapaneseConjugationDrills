@@ -80,7 +80,7 @@
     CGFloat min = 0.8;
     CGFloat ds  = 0.4 / [self tableView:tableView numberOfRowsInSection:0];
     CGFloat final = min - ds * indexPath.row;
-    cell.backgroundColor = [UIColor colorWithHue:self.themeColor saturation:(final + 1) / 2 brightness:final alpha:1];
+    cell.backgroundColor = [UIColor colorWithHue:self.themeColor saturation:(final ) / 2 brightness:final alpha:1];
     return cell;
 }
 
@@ -136,6 +136,7 @@
     id<FPNMultipleChoiceQuizGenerator> gen = sender;
     FPNMultipleChoiceVC* multi = segue.destinationViewController;
     multi.quizGenerator = gen;
+    [multi setThemeColor: self.themeColor];
 }
 
 

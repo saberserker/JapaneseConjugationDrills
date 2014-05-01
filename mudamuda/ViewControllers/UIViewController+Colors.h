@@ -11,5 +11,7 @@
 @interface UIViewController (Colors)
 @property (nonatomic, assign) NSNumber* kthemeHue;
 - (void) setRandomThemeColor;
+- (void) setRandomThemeColorChangeWithDelta:(CGFloat)delta;
 - (CGFloat) themeColor;
+- (void) setThemeColor:(CGFloat)theme;
 @end

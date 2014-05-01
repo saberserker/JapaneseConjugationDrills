@@ -68,11 +68,22 @@ static BOOL correctAnswerSelected;
     CATransform3D flattened3d = CATransform3DIdentity;
     flattened3d.m22 = 0.001;
     flattened3d.m24 = -0.000005;
+    
+    NSRange viewRange = [self rangeBasedOnCollectionOfViews:self.answerButton];
+    
+    for (FPNQuizAnswerButton* b in self.answerButton) {
+        CGFloat animTime = 0.05 + 0.35 * [self stepBasedOnRange:viewRange forView:b];
+        [UIView animateWithDuration:animTime animations:^{
+            CATransform3D bt = flattened3d;
+            bt.m42 = 100;
+            b.layer.transform = bt;
+        }];
+    }
+    
     [UIView animateWithDuration:0.4 animations:^{
-        for (UIView* sv in self.view.subviews) {
-            sv.layer.transform = flattened3d;
-            [sv shadowOpacityTo:0.5 from:0];
-        }
+        self.questionView.layer.transform = flattened3d;
+        [self.questionView shadowOpacityTo:0.5 from:0];
+        
         [self setRandomThemeColorChangeWithDelta:0.1];
         [self setupThemeColors];
 
@@ -80,14 +91,39 @@ static BOOL correctAnswerSelected;
         [self setupQuestions];
         CATransform3D flattenedover3d = flattened3d;
         flattenedover3d.m24 = 0.000005;
-        for (UIView* sv in self.view.subviews) {
-            sv.layer.transform = flattenedover3d;
-            [UIView animateWithDuration:0.4 animations:^{
-                sv.layer.transform = CATransform3DIdentity;
+        //animate self.questionView
+        self.questionView.layer.transform = flattenedover3d;
+        [UIView animateWithDuration:0.4 animations:^{
+            self.questionView.layer.transform = CATransform3DIdentity;
+        }];
+        [self.questionView shadowOpacityTo:0 from:0.5];
+        for (FPNQuizAnswerButton* b in self.answerButton) {
+            b.layer.transform = CATransform3DMakeTranslation(1000, 0, 0);
+            CGFloat animTime = 0.37 + 0.3 * [self stepBasedOnRange:viewRange forView:b];
+            [UIView animateWithDuration:animTime animations:^{
+                b.layer.transform = CATransform3DIdentity;
             }];
-            [sv shadowOpacityTo:0 from:0.5];
         }
     }];
+}
+
+- (NSRange) rangeBasedOnCollectionOfViews:(NSArray*) views {
+    NSUInteger min = NSUIntegerMax;
+    NSUInteger max = 0;
+    for (UIView* v in views) {
+        CGFloat val = v.center.x + v.center.y;
+        min = MIN(min, val);
+        max = MAX(max, val);
+    }
+    return NSMakeRange(min, max);
+}
+
+- (CGFloat) stepBasedOnRange:(NSRange) range forView:(UIView*)v {
+    CGFloat val = v.center.x + v.center.y;
+    NSUInteger min = range.location;
+    NSUInteger max = range.length;
+    CGFloat retval = (val - min) / (max - min);
+    return MAX(MIN(retval, 1),0);
 }
 
 - (IBAction)answerPushed: (FPNQuizAnswerButton*) sender {

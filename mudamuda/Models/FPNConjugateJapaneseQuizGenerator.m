@@ -79,6 +79,11 @@
     return retval;
 }
 
+-(NSArray*)generateIncorrectAnswersThatDoNotMatch:(NSString*)correctAnswer {
+#warning TODO
+    return nil;
+}
+
 +(NSDictionary*)conjugationRules {
     NSDictionary* retval =
     @{

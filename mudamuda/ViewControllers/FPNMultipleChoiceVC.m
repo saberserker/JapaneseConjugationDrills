@@ -59,7 +59,9 @@ static BOOL correctAnswerSelected;
         [self.questionView setTextAlignment:NSTextAlignmentCenter];
 
         for (int i = 0; i < MIN(possibleAnswers.count, randomButtons.count); i++) {
-           [((UIButton*)randomButtons[i]) setTitle:((NSString*)possibleAnswers[i]) forState:UIControlStateNormal];
+            UIButton* button = ((UIButton*)randomButtons[i]);
+            button.titleLabel.adjustsFontSizeToFitWidth = YES;
+           [button setTitle:((NSString*)possibleAnswers[i]) forState:UIControlStateNormal];
         }
     }];
 }

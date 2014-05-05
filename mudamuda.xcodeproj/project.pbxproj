@@ -13,6 +13,7 @@
 		F191A819190B3877004836F2 /* hiragana.plist in Resources */ = {isa = PBXBuildFile; fileRef = F191A818190B3877004836F2 /* hiragana.plist */; };
 		F191A81C190DC4EE004836F2 /* FPNQuizAnswerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F191A81B190DC4EE004836F2 /* FPNQuizAnswerButton.m */; };
 		F1C17F9D191746F8003102E6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1C17F9B191746F8003102E6 /* Model.xcdatamodeld */; };
+		F1C17FA019174909003102E6 /* FPNConjugateJapaneseQuizGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C17F9F19174909003102E6 /* FPNConjugateJapaneseQuizGenerator.m */; };
 		F1CB90CF190EAEA2004BFC47 /* hangul.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1CB90CE190EAEA2004BFC47 /* hangul.plist */; };
 		F1CB90D2190F4865004BFC47 /* FPNHangulQuizGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CB90D1190F4865004BFC47 /* FPNHangulQuizGenerator.m */; };
 		F1CB90D5190F4EE9004BFC47 /* UIView+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CB90D4190F4EE9004BFC47 /* UIView+Tools.m */; };
@@ -60,6 +61,8 @@
 		F191A81A190DC4EE004836F2 /* FPNQuizAnswerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNQuizAnswerButton.h; path = Views/FPNQuizAnswerButton.h; sourceTree = "<group>"; };
 		F191A81B190DC4EE004836F2 /* FPNQuizAnswerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNQuizAnswerButton.m; path = Views/FPNQuizAnswerButton.m; sourceTree = "<group>"; };
 		F1C17F9C191746F8003102E6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		F1C17F9E19174909003102E6 /* FPNConjugateJapaneseQuizGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNConjugateJapaneseQuizGenerator.h; path = Models/FPNConjugateJapaneseQuizGenerator.h; sourceTree = "<group>"; };
+		F1C17F9F19174909003102E6 /* FPNConjugateJapaneseQuizGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNConjugateJapaneseQuizGenerator.m; path = Models/FPNConjugateJapaneseQuizGenerator.m; sourceTree = "<group>"; };
 		F1CB90CE190EAEA2004BFC47 /* hangul.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = hangul.plist; path = assets/hangul.plist; sourceTree = "<group>"; };
 		F1CB90D0190F4865004BFC47 /* FPNHangulQuizGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNHangulQuizGenerator.h; path = Models/FPNHangulQuizGenerator.h; sourceTree = "<group>"; };
 		F1CB90D1190F4865004BFC47 /* FPNHangulQuizGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNHangulQuizGenerator.m; path = Models/FPNHangulQuizGenerator.m; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				F191A811190A2050004836F2 /* FPNAllRomanjiForKana.m */,
 				F1CB90D0190F4865004BFC47 /* FPNHangulQuizGenerator.h */,
 				F1CB90D1190F4865004BFC47 /* FPNHangulQuizGenerator.m */,
+				F1C17F9E19174909003102E6 /* FPNConjugateJapaneseQuizGenerator.h */,
+				F1C17F9F19174909003102E6 /* FPNConjugateJapaneseQuizGenerator.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1FD428A190F68FB00D83483 /* UIViewController+Colors.m in Sources */,
+				F1C17FA019174909003102E6 /* FPNConjugateJapaneseQuizGenerator.m in Sources */,
 				F191A812190A2050004836F2 /* FPNAllRomanjiForKana.m in Sources */,
 				F191A81C190DC4EE004836F2 /* FPNQuizAnswerButton.m in Sources */,
 				F1EA9B4719070201007F9F5C /* FPNMultipleChoiceVC.m in Sources */,

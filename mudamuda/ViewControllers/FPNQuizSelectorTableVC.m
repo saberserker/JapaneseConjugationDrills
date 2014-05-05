@@ -12,6 +12,7 @@
 #import "FPNAllRomanjiForKana.h"
 #import "FPNHangulQuizGenerator.h"
 #import "UIViewController+Colors.h"
+#import "FPNConjugateJapaneseQuizGenerator.h"
 
 @interface FPNQuizSelectorTableVC ()
 @property (nonatomic,strong) NSArray * cellNames;
@@ -32,11 +33,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.cellNames = @[ @"Hiragana Basic", @"Hiragana Marked", @"Hiragana Doubled", @"Hiragana Doubled and Marked", @"Hiragana All", @"Katakana Basic", @"Katakana Marked", @"Katakana Doubled", @"Katakana Doubled and Marked", @"Katakana All", @"Everything Kana",@"Hangul Parts"];
+    self.cellNames = @[ @"Hiragana Basic", @"Hiragana Marked", @"Hiragana Doubled", @"Hiragana Doubled and Marked", @"Hiragana All", @"Katakana Basic", @"Katakana Marked", @"Katakana Doubled", @"Katakana Doubled and Marked", @"Katakana All", @"Everything Kana",@"Hangul Parts", @"Japanese Conjugation (BETA)"];
     self.quizGenerator = @[[FPNAllRomanjiForKana quizWithType: kHiraganaBasic],
                            [FPNAllRomanjiForKana quizWithType: kHiraganaMarked],
                            [FPNAllRomanjiForKana quizWithType: kHiraganaDouble],
-                           [FPNAllRomanjiForKana quizWithType: kHiraganaMarkedDouble],[FPNAllRomanjiForKana quizWithType: kHiraganaAll],[FPNAllRomanjiForKana quizWithType: kKatakanaBasic],[FPNAllRomanjiForKana quizWithType: kKatakanaMarked],[FPNAllRomanjiForKana quizWithType: kKatakanaDouble],[FPNAllRomanjiForKana quizWithType: kKatakanaMarkedDouble],[FPNAllRomanjiForKana quizWithType: kKatakanaAll],[FPNAllRomanjiForKana quizWithType: kKanaAll], [FPNHangulQuizGenerator new]];
+                           [FPNAllRomanjiForKana quizWithType: kHiraganaMarkedDouble],
+                           [FPNAllRomanjiForKana quizWithType: kHiraganaAll],
+                           [FPNAllRomanjiForKana quizWithType: kKatakanaBasic],
+                           [FPNAllRomanjiForKana quizWithType: kKatakanaMarked],
+                           [FPNAllRomanjiForKana quizWithType: kKatakanaDouble],
+                           [FPNAllRomanjiForKana quizWithType: kKatakanaMarkedDouble],
+                           [FPNAllRomanjiForKana quizWithType: kKatakanaAll],
+                           [FPNAllRomanjiForKana quizWithType: kKanaAll],
+                           [FPNHangulQuizGenerator new],
+                           [FPNConjugateJapaneseQuizGenerator new]];
 
     
     // Uncomment the following line to preserve selection between presentations.

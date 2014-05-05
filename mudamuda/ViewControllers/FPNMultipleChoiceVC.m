@@ -55,7 +55,7 @@ static BOOL correctAnswerSelected;
     
     [self.quizGenerator generateMultipleChoice:^(NSString *question, NSArray *possibleAnswers) {
         self.questionView.text = question;
-        [self.questionView setFont:[UIFont boldSystemFontOfSize:120]];
+        [self.questionView setFont:[UIFont boldSystemFontOfSize:30]];
         [self.questionView setTextAlignment:NSTextAlignmentCenter];
 
         for (int i = 0; i < MIN(possibleAnswers.count, randomButtons.count); i++) {

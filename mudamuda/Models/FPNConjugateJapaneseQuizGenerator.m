@@ -7,6 +7,7 @@
 //
 
 #import "FPNConjugateJapaneseQuizGenerator.h"
+#import "NSArray+Tools.h"
 
 @interface FPNConjugateJapaneseQuizGenerator ()
 @property (nonatomic,strong) NSString* correctAnswer;
@@ -51,7 +52,8 @@
     NSString* word = [wordlistdict allKeys][arc4random_uniform(wordlistdict.count)];
     
     self.correctAnswer = [self conjugatePlainForm:word wordType:self.wordCategory conjugationType:self.conjugationCategory];
-    NSArray* wrongAnswers = @[self.correctAnswer, @"so doge", @"four", @"hatsune miku", @"doge", @"dog"];
+//    NSArray* wrongAnswers = @[self.correctAnswer, @"so doge", @"four", @"hatsune miku", @"doge", @"dog"];
+    NSArray* wrongAnswers = [self generateIncorrectAnswersThatDoNotMatch:self.correctAnswer conjugatePlainForm:word wordType:self.wordCategory conjugationType:self.conjugationCategory];
     
     //stuff that make the question presentable
     NSString* furigana = ((NSDictionary*)wordlistdict[word])[@"furigana"];
@@ -79,12 +81,54 @@
     return retval;
 }
 
--(NSArray*)generateIncorrectAnswersThatDoNotMatch:(NSString*)correctAnswer {
-#warning TODO
-    return nil;
+-(NSArray*)generateIncorrectAnswersThatDoNotMatch:(NSString*)correctAnswer conjugatePlainForm:(NSString*)plainForm wordType:(NSString*) wordType conjugationType:(NSString*)conjugationType{
+    NSMutableArray* retval = [[NSMutableArray alloc] initWithArray:@[correctAnswer]];
+    NSDictionary* conjugationRules = [FPNConjugateJapaneseQuizGenerator conjugationRules];
+    NSDictionary* thisConjugationRule = conjugationRules[conjugationType];
+    
+    NSMutableDictionary* everyRule = [NSMutableDictionary new];
+    for (NSString* wordTypeKey in [thisConjugationRule allKeys]) {
+        [everyRule addEntriesFromDictionary:thisConjugationRule[wordTypeKey]];
+    }
+         
+    for (NSString* pattern in [everyRule allKeys]) {
+        NSError* error = nil;
+        NSMutableString* candidateString = [plainForm mutableCopy];
+        
+        NSString* incorrectPattern = [FPNConjugateJapaneseQuizGenerator incorrectPatterns][wordType];
+        NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:incorrectPattern options:NSRegularExpressionAnchorsMatchLines error:&error];
+//        candidateString = [regex stringByReplacingMatchesInString:candidateString options:0 range:NSMakeRange(0, plainForm.length) withTemplate:(NSString*)everyRule[pattern]];
+//        NSInteger matches = [regex replaceMatchesInString:candidateString options:0 range:NSMakeRange(0, candidateString.length) withTemplate:(NSString*)everyRule[pattern]];
+        NSTextCheckingResult * result = [regex firstMatchInString:plainForm options:0 range:NSMakeRange(0, plainForm.length)];
+        
+        if (result) {
+            [candidateString replaceCharactersInRange:result.range withString:(NSString*)everyRule[pattern]];
+        }
+        
+        if (![retval containsObject:candidateString]) {
+            [retval addObject:[candidateString copy]];
+        }
+        if (retval.count >= 6) {
+            break;
+        }
+    }
+    return [retval copy];
+}
+
++(NSDictionary*)incorrectPatterns {
+    NSString * hiragana = @"ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんゔゕゖ";
+    NSString * replaceOne = [NSString stringWithFormat:@"[%@]{0,1}$",hiragana];
+//    NSString * replaceTwo = [NSString stringWithFormat:@"[%@]{0,2}$",hiragana];
+    return
+    @{@"V5": replaceOne,
+      @"V1": replaceOne,
+      @"ADJI": replaceOne,
+      @"ADJNA": replaceOne
+      };
 }
 
 +(NSDictionary*)conjugationRules {
+    // i hiragana : [いきぎしじちぢにひびぴみ]
     NSDictionary* retval =
     @{
       @"TEFORM":
@@ -99,8 +143,7 @@
             @"む$":@"んで",
             @"る$":@"って"},
           @"V1":
-            @{@"いる$":@"いて",
-              @"える$":@"えて"},
+            @{@"る$":@"て"},
           @"ADJI":
               @{@"い$":@"くて"},
           @"ADJNA":
@@ -118,8 +161,7 @@
                   @"む$":@"んだ",
                   @"る$":@"った"},
             @"V1":
-                @{@"いる$":@"いた",
-                  @"える$":@"えた"},
+                @{@"る$":@"た"},
             @"ADJI":
                 @{@"い$":@"かった"},
             @"ADJNA":
@@ -137,8 +179,7 @@
                 @"む$":@"まない",
                 @"る$":@"らない"},
             @"V1":
-                @{@"いる$":@"いない",
-                  @"える$":@"えない"},
+                @{@"る$":@"ない"},
             @"ADJI":
                 @{@"い$":@"くない"},
             @"ADJNA":

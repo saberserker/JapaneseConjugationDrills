@@ -18,8 +18,15 @@
 
 @implementation FPNConjugateJapaneseQuizGenerator
 
++ (FPNConjugateJapaneseQuizGenerator*) newWithConjugation: (NSString*) conjugation{
+    FPNConjugateJapaneseQuizGenerator* retval = [FPNConjugateJapaneseQuizGenerator new];
+    retval.conjugationCategory = conjugation;
+    return retval;
+}
+
 -(NSArray*)validWordCategoriesForConjugationRules:(NSString*) someForm {
     NSArray* withAdj = @[@"V1",@"V5",@"ADJNA",@"ADJI"];
+
     NSArray* noAdj = @[@"V1",@"V5"];
     NSDictionary* rules = @{@"TEFORM":withAdj,
                             @"TAFORM":withAdj,
@@ -38,8 +45,10 @@
 }
 
 -(void)generateMultipleChoice:(void (^)(NSString* question, NSArray* wrongAnswers))callback {
-    //pick any conjugation category randomly
-    self.conjugationCategory = @"TEFORM";
+    //pick a conjugation category if it doesn't exist
+    if (self.conjugationCategory == nil) {
+        self.conjugationCategory = @"TEFORM";
+    }
     
     NSArray* validVerbCats = [self validWordCategoriesForConjugationRules:self.conjugationCategory];
     NSDictionary* vocab = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"japanese_words" ofType:@"plist"]];
@@ -56,8 +65,15 @@
     NSArray* wrongAnswers = [self generateIncorrectAnswersThatDoNotMatch:self.correctAnswer conjugatePlainForm:word wordType:self.wordCategory conjugationType:self.conjugationCategory];
     
     //stuff that make the question presentable
+    NSDictionary* adjKeyForDescription = @{@"V1":   @"Ichidan Verb",
+                                           @"V5":    @"Godan Verb",
+                                           @"ADJNA": @"な-Adjective",
+                                           @"ADJI":  @"い-Adjective"};
+    
     NSString* furigana = ((NSDictionary*)wordlistdict[word])[@"furigana"];
-    NSString* displayableProblemString = [@[word, furigana, self.wordCategory] componentsJoinedByString:@"\n"];
+    NSString* englishMeaning = ((NSDictionary*)wordlistdict[word])[@"definition"];
+
+    NSString* displayableProblemString = [@[word, furigana, adjKeyForDescription[self.wordCategory],englishMeaning]componentsJoinedByString:@"\n"];
     callback(displayableProblemString,wrongAnswers);
 }
 
@@ -97,8 +113,6 @@
         
         NSString* incorrectPattern = [FPNConjugateJapaneseQuizGenerator incorrectPatterns][wordType];
         NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:incorrectPattern options:NSRegularExpressionAnchorsMatchLines error:&error];
-//        candidateString = [regex stringByReplacingMatchesInString:candidateString options:0 range:NSMakeRange(0, plainForm.length) withTemplate:(NSString*)everyRule[pattern]];
-//        NSInteger matches = [regex replaceMatchesInString:candidateString options:0 range:NSMakeRange(0, candidateString.length) withTemplate:(NSString*)everyRule[pattern]];
         NSTextCheckingResult * result = [regex firstMatchInString:plainForm options:0 range:NSMakeRange(0, plainForm.length)];
         
         if (result) {
@@ -183,8 +197,105 @@
             @"ADJI":
                 @{@"い$":@"くない"},
             @"ADJNA":
-                @{@"な{0,1}$":@"じゃない"},
-            }
+                @{@"な{0,1}$":@"じゃない"}
+            },
+      @"IFORM": @{
+              @"V5": @{
+                      @"う$":@"い",
+                      @"く$":@"き",
+                      @"ぐ$":@"ぎ",
+                      @"す$":@"し",
+                      @"つ$":@"ち",
+                      @"ぬ$":@"に",
+                      @"ぶ$":@"び",
+                      @"む$":@"み",
+                      @"る$":@"り"
+                      },
+              @"V1": @{ @"る$":@""}},
+      
+      @"ERUFORM": @{
+              @"V5": @{
+                      @"う$":@"える",
+                      @"く$":@"ける",
+                      @"ぐ$":@"げる",
+                      @"す$":@"せる",
+                      @"つ$":@"てる",
+                      @"ぬ$":@"ねる",
+                      @"ぶ$":@"べる",
+                      @"む$":@"める",
+                      @"る$":@"れる"
+                      },
+              @"V1": @{ @"える$":@"られる" }},
+      @"CAUSATIVEFORM": @{
+              @"V5": @{
+                      @"う$":@"わせる",
+                      @"く$":@"かせる",
+                      @"ぐ$":@"がせる",
+                      @"す$":@"させる",
+                      @"つ$":@"たせる",
+                      @"ぬ$":@"なせる",
+                      @"ぶ$":@"ばせる",
+                      @"む$":@"ませる",
+                      @"る$":@"らせる"
+                      },
+              @"V1": @{ @"る$":@"させる"},
+              @"ADJI": @{ @"い$":@"くさせる" },
+              @"ADJNA": @{ @"な{0,1}$":@"にさせる" }},
+    @"PASSIVEFORM": @{
+                      @"V5": @{
+                              @"う$":@"われる",
+                              @"く$":@"かれる",
+                              @"ぐ$":@"がれる",
+                              @"す$":@"される",
+                              @"つ$":@"たれる",
+                              @"ぬ$":@"なれる",
+                              @"ぶ$":@"ばれる",
+                              @"む$":@"まれる",
+                              @"る$":@"られる"
+                              }, 
+                      @"V1": @{ @"る$":@"られる" }},
+    @"EBAFORM": @{ 
+                  @"V5": @{
+                          @"う$":@"えば",
+                          @"く$":@"けば",
+                          @"ぐ$":@"げば",
+                          @"す$":@"せば",
+                          @"つ$":@"てば",
+                          @"ぬ$":@"ねば",
+                          @"ぶ$":@"べば",
+                          @"む$":@"めば",
+                          @"る$":@"れば"
+                          }, 
+                  @"V1": @{ @"る$":@"れば"},
+                  @"ADJI": @{ @"い$":@"ければ"},
+                  @"ADJNA": @{ @"な{0,1}$":@"であれば" }
+                  },
+    @"IMPERATIVEFORM": @{
+                         @"V5": @{
+                                 @"う$":@"え",
+                                 @"く$":@"け",
+                                 @"ぐ$":@"げ",
+                                 @"す$":@"せ",
+                                 @"つ$":@"て",
+                                 @"ぬ$":@"ね",
+                                 @"ぶ$":@"べ",
+                                 @"む$":@"め",
+                                 @"る$":@"れ"},
+                         @"V1": @{ @"る$":@"ろ"}},
+    @"VOLITIONALFORM": @{
+                         @"V5": @{
+                                 @"う$":@"おう",
+                                 @"く$":@"こう",
+                                 @"ぐ$":@"ごう",
+                                 @"す$":@"そう",
+                                 @"つ$":@"とう",
+                                 @"ぬ$":@"のう",
+                                 @"ぶ$":@"ぼう",
+                                 @"む$":@"もう",
+                                 @"る$":@"ろう"},
+                         @"V1": @{ @"る$":@"よう"}, 
+                         @"ADJI": @{ @"い$":@"かろう"}, 
+                         @"ADJNA": @{ @"な{0,1}$":@"だろう"}}
       };
     return retval;
 }

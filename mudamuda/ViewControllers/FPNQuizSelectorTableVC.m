@@ -33,7 +33,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.cellNames = @[ @"Hiragana Basic", @"Hiragana Marked", @"Hiragana Doubled", @"Hiragana Doubled and Marked", @"Hiragana All", @"Katakana Basic", @"Katakana Marked", @"Katakana Doubled", @"Katakana Doubled and Marked", @"Katakana All", @"Everything Kana",@"Hangul Parts", @"Japanese Conjugation (BETA)"];
+    self.cellNames = @[ @"Hiragana Basic", @"Hiragana Marked", @"Hiragana Doubled", @"Hiragana Doubled and Marked", @"Hiragana All", @"Katakana Basic", @"Katakana Marked", @"Katakana Doubled", @"Katakana Doubled and Marked", @"Katakana All", @"Everything Kana",@"Hangul Parts",
+                        @"て-form",
+                        @"た-form",
+                        @"ます-stem",
+                        @"い-form",
+                        @"える-form",
+                        @"Causative form",
+                        @"Passive form",
+                        @"えば-form",
+                        @"Imperative form",
+                        @"Volitional form"];
     self.quizGenerator = @[[FPNAllRomanjiForKana quizWithType: kHiraganaBasic],
                            [FPNAllRomanjiForKana quizWithType: kHiraganaMarked],
                            [FPNAllRomanjiForKana quizWithType: kHiraganaDouble],
@@ -46,7 +56,17 @@
                            [FPNAllRomanjiForKana quizWithType: kKatakanaAll],
                            [FPNAllRomanjiForKana quizWithType: kKanaAll],
                            [FPNHangulQuizGenerator new],
-                           [FPNConjugateJapaneseQuizGenerator new]];
+                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"TEFORM"],
+                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"TAFORM"],
+                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"NAIFORM"],
+                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"IFORM"],
+                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"ERUFORM"],
+                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"CAUSATIVEFORM"],
+                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"PASSIVEFORM"],
+                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"EBAFORM"],
+                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"IMPERATIVEFORM"],
+                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"VOLITIONALFORM"]
+                           ];
 
     
     // Uncomment the following line to preserve selection between presentations.
@@ -95,7 +115,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView  didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"toMultipleChoice" sender:self.quizGenerator[indexPath.row]];
+    [self performSegueWithIdentifier:@"toMultipleChoice" sender:indexPath];
 }
 
 
@@ -143,9 +163,11 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    id<FPNMultipleChoiceQuizGenerator> gen = sender;
+    NSIndexPath* indexPath = sender;
+    id<FPNMultipleChoiceQuizGenerator> gen = self.quizGenerator[indexPath.row];
     FPNMultipleChoiceVC* multi = segue.destinationViewController;
     multi.quizGenerator = gen;
+    multi.navigationItem.title = self.cellNames[indexPath.row];
     [multi setThemeColor: self.themeColor];
 }
 

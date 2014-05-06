@@ -10,7 +10,8 @@
 #import "FPNMultipleChoiceQuizGenerator.h"
 
 @interface FPNConjugateJapaneseQuizGenerator : NSObject <FPNMultipleChoiceQuizGenerator>
--(void)generateMultipleChoice:(void (^)(NSString* question, NSArray* wrongAnswers))callback;
--(BOOL)is:(NSString*)answer correctforQuestion:(NSString*) question;
++ (FPNConjugateJapaneseQuizGenerator*) newWithConjugation: (NSString*) conjugation;
+- (void)generateMultipleChoice:(void (^)(NSString* question, NSArray* wrongAnswers))callback;
+- (BOOL)is:(NSString*)answer correctforQuestion:(NSString*) question;
 
 @end

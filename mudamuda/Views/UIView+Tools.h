@@ -10,4 +10,5 @@
 
 @interface UIView (Tools)
 -(void) shadowOpacityTo:(CGFloat)alpha from:(CGFloat)fromAlpha;
+-(CAGradientLayer*)shineGradient;
 @end

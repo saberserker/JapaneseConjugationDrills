@@ -46,4 +46,23 @@
     [gradient addAnimation:flash forKey:@"shadowAni"];
 }
 
+-(CAGradientLayer*)shineGradient {
+    CAGradientLayer* gradient = [self.layer valueForKey:@"FPNchildShineGradient"];
+    if (gradient == nil) {
+        gradient = [[CAGradientLayer alloc] init];
+        gradient.startPoint = CGPointMake(0.6, 0.2);
+        gradient.endPoint = CGPointMake(0.7, 0.5);
+        gradient.frame = self.bounds;
+        gradient.cornerRadius = self.layer.cornerRadius;
+        gradient.opacity = 0;
+        [self.layer addSublayer:gradient];
+        [self.layer setValue:gradient forKey:@"FPNchildShineGradient"];
+        
+        UIColor* white = [UIColor colorWithWhite:1 alpha:0.5];
+        UIColor* clear = [UIColor colorWithWhite:1 alpha:0];
+        gradient.colors = [NSArray arrayWithObjects:(id)clear.CGColor, (id)white.CGColor, (id)white.CGColor, (id)white.CGColor, (id)clear.CGColor,nil];
+    }
+    return gradient;
+}
+
 @end

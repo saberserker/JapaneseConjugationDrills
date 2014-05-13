@@ -14,4 +14,6 @@
 - (void)generateMultipleChoice:(void (^)(NSString* question, NSArray* wrongAnswers))callback;
 - (BOOL)is:(NSString*)answer correctforQuestion:(NSString*) question;
 
+//This method is exposed as public for unit testing purposes
+-(NSString*)conjugatePlainForm:(NSString*)plainForm wordType:(NSString*) wordType conjugationType:(NSString*)conjugationType;
 @end

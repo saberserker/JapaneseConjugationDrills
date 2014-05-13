@@ -17,6 +17,12 @@
 @interface FPNQuizSelectorTableVC ()
 @property (nonatomic,strong) NSArray * cellNames;
 @property (nonatomic,strong) NSArray * quizGenerator;
+
+@property (nonatomic,strong) NSArray * sectionNames;
+@property (nonatomic,strong) NSArray * vcNames;
+@property (nonatomic,strong) NSArray * vcs;
+
+
 @end
 
 @implementation FPNQuizSelectorTableVC
@@ -33,40 +39,50 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.cellNames = @[ @"Hiragana Basic", @"Hiragana Marked", @"Hiragana Doubled", @"Hiragana Doubled and Marked", @"Hiragana All", @"Katakana Basic", @"Katakana Marked", @"Katakana Doubled", @"Katakana Doubled and Marked", @"Katakana All", @"Everything Kana",@"Hangul Parts",
-                        @"て-form",
-                        @"た-form",
-                        @"ます-stem",
-                        @"い-form",
-                        @"える-form",
-                        @"Causative form",
-                        @"Passive form",
-                        @"えば-form",
-                        @"Imperative form",
-                        @"Volitional form"];
-    self.quizGenerator = @[[FPNAllRomanjiForKana quizWithType: kHiraganaBasic],
-                           [FPNAllRomanjiForKana quizWithType: kHiraganaMarked],
-                           [FPNAllRomanjiForKana quizWithType: kHiraganaDouble],
-                           [FPNAllRomanjiForKana quizWithType: kHiraganaMarkedDouble],
-                           [FPNAllRomanjiForKana quizWithType: kHiraganaAll],
-                           [FPNAllRomanjiForKana quizWithType: kKatakanaBasic],
-                           [FPNAllRomanjiForKana quizWithType: kKatakanaMarked],
-                           [FPNAllRomanjiForKana quizWithType: kKatakanaDouble],
-                           [FPNAllRomanjiForKana quizWithType: kKatakanaMarkedDouble],
-                           [FPNAllRomanjiForKana quizWithType: kKatakanaAll],
-                           [FPNAllRomanjiForKana quizWithType: kKanaAll],
-                           [FPNHangulQuizGenerator new],
-                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"TEFORM"],
-                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"TAFORM"],
-                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"NAIFORM"],
-                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"IFORM"],
-                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"ERUFORM"],
-                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"CAUSATIVEFORM"],
-                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"PASSIVEFORM"],
-                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"EBAFORM"],
-                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"IMPERATIVEFORM"],
-                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"VOLITIONALFORM"]
-                           ];
+    
+    NSArray* kana = @[@"Hiragana Basic", @"Hiragana Marked", @"Hiragana Doubled", @"Hiragana Doubled and Marked", @"Hiragana All", @"Katakana Basic", @"Katakana Marked", @"Katakana Doubled", @"Katakana Doubled and Marked", @"Katakana All", @"Everything Kana"];
+    NSArray* conju = @[                        @"て-form",
+                                               @"た-form",
+                                               @"ます-stem",
+                                               @"い-form",
+                                               @"える-form",
+                                               @"Causative form",
+                                               @"Passive form",
+                                               @"えば-form",
+                                               @"Imperative form",
+                                               @"Volitional form"];
+    NSArray* bonus = @[@"Hangul Jamo", @"About"];
+    
+    NSArray* kanaVCs = @[[FPNAllRomanjiForKana quizWithType: kHiraganaBasic],
+                         [FPNAllRomanjiForKana quizWithType: kHiraganaMarked],
+                         [FPNAllRomanjiForKana quizWithType: kHiraganaDouble],
+                         [FPNAllRomanjiForKana quizWithType: kHiraganaMarkedDouble],
+                         [FPNAllRomanjiForKana quizWithType: kHiraganaAll],
+                         [FPNAllRomanjiForKana quizWithType: kKatakanaBasic],
+                         [FPNAllRomanjiForKana quizWithType: kKatakanaMarked],
+                         [FPNAllRomanjiForKana quizWithType: kKatakanaDouble],
+                         [FPNAllRomanjiForKana quizWithType: kKatakanaMarkedDouble],
+                         [FPNAllRomanjiForKana quizWithType: kKatakanaAll],
+                         [FPNAllRomanjiForKana quizWithType: kKanaAll]];
+    
+    NSArray* conjuVCs = @[[FPNConjugateJapaneseQuizGenerator newWithConjugation:@"TEFORM"],
+                          [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"TAFORM"],
+                          [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"NAIFORM"],
+                          [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"IFORM"],
+                          [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"ERUFORM"],
+                          [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"CAUSATIVEFORM"],
+                          [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"PASSIVEFORM"],
+                          [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"EBAFORM"],
+                          [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"IMPERATIVEFORM"],
+                          [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"VOLITIONALFORM"]];
+    
+    NSArray* otherVCs = @[[FPNHangulQuizGenerator new], [FPNHangulQuizGenerator new]];
+    self.vcs = @[kanaVCs,conjuVCs,otherVCs];
+
+
+    self.sectionNames = @[@"Hiragana/Katakana",@"Conjugation",@"Other"];
+    self.vcNames = @[kana,conju,bonus];
+
 
     
     // Uncomment the following line to preserve selection between presentations.
@@ -79,8 +95,13 @@
 - (void) viewWillAppear:(BOOL)animated {
     [self setRandomThemeColor];
     self.view.backgroundColor = [UIColor colorWithHue:self.themeColor saturation:0.5 brightness:0.8 alpha:1];
+//    [self.navigationController setNavigationBarH  idden:YES animated:YES];
 
     [self.tableView reloadData];
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+//    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,19 +114,24 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return self.sectionNames.count;
+}
+
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return self.sectionNames[section];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.cellNames.count;
+    return ((NSArray*)self.vcNames[section]).count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"quizSelect" forIndexPath:indexPath];
-    cell.textLabel.text = self.cellNames[indexPath.row];
+    cell.textLabel.text = ((NSArray*)self.vcNames[indexPath.section])[indexPath.row];
+    cell.textLabel.textColor = [UIColor whiteColor];
     
     CGFloat min = 0.8;
     CGFloat ds  = 0.4 / [self tableView:tableView numberOfRowsInSection:0];
@@ -113,11 +139,6 @@
     cell.backgroundColor = [UIColor colorWithHue:self.themeColor saturation:(final ) / 2 brightness:final alpha:1];
     return cell;
 }
-
-- (void)tableView:(UITableView *)tableView  didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"toMultipleChoice" sender:indexPath];
-}
-
 
 /*
 // Override to support conditional editing of the table view.
@@ -159,15 +180,23 @@
 
 #pragma mark - Navigation
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    id gen = ((NSArray*)self.vcs[indexPath.section])[indexPath.row];
+    if ([gen conformsToProtocol:@protocol(FPNMultipleChoiceQuizGenerator)]) {
+        [self performSegueWithIdentifier:@"toMultipleChoice" sender:indexPath];
+    }
+}
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSIndexPath* indexPath = sender;
-    id<FPNMultipleChoiceQuizGenerator> gen = self.quizGenerator[indexPath.row];
-    FPNMultipleChoiceVC* multi = segue.destinationViewController;
-    multi.quizGenerator = gen;
-    multi.navigationItem.title = self.cellNames[indexPath.row];
-    [multi setThemeColor: self.themeColor];
+    if ([segue.identifier isEqualToString:@"toMultipleChoice"]){
+        FPNMultipleChoiceVC* multi = segue.destinationViewController;
+        multi.quizGenerator =           ((NSArray*)self.vcs    [indexPath.section])[indexPath.row];
+        multi.navigationItem.title =    ((NSArray*)self.vcNames[indexPath.section])[indexPath.row];
+        [multi setThemeColor: self.themeColor];
+    }
 }
 
 

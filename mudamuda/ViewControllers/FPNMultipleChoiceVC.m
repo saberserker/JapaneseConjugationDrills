@@ -82,12 +82,14 @@ static BOOL correctAnswerSelected;
         }];
     }
     
+    [self.view layoutSubviews];
     [UIView animateWithDuration:0.4 animations:^{
         self.questionView.layer.transform = flattened3d;
         [self.questionView shadowOpacityTo:0.5 from:0];
         
         [self setRandomThemeColorChangeWithDelta:0.1];
         [self setupThemeColors];
+        [self.view layoutSubviews];
 
     } completion:^(BOOL finished) {
         [self setupQuestions];
@@ -97,12 +99,14 @@ static BOOL correctAnswerSelected;
         self.questionView.layer.transform = flattenedover3d;
         [UIView animateWithDuration:0.4 animations:^{
             self.questionView.layer.transform = CATransform3DIdentity;
+            [self.view layoutSubviews];
         }];
         [self.questionView shadowOpacityTo:0 from:0.5];
         for (FPNQuizAnswerButton* b in self.answerButton) {
             b.layer.transform = CATransform3DMakeTranslation(1000, 0, 0);
             CGFloat animTime = 0.37 + 0.3 * [self stepBasedOnRange:viewRange forView:b];
             [UIView animateWithDuration:animTime animations:^{
+                [self.view layoutSubviews];
                 b.layer.transform = CATransform3DIdentity;
             }];
         }

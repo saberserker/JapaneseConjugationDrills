@@ -44,8 +44,8 @@
     NSArray* kana = @[@"Hiragana Basic", @"Hiragana Marked", @"Hiragana Doubled", @"Hiragana Doubled and Marked", @"Hiragana All", @"Katakana Basic", @"Katakana Marked", @"Katakana Doubled", @"Katakana Doubled and Marked", @"Katakana All", @"Everything Kana"];
     NSArray* conju = @[                        @"て-form",
                                                @"た-form",
+                                               @"ない-form",
                                                @"ます-stem",
-                                               @"い-form",
                                                @"える-form",
                                                @"Causative form",
                                                @"Passive form",

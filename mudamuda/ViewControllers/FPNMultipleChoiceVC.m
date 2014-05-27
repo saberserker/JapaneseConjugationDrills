@@ -32,8 +32,8 @@
 
 - (void) setupThemeColors {
     CGFloat themeHue = self.themeColor;
-    self.questionView.backgroundColor = [UIColor colorWithHue:themeHue saturation:0.4 brightness:0.8 alpha:1];
-    self.questionView.layer.borderColor = [UIColor colorWithHue:themeHue saturation:0.8 brightness:0.7 alpha:1].CGColor;
+    self.questionView.backgroundColor = [UIColor colorWithHue:themeHue saturation:0.4 brightness:0.6 alpha:1];
+    self.questionView.layer.borderColor = [UIColor colorWithHue:themeHue saturation:0.8 brightness:0.8 alpha:1].CGColor;
     for (FPNQuizAnswerButton* button in self.answerButton) {
         [button resetButtonWithHue:themeHue];
     }
@@ -49,6 +49,7 @@
         self.questionView.text = question;
         [self.questionView setFont:[UIFont boldSystemFontOfSize:90]];
         [self.questionView setTextAlignment:NSTextAlignmentCenter];
+        [self.questionView setTextColor:[UIColor colorWithHue:self.themeColor saturation:0.2 brightness:1 alpha:1]];
         [self assignToButtonsPossibleAnswers:possibleAnswers];
     }];
 }
@@ -106,6 +107,10 @@
             CGFloat animTime = 0.37 + 0.3 * [self stepBasedOnRange:viewRange forView:b];
             [UIView animateWithDuration:animTime animations:^{
                 [self.view layoutSubviews];
+                b.layer.transform = CATransform3DIdentity;
+            } completion:^(BOOL finished) {
+                [self.view layoutSubviews];
+                [self.view setNeedsDisplay];
                 b.layer.transform = CATransform3DIdentity;
             }];
         }

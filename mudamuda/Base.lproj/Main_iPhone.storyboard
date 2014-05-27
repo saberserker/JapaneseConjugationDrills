@@ -502,7 +502,8 @@
                             <textView multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="単語" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls9-cf-SBy">
                                 <rect key="frame" x="20" y="74" width="282" height="310"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.9453710206" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.57930253769888251" green="1" blue="0.64105032877586732" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="90"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>

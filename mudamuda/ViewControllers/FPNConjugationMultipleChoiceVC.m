@@ -34,5 +34,24 @@
     }];
 }
 
+- (void) setupQuestionsWithAnimation {
+    [super setupQuestionsWithAnimation];
+    
+    NSArray* questionViews = @[self.wordLabel,self.furiganaLabel,self.wordTypeLabel,self.definitionLabel];
+    NSRange viewRange = [self rangeBasedOnCollectionOfViews:questionViews];
+    
+    
+    for (UIView* v in questionViews) {
+        CGFloat animTime = 0.05 + 0.35 * [self stepBasedOnRange:viewRange forView:v];
+        [UIView animateWithDuration:animTime animations:^{
+            v.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:animTime delay:0.41 - animTime options:0 animations:^{
+                v.alpha = 1.0;
+            } completion:nil];
+        }];
+        
+    }
+}
 
 @end

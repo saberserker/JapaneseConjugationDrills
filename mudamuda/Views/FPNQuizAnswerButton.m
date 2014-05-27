@@ -20,8 +20,8 @@
 
 
 -(void) resetButtonWithHue:(CGFloat)hue {
-    self.backgroundColor = [UIColor colorWithHue:hue saturation:0.2 brightness:0.95 alpha:1];
-    self.layer.borderColor = [UIColor colorWithHue:hue saturation:0.7 brightness:0.7 alpha:1].CGColor;
+    self.backgroundColor = [UIColor colorWithHue:hue saturation:0.4 brightness:0.6 alpha:1];
+    self.layer.borderColor = [UIColor colorWithHue:hue saturation:0.4 brightness:0.8 alpha:1].CGColor;
 }
 
 //color static appearances

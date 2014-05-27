@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "FPNMultipleChoiceQuizGenerator.h"
+#import "FPNQuizAnswerButton.h"
 
 
 @interface FPNMultipleChoiceVC : UIViewController
 @property (strong, nonatomic) id<FPNMultipleChoiceQuizGenerator> quizGenerator;
+@property (assign, nonatomic) BOOL correctAnswerSelected;
+@property (strong, nonatomic) IBOutletCollection(FPNQuizAnswerButton) NSArray *answerButton;
+
+//internal helper methods
+- (void) assignToButtonsPossibleAnswers:(NSArray*)possibleAnswers;
 @end

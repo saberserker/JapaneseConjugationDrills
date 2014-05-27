@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F10519DD19343AA900FD6C79 /* FPNConjugationMultipleChoiceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F10519DC19343AA900FD6C79 /* FPNConjugationMultipleChoiceVC.m */; };
 		F191A80E190A1794004836F2 /* FPNViewBorderColorizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F191A80D190A1794004836F2 /* FPNViewBorderColorizer.m */; };
 		F191A812190A2050004836F2 /* FPNAllRomanjiForKana.m in Sources */ = {isa = PBXBuildFile; fileRef = F191A811190A2050004836F2 /* FPNAllRomanjiForKana.m */; };
 		F191A817190AFD4E004836F2 /* FPNQuizSelectorTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F191A816190AFD4E004836F2 /* FPNQuizSelectorTableVC.m */; };
@@ -51,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F10519DB19343AA900FD6C79 /* FPNConjugationMultipleChoiceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNConjugationMultipleChoiceVC.h; path = ViewControllers/FPNConjugationMultipleChoiceVC.h; sourceTree = "<group>"; };
+		F10519DC19343AA900FD6C79 /* FPNConjugationMultipleChoiceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNConjugationMultipleChoiceVC.m; path = ViewControllers/FPNConjugationMultipleChoiceVC.m; sourceTree = "<group>"; };
 		F191A80C190A1794004836F2 /* FPNViewBorderColorizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNViewBorderColorizer.h; path = Views/FPNViewBorderColorizer.h; sourceTree = "<group>"; };
 		F191A80D190A1794004836F2 /* FPNViewBorderColorizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNViewBorderColorizer.m; path = Views/FPNViewBorderColorizer.m; sourceTree = "<group>"; };
 		F191A810190A2050004836F2 /* FPNAllRomanjiForKana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNAllRomanjiForKana.h; path = Models/FPNAllRomanjiForKana.h; sourceTree = "<group>"; };
@@ -261,6 +264,8 @@
 				F191A816190AFD4E004836F2 /* FPNQuizSelectorTableVC.m */,
 				F1FD4288190F68FB00D83483 /* UIViewController+Colors.h */,
 				F1FD4289190F68FB00D83483 /* UIViewController+Colors.m */,
+				F10519DB19343AA900FD6C79 /* FPNConjugationMultipleChoiceVC.h */,
+				F10519DC19343AA900FD6C79 /* FPNConjugationMultipleChoiceVC.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 			files = (
 				F1FD428A190F68FB00D83483 /* UIViewController+Colors.m in Sources */,
 				F1C17FA019174909003102E6 /* FPNConjugateJapaneseQuizGenerator.m in Sources */,
+				F10519DD19343AA900FD6C79 /* FPNConjugationMultipleChoiceVC.m in Sources */,
 				F191A812190A2050004836F2 /* FPNAllRomanjiForKana.m in Sources */,
 				F191A81C190DC4EE004836F2 /* FPNQuizAnswerButton.m in Sources */,
 				F1EA9B4719070201007F9F5C /* FPNMultipleChoiceVC.m in Sources */,

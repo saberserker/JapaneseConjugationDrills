@@ -8,14 +8,12 @@
 
 #import "FPNMultipleChoiceVC.h"
 #import "FPNAllRomanjiForKana.h"
-#import "FPNQuizAnswerButton.h"
 #import "FPNViewBorderColorizer.h"
 #import "UIView+Tools.h"
 #import "UIViewController+Colors.h"
 
 @interface FPNMultipleChoiceVC ()
 @property (weak, nonatomic) IBOutlet UITextView *questionView;
-@property (strong, nonatomic) IBOutletCollection(FPNQuizAnswerButton) NSArray *answerButton;
 @end
 
 @implementation FPNMultipleChoiceVC
@@ -44,26 +42,27 @@
     [background colorWithHue:themeHue];
 }
 
-static BOOL correctAnswerSelected;
 - (void) setupQuestions {
-    correctAnswerSelected = false;
-    
-    NSMutableArray* randomButtons = [[NSMutableArray alloc] initWithArray:self.answerButton];
-    for (int i = 0; i < randomButtons.count; i++) {
-        [randomButtons exchangeObjectAtIndex:i withObjectAtIndex:arc4random_uniform(randomButtons.count)];
-    }
+    self.correctAnswerSelected = false;
     
     [self.quizGenerator generateMultipleChoice:^(NSString *question, NSArray *possibleAnswers) {
         self.questionView.text = question;
         [self.questionView setFont:[UIFont boldSystemFontOfSize:30]];
         [self.questionView setTextAlignment:NSTextAlignmentCenter];
-
-        for (int i = 0; i < MIN(possibleAnswers.count, randomButtons.count); i++) {
-            UIButton* button = ((UIButton*)randomButtons[i]);
-            button.titleLabel.adjustsFontSizeToFitWidth = YES;
-           [button setTitle:((NSString*)possibleAnswers[i]) forState:UIControlStateNormal];
-        }
+        [self assignToButtonsPossibleAnswers:possibleAnswers];
     }];
+}
+
+- (void) assignToButtonsPossibleAnswers:(NSArray*)possibleAnswers {
+    NSMutableArray* randomButtons = [[NSMutableArray alloc] initWithArray:self.answerButton];
+    for (int i = 0; i < randomButtons.count; i++) {
+        [randomButtons exchangeObjectAtIndex:i withObjectAtIndex:arc4random_uniform(randomButtons.count)];
+    }
+    for (int i = 0; i < MIN(possibleAnswers.count, randomButtons.count); i++) {
+        UIButton* button = ((UIButton*)randomButtons[i]);
+        button.titleLabel.adjustsFontSizeToFitWidth = YES;
+        [button setTitle:((NSString*)possibleAnswers[i]) forState:UIControlStateNormal];
+    }
 }
 
 - (void) setupQuestionsWithAnimation {
@@ -133,14 +132,14 @@ static BOOL correctAnswerSelected;
 }
 
 - (IBAction)answerPushed: (FPNQuizAnswerButton*) sender {
-    if (correctAnswerSelected) {
+    if (self.correctAnswerSelected) {
         [self setupQuestionsWithAnimation];
         return;
     }
     
     if ([self.quizGenerator is:sender.titleLabel.text correctforQuestion: self.questionView.text]) {
         [sender buttonLooksRight];
-        correctAnswerSelected = YES;
+        self.correctAnswerSelected = YES;
     } else {
         [sender buttonLooksWrong];
     }

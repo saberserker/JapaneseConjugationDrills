@@ -44,7 +44,7 @@
     return nil;
 }
 
--(void)generateMultipleChoice:(void (^)(NSString* question, NSArray* wrongAnswers))callback {
+- (void)generateConjugationMultipleChoice:(void (^)(NSString * verb, NSString * furigana, NSString * verbType, NSString * definition, NSArray * possibleAnswers))callback {
     //pick a conjugation category if it doesn't exist
     if (self.conjugationCategory == nil) {
         self.conjugationCategory = @"TEFORM";
@@ -61,7 +61,7 @@
     NSString* word = [wordlistdict allKeys][arc4random_uniform(wordlistdict.count)];
     
     self.correctAnswer = [self conjugatePlainForm:word wordType:self.wordCategory conjugationType:self.conjugationCategory];
-//    NSArray* wrongAnswers = @[self.correctAnswer, @"so doge", @"four", @"hatsune miku", @"doge", @"dog"];
+    //    NSArray* wrongAnswers = @[self.correctAnswer, @"so doge", @"four", @"hatsune miku", @"doge", @"dog"];
     NSArray* wrongAnswers = [self generateIncorrectAnswersThatDoNotMatch:self.correctAnswer conjugatePlainForm:word wordType:self.wordCategory conjugationType:self.conjugationCategory];
     
     //stuff that make the question presentable
@@ -72,9 +72,17 @@
     
     NSString* furigana = ((NSDictionary*)wordlistdict[word])[@"furigana"];
     NSString* englishMeaning = ((NSDictionary*)wordlistdict[word])[@"definition"];
+    
+    
+    callback(word,furigana,adjKeyForDescription[self.wordCategory],englishMeaning,wrongAnswers);
+}
 
-    NSString* displayableProblemString = [@[word, furigana, adjKeyForDescription[self.wordCategory],englishMeaning]componentsJoinedByString:@"\n"];
-    callback(displayableProblemString,wrongAnswers);
+//legacy method
+-(void)generateMultipleChoice:(void (^)(NSString* question, NSArray* wrongAnswers))callback {
+    [self generateConjugationMultipleChoice:^(NSString *verb, NSString *furigana, NSString *verbType, NSString *definition, NSArray *possibleAnswers) {
+        NSString* displayableProblemString = [@[verb, furigana, verbType, definition]componentsJoinedByString:@"\n"];
+        callback(displayableProblemString,possibleAnswers);
+    }];
 }
 
 -(BOOL)is:(NSString*)answer correctforQuestion:(NSString*) question {

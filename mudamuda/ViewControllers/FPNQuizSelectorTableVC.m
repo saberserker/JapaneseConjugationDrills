@@ -13,6 +13,7 @@
 #import "FPNHangulQuizGenerator.h"
 #import "UIViewController+Colors.h"
 #import "FPNConjugateJapaneseQuizGenerator.h"
+#import "FPNConjugationMultipleChoiceVC.h"
 
 @interface FPNQuizSelectorTableVC ()
 @property (nonatomic,strong) NSArray * cellNames;
@@ -136,7 +137,7 @@
     CGFloat min = 0.8;
     CGFloat ds  = 0.4 / [self tableView:tableView numberOfRowsInSection:0];
     CGFloat final = min - ds * indexPath.row;
-    cell.backgroundColor = [UIColor colorWithHue:self.themeColor saturation:(final ) / 2 brightness:final alpha:1];
+    cell.backgroundColor = [UIColor colorWithHue:self.themeColor saturation:(final )  brightness:final / 2 alpha:1];
     return cell;
 }
 
@@ -182,8 +183,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     id gen = ((NSArray*)self.vcs[indexPath.section])[indexPath.row];
+    if ([gen isKindOfClass:[FPNConjugateJapaneseQuizGenerator class]]) {
+        [self performSegueWithIdentifier:@"toConjugationMultipleChoice" sender:indexPath];
+        return;
+    }
     if ([gen conformsToProtocol:@protocol(FPNMultipleChoiceQuizGenerator)]) {
         [self performSegueWithIdentifier:@"toMultipleChoice" sender:indexPath];
+        return;
     }
 }
 
@@ -191,12 +197,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSIndexPath* indexPath = sender;
+    UIViewController* nextVC = segue.destinationViewController;
     if ([segue.identifier isEqualToString:@"toMultipleChoice"]){
         FPNMultipleChoiceVC* multi = segue.destinationViewController;
-        multi.quizGenerator =           ((NSArray*)self.vcs    [indexPath.section])[indexPath.row];
-        multi.navigationItem.title =    ((NSArray*)self.vcNames[indexPath.section])[indexPath.row];
-        [multi setThemeColor: self.themeColor];
+        multi.quizGenerator = ((NSArray*)self.vcs    [indexPath.section])[indexPath.row];
     }
+    if ([segue.identifier isEqualToString:@"toConjugationMultipleChoice"]){
+        FPNConjugationMultipleChoiceVC* multi = segue.destinationViewController;
+        multi.conjugationGenerator = ((NSArray*)self.vcs    [indexPath.section])[indexPath.row];
+    }
+    nextVC.navigationItem.title = ((NSArray*)self.vcNames[indexPath.section])[indexPath.row];
+    [nextVC setThemeColor: self.themeColor];
 }
 
 

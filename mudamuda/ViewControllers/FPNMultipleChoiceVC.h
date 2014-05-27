@@ -18,4 +18,9 @@
 
 //internal helper methods
 - (void) assignToButtonsPossibleAnswers:(NSArray*)possibleAnswers;
+- (void) setupQuestionsWithAnimation;
+
+//very esoteric animation helpers.
+- (NSRange) rangeBasedOnCollectionOfViews:(NSArray*) views;
+- (CGFloat) stepBasedOnRange:(NSRange) range forView:(UIView*)v;
 @end

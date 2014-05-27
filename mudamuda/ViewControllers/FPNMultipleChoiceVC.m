@@ -47,7 +47,7 @@
     
     [self.quizGenerator generateMultipleChoice:^(NSString *question, NSArray *possibleAnswers) {
         self.questionView.text = question;
-        [self.questionView setFont:[UIFont boldSystemFontOfSize:30]];
+        [self.questionView setFont:[UIFont boldSystemFontOfSize:90]];
         [self.questionView setTextAlignment:NSTextAlignmentCenter];
         [self assignToButtonsPossibleAnswers:possibleAnswers];
     }];

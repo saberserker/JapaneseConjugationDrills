@@ -124,7 +124,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return ((NSArray*)self.vcNames[section]).count;
+    return MIN(((NSArray*)self.vcNames[section]).count, ((NSArray*)self.vcs[section]).count);
 }
 
 

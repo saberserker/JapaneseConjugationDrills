@@ -94,10 +94,8 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    [self setRandomThemeColor];
+    [self setThemeColor:0];
     self.view.backgroundColor = [UIColor colorWithHue:self.themeColor saturation:0.5 brightness:0.8 alpha:1];
-//    [self.navigationController setNavigationBarH  idden:YES animated:YES];
-
     [self.tableView reloadData];
 }
 

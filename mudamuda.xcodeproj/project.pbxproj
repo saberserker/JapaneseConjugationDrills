@@ -30,7 +30,6 @@
 		F1EA9B1A1906CCD4007F9F5C /* FPNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA9B191906CCD4007F9F5C /* FPNAppDelegate.m */; };
 		F1EA9B1D1906CCD4007F9F5C /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1EA9B1B1906CCD4007F9F5C /* Main_iPhone.storyboard */; };
 		F1EA9B201906CCD4007F9F5C /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1EA9B1E1906CCD4007F9F5C /* Main_iPad.storyboard */; };
-		F1EA9B231906CCD4007F9F5C /* FPNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA9B221906CCD4007F9F5C /* FPNViewController.m */; };
 		F1EA9B251906CCD4007F9F5C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1EA9B241906CCD4007F9F5C /* Images.xcassets */; };
 		F1EA9B2C1906CCD4007F9F5C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EA9B2B1906CCD4007F9F5C /* XCTest.framework */; };
 		F1EA9B2D1906CCD4007F9F5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EA9B091906CCD4007F9F5C /* Foundation.framework */; };
@@ -55,8 +54,8 @@
 /* Begin PBXFileReference section */
 		F10519DB19343AA900FD6C79 /* FPNConjugationMultipleChoiceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNConjugationMultipleChoiceVC.h; path = ViewControllers/FPNConjugationMultipleChoiceVC.h; sourceTree = "<group>"; };
 		F10519DC19343AA900FD6C79 /* FPNConjugationMultipleChoiceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNConjugationMultipleChoiceVC.m; path = ViewControllers/FPNConjugationMultipleChoiceVC.m; sourceTree = "<group>"; };
-		F10519DE195CBBA700FD6C79 /* FPNViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPNViewController.h; sourceTree = "<group>"; };
-		F10519DF195CBBA700FD6C79 /* FPNViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPNViewController.m; sourceTree = "<group>"; };
+		F10519DE195CBBA700FD6C79 /* FPNViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNViewController.h; path = ../FPNViewController.h; sourceTree = "<group>"; };
+		F10519DF195CBBA700FD6C79 /* FPNViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNViewController.m; path = ../FPNViewController.m; sourceTree = "<group>"; };
 		F191A80C190A1794004836F2 /* FPNViewBorderColorizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNViewBorderColorizer.h; path = Views/FPNViewBorderColorizer.h; sourceTree = "<group>"; };
 		F191A80D190A1794004836F2 /* FPNViewBorderColorizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNViewBorderColorizer.m; path = Views/FPNViewBorderColorizer.m; sourceTree = "<group>"; };
 		F191A810190A2050004836F2 /* FPNAllRomanjiForKana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNAllRomanjiForKana.h; path = Models/FPNAllRomanjiForKana.h; sourceTree = "<group>"; };
@@ -91,8 +90,6 @@
 		F1EA9B191906CCD4007F9F5C /* FPNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPNAppDelegate.m; sourceTree = "<group>"; };
 		F1EA9B1C1906CCD4007F9F5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		F1EA9B1F1906CCD4007F9F5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		F1EA9B211906CCD4007F9F5C /* FPNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPNViewController.h; sourceTree = "<group>"; };
-		F1EA9B221906CCD4007F9F5C /* FPNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPNViewController.m; sourceTree = "<group>"; };
 		F1EA9B241906CCD4007F9F5C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F1EA9B2A1906CCD4007F9F5C /* mudamudaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mudamudaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EA9B2B1906CCD4007F9F5C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -169,8 +166,6 @@
 		F1EA9AFD1906CCD4007F9F5C = {
 			isa = PBXGroup;
 			children = (
-				F10519DE195CBBA700FD6C79 /* FPNViewController.h */,
-				F10519DF195CBBA700FD6C79 /* FPNViewController.m */,
 				F1EA9B0F1906CCD4007F9F5C /* mudamuda */,
 				F1EA9B311906CCD4007F9F5C /* mudamudaTests */,
 				F1EA9B081906CCD4007F9F5C /* Frameworks */,
@@ -201,6 +196,8 @@
 		F1EA9B0F1906CCD4007F9F5C /* mudamuda */ = {
 			isa = PBXGroup;
 			children = (
+				F10519DE195CBBA700FD6C79 /* FPNViewController.h */,
+				F10519DF195CBBA700FD6C79 /* FPNViewController.m */,
 				F191A813190AFCBE004836F2 /* Protocols */,
 				F191A80F190A201F004836F2 /* Models */,
 				F191A80B190A1765004836F2 /* Views */,
@@ -210,8 +207,6 @@
 				F1EA9B191906CCD4007F9F5C /* FPNAppDelegate.m */,
 				F1EA9B1B1906CCD4007F9F5C /* Main_iPhone.storyboard */,
 				F1EA9B1E1906CCD4007F9F5C /* Main_iPad.storyboard */,
-				F1EA9B211906CCD4007F9F5C /* FPNViewController.h */,
-				F1EA9B221906CCD4007F9F5C /* FPNViewController.m */,
 				F1EA9B241906CCD4007F9F5C /* Images.xcassets */,
 				F1EA9B101906CCD4007F9F5C /* Supporting Files */,
 			);
@@ -392,7 +387,6 @@
 				F1CB90D2190F4865004BFC47 /* FPNHangulQuizGenerator.m in Sources */,
 				F1C17FA31917D5FE003102E6 /* NSArray+Tools.m in Sources */,
 				F191A817190AFD4E004836F2 /* FPNQuizSelectorTableVC.m in Sources */,
-				F1EA9B231906CCD4007F9F5C /* FPNViewController.m in Sources */,
 				F191A80E190A1794004836F2 /* FPNViewBorderColorizer.m in Sources */,
 				F1EA9B161906CCD4007F9F5C /* main.m in Sources */,
 				F1CB90D5190F4EE9004BFC47 /* UIView+Tools.m in Sources */,

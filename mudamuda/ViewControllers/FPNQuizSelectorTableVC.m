@@ -41,7 +41,7 @@
 {
     [super viewDidLoad];
     
-    NSArray* kana = @[@"Hiragana Basic", @"Hiragana Marked", @"Hiragana Doubled", @"Hiragana Doubled and Marked", @"Hiragana All", @"Katakana Basic", @"Katakana Marked", @"Katakana Doubled", @"Katakana Doubled and Marked", @"Katakana All", @"Everything Kana"];
+//    NSArray* kana = @[@"Hiragana Basic", @"Hiragana Marked", @"Hiragana Doubled", @"Hiragana Doubled and Marked", @"Hiragana All", @"Katakana Basic", @"Katakana Marked", @"Katakana Doubled", @"Katakana Doubled and Marked", @"Katakana All", @"Everything Kana"];
     NSArray* conju = @[                        @"て-form",
                                                @"た-form",
                                                @"ない-form",
@@ -52,19 +52,21 @@
                                                @"えば-form",
                                                @"Imperative form",
                                                @"Volitional form"];
-    NSArray* bonus = @[@"Hangul Jamo", @"About"];
+//    NSArray* bonus = @[@"Hangul Jamo", @"About"];
+    NSArray* bonus = @[@"About"];
+
     
-    NSArray* kanaVCs = @[[FPNAllRomanjiForKana quizWithType: kHiraganaBasic],
-                         [FPNAllRomanjiForKana quizWithType: kHiraganaMarked],
-                         [FPNAllRomanjiForKana quizWithType: kHiraganaDouble],
-                         [FPNAllRomanjiForKana quizWithType: kHiraganaMarkedDouble],
-                         [FPNAllRomanjiForKana quizWithType: kHiraganaAll],
-                         [FPNAllRomanjiForKana quizWithType: kKatakanaBasic],
-                         [FPNAllRomanjiForKana quizWithType: kKatakanaMarked],
-                         [FPNAllRomanjiForKana quizWithType: kKatakanaDouble],
-                         [FPNAllRomanjiForKana quizWithType: kKatakanaMarkedDouble],
-                         [FPNAllRomanjiForKana quizWithType: kKatakanaAll],
-                         [FPNAllRomanjiForKana quizWithType: kKanaAll]];
+//    NSArray* kanaVCs = @[[FPNAllRomanjiForKana quizWithType: kHiraganaBasic],
+//                         [FPNAllRomanjiForKana quizWithType: kHiraganaMarked],
+//                         [FPNAllRomanjiForKana quizWithType: kHiraganaDouble],
+//                         [FPNAllRomanjiForKana quizWithType: kHiraganaMarkedDouble],
+//                         [FPNAllRomanjiForKana quizWithType: kHiraganaAll],
+//                         [FPNAllRomanjiForKana quizWithType: kKatakanaBasic],
+//                         [FPNAllRomanjiForKana quizWithType: kKatakanaMarked],
+//                         [FPNAllRomanjiForKana quizWithType: kKatakanaDouble],
+//                         [FPNAllRomanjiForKana quizWithType: kKatakanaMarkedDouble],
+//                         [FPNAllRomanjiForKana quizWithType: kKatakanaAll],
+//                         [FPNAllRomanjiForKana quizWithType: kKanaAll]];
     
     NSArray* conjuVCs = @[[FPNConjugateJapaneseQuizGenerator newWithConjugation:@"TEFORM"],
                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"TAFORM"],
@@ -77,12 +79,17 @@
                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"IMPERATIVEFORM"],
                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"VOLITIONALFORM"]];
     
-    NSArray* otherVCs = @[[FPNHangulQuizGenerator new], [FPNHangulQuizGenerator new]];
-    self.vcs = @[kanaVCs,conjuVCs,otherVCs];
+//    NSArray* otherVCs = @[[FPNHangulQuizGenerator new], [FPNHangulQuizGenerator new]];
+    NSArray* otherVCs = @[[NSNull null]];
+//    self.vcs = @[kanaVCs,conjuVCs,otherVCs];
+    self.vcs = @[conjuVCs,otherVCs];
 
 
-    self.sectionNames = @[@"Hiragana/Katakana",@"Conjugation",@"Other"];
-    self.vcNames = @[kana,conju,bonus];
+//    self.sectionNames = @[@"Hiragana/Katakana",@"Conjugation",@"Other"];
+    self.sectionNames = @[@"Conjugation",@"Other"];
+//    self.vcNames = @[kana,conju,bonus];
+    self.vcNames = @[conju,bonus];
+
 
 
     

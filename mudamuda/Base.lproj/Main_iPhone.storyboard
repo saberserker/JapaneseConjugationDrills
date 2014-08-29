@@ -55,8 +55,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nai-5V-9tO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goT-t8-3zS" customClass="FPNQuizAnswerButton">
-                                        <rect key="frame" x="20" y="454" width="136" height="48"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goT-t8-3zS" customClass="FPNQuizAnswerButton">
+                                        <rect key="frame" x="18" y="454" width="136" height="48"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Ka">
@@ -78,8 +78,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4P0-gN-Iap" customClass="FPNQuizAnswerButton">
-                                        <rect key="frame" x="20" y="510" width="136" height="48"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4P0-gN-Iap" customClass="FPNQuizAnswerButton">
+                                        <rect key="frame" x="18" y="510" width="136" height="48"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Ka">
@@ -101,8 +101,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWe-0z-FmY" customClass="FPNQuizAnswerButton">
-                                        <rect key="frame" x="166" y="454" width="136" height="48"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWe-0z-FmY" customClass="FPNQuizAnswerButton">
+                                        <rect key="frame" x="164" y="454" width="136" height="48"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Ka">
@@ -124,8 +124,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oy-gp-Ud3" customClass="FPNQuizAnswerButton">
-                                        <rect key="frame" x="166" y="510" width="136" height="48"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oy-gp-Ud3" customClass="FPNQuizAnswerButton">
+                                        <rect key="frame" x="164" y="510" width="136" height="48"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Ka">
@@ -147,12 +147,11 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRM-8G-cjw" customClass="FPNQuizAnswerButton">
-                                        <rect key="frame" x="20" y="398" width="136" height="48"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRM-8G-cjw" customClass="FPNQuizAnswerButton">
+                                        <rect key="frame" x="18" y="398" width="136" height="48"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" priority="990" constant="60" id="SPp-n2-drI"/>
-                                            <constraint firstAttribute="width" constant="136" id="cQf-Zj-0Xd"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="xnv-Zm-TsD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -175,8 +174,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0V0-ei-1Tt" customClass="FPNQuizAnswerButton">
-                                        <rect key="frame" x="166" y="398" width="136" height="48"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0V0-ei-1Tt" customClass="FPNQuizAnswerButton">
+                                        <rect key="frame" x="164" y="398" width="136" height="48"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Ka">
@@ -259,7 +258,7 @@
                                     <constraint firstItem="CRM-8G-cjw" firstAttribute="leading" secondItem="4P0-gN-Iap" secondAttribute="leading" id="GJ0-11-zhD"/>
                                     <constraint firstItem="0V0-ei-1Tt" firstAttribute="top" secondItem="CRM-8G-cjw" secondAttribute="top" id="GdV-gx-0UF"/>
                                     <constraint firstItem="CRM-8G-cjw" firstAttribute="leading" secondItem="goT-t8-3zS" secondAttribute="leading" id="HFi-IB-ScN"/>
-                                    <constraint firstItem="CRM-8G-cjw" firstAttribute="leading" secondItem="nai-5V-9tO" secondAttribute="leading" constant="20" id="HSw-qV-IFX"/>
+                                    <constraint firstItem="CRM-8G-cjw" firstAttribute="leading" secondItem="nai-5V-9tO" secondAttribute="leading" constant="18" id="HSw-qV-IFX"/>
                                     <constraint firstItem="Qgp-mt-2Xt" firstAttribute="leading" secondItem="nai-5V-9tO" secondAttribute="leading" id="IKs-h8-Nm7"/>
                                     <constraint firstItem="1Mj-Pg-Gra" firstAttribute="leading" secondItem="nai-5V-9tO" secondAttribute="leading" id="JAQ-iX-S77"/>
                                     <constraint firstAttribute="trailing" secondItem="Mc2-lD-1rd" secondAttribute="trailing" id="JOK-5Y-sfz"/>
@@ -288,6 +287,7 @@
                                     <constraint firstItem="goT-t8-3zS" firstAttribute="top" secondItem="CRM-8G-cjw" secondAttribute="bottom" constant="8" id="t88-gd-jd4"/>
                                     <constraint firstItem="CRM-8G-cjw" firstAttribute="width" secondItem="0V0-ei-1Tt" secondAttribute="width" id="uM0-VN-Wgc"/>
                                     <constraint firstItem="Ohl-Kh-aLF" firstAttribute="leading" secondItem="nai-5V-9tO" secondAttribute="leading" id="uSz-hH-Bc6"/>
+                                    <constraint firstAttribute="trailing" secondItem="0V0-ei-1Tt" secondAttribute="trailing" constant="18" id="zeX-tN-YKT"/>
                                 </constraints>
                             </view>
                         </subviews>

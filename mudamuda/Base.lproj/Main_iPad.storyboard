@@ -35,7 +35,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VDD-gN-Ri2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953" y="1913"/>
+            <point key="canvasLocation" x="933" y="2255"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Zo-Va-tj7">
@@ -92,10 +92,390 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Exercises" id="4H0-TX-C7w"/>
+                    <connections>
+                        <segue destination="jH0-FB-J6T" kind="replace" identifier="toConjugationMultipleChoice" splitViewControllerTargetIndex="1" id="UzE-ly-Wvz"/>
+                        <segue destination="QbP-Jq-Yet" kind="replace" identifier="toAbout" splitViewControllerTargetIndex="1" id="Jbf-Ob-fkg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7na-lb-dP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102" y="803"/>
+            <point key="canvasLocation" x="1104" y="827"/>
+        </scene>
+        <!--Conjugation Multiple ChoiceVC-->
+        <scene sceneID="Hid-p9-Xs6">
+            <objects>
+                <viewController id="jH0-FB-J6T" customClass="FPNConjugationMultipleChoiceVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wxV-jM-moQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="HiU-3r-YvF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0dk-oc-GSO" customClass="FPNViewBorderColorizer">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qD-dF-M6I">
+                                <rect key="frame" x="0.0" y="-44" width="768" height="1068"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNx-rL-uCc" customClass="FPNQuizAnswerButton">
+                                        <rect key="frame" x="18" y="954" width="361" height="48"/>
+                                        <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Ka">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="0.0" green="0.50493036049999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbK-Hu-Asl" customClass="FPNQuizAnswerButton">
+                                        <rect key="frame" x="18" y="1010" width="361" height="48"/>
+                                        <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Ka">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="0.0" green="0.50493036049999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbp-Xn-H9S" customClass="FPNQuizAnswerButton">
+                                        <rect key="frame" x="389" y="954" width="361" height="48"/>
+                                        <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Ka">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="0.0" green="0.50493036049999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eon-HX-1CG" customClass="FPNQuizAnswerButton">
+                                        <rect key="frame" x="389" y="1010" width="361" height="48"/>
+                                        <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Ka">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="0.0" green="0.50493036049999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isq-iN-rc0" customClass="FPNQuizAnswerButton">
+                                        <rect key="frame" x="18" y="898" width="361" height="48"/>
+                                        <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="LoC-dK-o44"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" priority="990" constant="60" id="QdO-cR-Qyk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Ka">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="0.0" green="0.50493036049999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrz-4E-PAh" customClass="FPNQuizAnswerButton">
+                                        <rect key="frame" x="389" y="898" width="361" height="48"/>
+                                        <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Ka">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="0.0" green="0.50493036049999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="弾幕する" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wy8-3W-1aU" customClass="FPNConcealableQuestionLabel">
+                                        <rect key="frame" x="0.0" y="64" width="768" height="73"/>
+                                        <color key="backgroundColor" red="0.90716287360000003" green="0.90716287360000003" blue="0.90716287360000003" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="hFG-3N-4XY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="61"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="H0v-Sa-XnI" appends="YES" id="aPW-71-cZw"/>
+                                        </connections>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="だんまくする" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="alK-pd-zyb" customClass="FPNConcealableQuestionLabel">
+                                        <rect key="frame" x="0.0" y="145" width="768" height="44"/>
+                                        <color key="backgroundColor" red="0.90716287360000003" green="0.90716287360000003" blue="0.90716287360000003" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="evq-Xy-smV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="H0v-Sa-XnI" appends="YES" id="6r2-xf-AZv"/>
+                                        </connections>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ichidan Verb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CjL-VC-s6E" customClass="FPNConcealableQuestionLabel">
+                                        <rect key="frame" x="0.0" y="197" width="768" height="44"/>
+                                        <color key="backgroundColor" red="0.90716287360000003" green="0.90716287360000003" blue="0.90716287360000003" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="FFd-yf-Yic"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="H0v-Sa-XnI" appends="YES" id="TzS-UA-z7o"/>
+                                        </connections>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To make due; to make due to make due; to make due to anger to anger to anger" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="vRv-Vi-7Dz" customClass="FPNConcealableQuestionLabel">
+                                        <rect key="frame" x="0.0" y="249" width="768" height="44"/>
+                                        <color key="backgroundColor" red="0.90716287360000003" green="0.90716287360000003" blue="0.90716287360000003" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="QKa-CB-TCx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="H0v-Sa-XnI" appends="YES" id="LEb-0T-O9n"/>
+                                        </connections>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CjL-VC-s6E" firstAttribute="leading" secondItem="9qD-dF-M6I" secondAttribute="leading" id="0Kk-7p-30o"/>
+                                    <constraint firstItem="gbK-Hu-Asl" firstAttribute="top" secondItem="uNx-rL-uCc" secondAttribute="bottom" constant="8" id="1gW-BT-cDs"/>
+                                    <constraint firstAttribute="trailing" secondItem="vRv-Vi-7Dz" secondAttribute="trailing" id="3Fv-t6-bHz"/>
+                                    <constraint firstItem="Rbp-Xn-H9S" firstAttribute="height" secondItem="qrz-4E-PAh" secondAttribute="height" id="Bnj-D1-opw"/>
+                                    <constraint firstItem="vRv-Vi-7Dz" firstAttribute="leading" secondItem="9qD-dF-M6I" secondAttribute="leading" id="Bx3-HI-g9k"/>
+                                    <constraint firstItem="uNx-rL-uCc" firstAttribute="top" secondItem="Isq-iN-rc0" secondAttribute="bottom" constant="8" id="CcG-tM-fob"/>
+                                    <constraint firstItem="Isq-iN-rc0" firstAttribute="leading" secondItem="gbK-Hu-Asl" secondAttribute="leading" id="EvW-wr-u40"/>
+                                    <constraint firstItem="Isq-iN-rc0" firstAttribute="width" secondItem="qrz-4E-PAh" secondAttribute="width" id="F6b-rj-a9g"/>
+                                    <constraint firstItem="Isq-iN-rc0" firstAttribute="height" secondItem="uNx-rL-uCc" secondAttribute="height" id="FLx-Rb-tGn"/>
+                                    <constraint firstItem="vRv-Vi-7Dz" firstAttribute="top" secondItem="CjL-VC-s6E" secondAttribute="bottom" constant="8" id="Ffc-CW-BA4"/>
+                                    <constraint firstItem="Isq-iN-rc0" firstAttribute="leading" secondItem="9qD-dF-M6I" secondAttribute="leading" constant="18" id="GQW-MO-F5i"/>
+                                    <constraint firstItem="qrz-4E-PAh" firstAttribute="bottom" secondItem="Isq-iN-rc0" secondAttribute="bottom" id="LGp-gz-Xtg"/>
+                                    <constraint firstAttribute="trailing" secondItem="CjL-VC-s6E" secondAttribute="trailing" id="NTe-Wt-WCf"/>
+                                    <constraint firstAttribute="bottom" secondItem="Eon-HX-1CG" secondAttribute="bottom" constant="10" id="UP8-i3-D8p"/>
+                                    <constraint firstAttribute="trailing" secondItem="qrz-4E-PAh" secondAttribute="trailing" constant="18" id="UWq-dx-0SW"/>
+                                    <constraint firstItem="Isq-iN-rc0" firstAttribute="leading" secondItem="uNx-rL-uCc" secondAttribute="leading" id="VUW-XN-cdJ"/>
+                                    <constraint firstItem="Isq-iN-rc0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vRv-Vi-7Dz" secondAttribute="bottom" constant="10" id="Vu5-l0-rVl"/>
+                                    <constraint firstItem="alK-pd-zyb" firstAttribute="leading" secondItem="9qD-dF-M6I" secondAttribute="leading" id="Whm-Lj-r8B"/>
+                                    <constraint firstItem="Isq-iN-rc0" firstAttribute="trailing" secondItem="uNx-rL-uCc" secondAttribute="trailing" id="ZRI-bu-5c4"/>
+                                    <constraint firstItem="gbK-Hu-Asl" firstAttribute="height" secondItem="Isq-iN-rc0" secondAttribute="height" id="aMM-vV-ejb"/>
+                                    <constraint firstItem="qrz-4E-PAh" firstAttribute="leading" secondItem="Isq-iN-rc0" secondAttribute="trailing" constant="10" id="aTy-CR-FUk"/>
+                                    <constraint firstItem="Eon-HX-1CG" firstAttribute="leading" secondItem="Rbp-Xn-H9S" secondAttribute="leading" id="drC-zS-hrv"/>
+                                    <constraint firstAttribute="trailing" secondItem="alK-pd-zyb" secondAttribute="trailing" id="eyA-Hf-O7I"/>
+                                    <constraint firstItem="Wy8-3W-1aU" firstAttribute="leading" secondItem="9qD-dF-M6I" secondAttribute="leading" id="fx7-mZ-fas"/>
+                                    <constraint firstItem="Eon-HX-1CG" firstAttribute="height" secondItem="qrz-4E-PAh" secondAttribute="height" id="gmV-wd-zvb"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wy8-3W-1aU" secondAttribute="trailing" id="hNZ-0y-hFM"/>
+                                    <constraint firstItem="Rbp-Xn-H9S" firstAttribute="leading" secondItem="qrz-4E-PAh" secondAttribute="leading" id="hWk-rX-BG2"/>
+                                    <constraint firstItem="Rbp-Xn-H9S" firstAttribute="top" secondItem="qrz-4E-PAh" secondAttribute="bottom" constant="8" id="ksk-RT-5Tn"/>
+                                    <constraint firstItem="Eon-HX-1CG" firstAttribute="trailing" secondItem="qrz-4E-PAh" secondAttribute="trailing" id="nhX-4n-lG7"/>
+                                    <constraint firstItem="qrz-4E-PAh" firstAttribute="top" secondItem="Isq-iN-rc0" secondAttribute="top" id="oB5-hW-yNk"/>
+                                    <constraint firstItem="Rbp-Xn-H9S" firstAttribute="trailing" secondItem="qrz-4E-PAh" secondAttribute="trailing" id="oe6-5j-rsj"/>
+                                    <constraint firstItem="Isq-iN-rc0" firstAttribute="trailing" secondItem="gbK-Hu-Asl" secondAttribute="trailing" id="p7U-IG-KZj"/>
+                                    <constraint firstItem="CjL-VC-s6E" firstAttribute="top" secondItem="alK-pd-zyb" secondAttribute="bottom" constant="8" id="pSt-Yu-HJj"/>
+                                    <constraint firstItem="Eon-HX-1CG" firstAttribute="top" secondItem="Rbp-Xn-H9S" secondAttribute="bottom" constant="8" id="rdz-jW-TTz"/>
+                                    <constraint firstItem="alK-pd-zyb" firstAttribute="top" secondItem="Wy8-3W-1aU" secondAttribute="bottom" constant="8" id="yk4-SS-K4W"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9qD-dF-M6I" secondAttribute="trailing" id="8kE-XT-Z1Q"/>
+                            <constraint firstItem="HiU-3r-YvF" firstAttribute="top" secondItem="9qD-dF-M6I" secondAttribute="bottom" id="9AH-SR-9W3"/>
+                            <constraint firstItem="wxV-jM-moQ" firstAttribute="bottom" secondItem="Wy8-3W-1aU" secondAttribute="top" id="Ehz-KS-fdb"/>
+                            <constraint firstItem="9qD-dF-M6I" firstAttribute="top" secondItem="wxV-jM-moQ" secondAttribute="bottom" constant="-64" id="LFe-LL-Zze"/>
+                            <constraint firstItem="9qD-dF-M6I" firstAttribute="leading" secondItem="0dk-oc-GSO" secondAttribute="leading" id="afk-ZG-AlC"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="templateBorderColor">
+                                <color key="value" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outletCollection property="coloredViews" destination="uNx-rL-uCc" id="hrU-8x-Heo"/>
+                            <outletCollection property="coloredViews" destination="gbK-Hu-Asl" id="xmJ-fv-9i9"/>
+                            <outletCollection property="coloredViews" destination="Rbp-Xn-H9S" id="V8q-ii-iDG"/>
+                            <outletCollection property="coloredViews" destination="Eon-HX-1CG" id="vlO-07-jc1"/>
+                            <outletCollection property="coloredViews" destination="Isq-iN-rc0" id="FgF-P1-inA"/>
+                            <outletCollection property="coloredViews" destination="qrz-4E-PAh" id="bWA-Tq-A0D"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="iTz-je-Yb1"/>
+                    <connections>
+                        <outlet property="definitionLabel" destination="vRv-Vi-7Dz" id="Mg7-qa-mR5"/>
+                        <outlet property="furiganaLabel" destination="alK-pd-zyb" id="wrR-tT-TIl"/>
+                        <outlet property="wordLabel" destination="Wy8-3W-1aU" id="Nue-wC-zkK"/>
+                        <outlet property="wordTypeLabel" destination="CjL-VC-s6E" id="wcK-ZF-WEv"/>
+                        <outletCollection property="answerButton" destination="uNx-rL-uCc" id="DdE-Um-JTR"/>
+                        <outletCollection property="answerButton" destination="gbK-Hu-Asl" id="IJs-EG-mGz"/>
+                        <outletCollection property="answerButton" destination="Rbp-Xn-H9S" id="Qyh-IL-7p0"/>
+                        <outletCollection property="answerButton" destination="Eon-HX-1CG" id="xFS-6c-KrP"/>
+                        <outletCollection property="answerButton" destination="Isq-iN-rc0" id="699-E4-vXI"/>
+                        <outletCollection property="answerButton" destination="qrz-4E-PAh" id="OmN-ia-jcd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uSl-0s-rGG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="H0v-Sa-XnI">
+                    <connections>
+                        <action selector="labelTapped:" destination="jH0-FB-J6T" id="3BN-5q-g1k"/>
+                        <outlet property="delegate" destination="jH0-FB-J6T" id="q4b-pI-Vah"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1951" y="905"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="KhZ-F4-Xwg">
+            <objects>
+                <viewController id="QbP-Jq-Yet" customClass="FPNAboutVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fXh-Ng-Ivs"/>
+                        <viewControllerLayoutGuide type="bottom" id="cTy-EW-h2u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rXH-QV-hub" customClass="FPNViewBorderColorizer">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gj-Va-Wud">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNR-FS-clv">
+                                <rect key="frame" x="16" y="72" width="288" height="162"/>
+                                <string key="text">This was a free app made with hopes that it was helpful in your learning of the Japanese language. If you have any suggestions for making this app better or would like to report omissions/errors/mistakes, feel free to send an email to be below address.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="devappfeedback@icloud.com" translatesAutoresizingMaskIntoConstraints="NO" id="0lU-Hq-e4o">
+                                <rect key="frame" x="16" y="242" width="288" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4cU-yo-FIh"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Color Adjustment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5A4-Q8-v4x">
+                                <rect key="frame" x="16" y="290" width="134" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cBb-cb-ffc">
+                                <rect key="frame" x="14" y="314" width="292" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="QbP-Jq-Yet" eventType="valueChanged" id="5XV-7c-lrf"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5A4-Q8-v4x" firstAttribute="top" secondItem="0lU-Hq-e4o" secondAttribute="bottom" constant="8" id="2Ab-YE-mji"/>
+                            <constraint firstItem="cBb-cb-ffc" firstAttribute="top" secondItem="5A4-Q8-v4x" secondAttribute="bottom" constant="3.5" id="Bwm-Dv-tBe"/>
+                            <constraint firstItem="uNR-FS-clv" firstAttribute="leading" secondItem="5A4-Q8-v4x" secondAttribute="leading" id="IZT-CW-6gP"/>
+                            <constraint firstItem="uNR-FS-clv" firstAttribute="top" secondItem="fXh-Ng-Ivs" secondAttribute="bottom" constant="8" id="Jm5-Pp-GA7"/>
+                            <constraint firstItem="0lU-Hq-e4o" firstAttribute="trailing" secondItem="uNR-FS-clv" secondAttribute="trailing" id="Ksb-NX-rNa"/>
+                            <constraint firstItem="uNR-FS-clv" firstAttribute="leading" secondItem="cBb-cb-ffc" secondAttribute="leading" id="YNQ-g8-jbj"/>
+                            <constraint firstAttribute="trailing" secondItem="1gj-Va-Wud" secondAttribute="trailing" id="a9C-6v-sOz"/>
+                            <constraint firstItem="1gj-Va-Wud" firstAttribute="leading" secondItem="rXH-QV-hub" secondAttribute="leading" id="b8P-Kl-QWC"/>
+                            <constraint firstItem="uNR-FS-clv" firstAttribute="trailing" secondItem="cBb-cb-ffc" secondAttribute="trailing" id="e17-6I-3Au"/>
+                            <constraint firstItem="1gj-Va-Wud" firstAttribute="top" secondItem="rXH-QV-hub" secondAttribute="top" id="hWj-hJ-9xr"/>
+                            <constraint firstItem="uNR-FS-clv" firstAttribute="leading" secondItem="rXH-QV-hub" secondAttribute="leadingMargin" id="lNT-Lm-c5g"/>
+                            <constraint firstItem="0lU-Hq-e4o" firstAttribute="leading" secondItem="uNR-FS-clv" secondAttribute="leading" id="lkR-2K-rRk"/>
+                            <constraint firstItem="uNR-FS-clv" firstAttribute="trailing" secondItem="rXH-QV-hub" secondAttribute="trailingMargin" id="n0U-HS-KiR"/>
+                            <constraint firstItem="cTy-EW-h2u" firstAttribute="top" secondItem="1gj-Va-Wud" secondAttribute="bottom" id="ud3-ry-KsI"/>
+                            <constraint firstItem="0lU-Hq-e4o" firstAttribute="top" secondItem="uNR-FS-clv" secondAttribute="bottom" constant="7.5" id="wtP-cG-2lO"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="coloredViews" destination="1gj-Va-Wud" id="bhH-Zv-JLn"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="Xtx-eY-b55"/>
+                    <connections>
+                        <outlet property="colorSlider" destination="cBb-cb-ffc" id="kko-qw-7rx"/>
+                        <outlet property="emailField" destination="0lU-Hq-e4o" id="VJh-nv-xgp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QW1-sU-BIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1823" y="2175"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

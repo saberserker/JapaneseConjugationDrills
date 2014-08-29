@@ -12,6 +12,7 @@
 
 @interface FPNAboutVC ()
 @property (weak, nonatomic) IBOutlet UISlider *colorSlider;
+@property (weak, nonatomic) IBOutlet UITextView *emailField;
 
 @end
 
@@ -28,30 +29,28 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
+    self.colorSlider.value = self.themeColor;
     [self setupThemeColors];
 }
 
 - (void) setupThemeColors {
     CGFloat themeHue = self.themeColor;
+    [self setupThemeColorWithHue:themeHue];
+}
+
+- (void) setupThemeColorWithHue:(CGFloat) themeHue {
     FPNViewBorderColorizer* background = (FPNViewBorderColorizer*)self.view;
     [background colorWithHue:themeHue];
-    self.colorSlider.tintColor = [UIColor colorWithHue:themeHue saturation:0.9 brightness:0.5 alpha:1];
-    self.colorSlider.value = self.themeColor;
+    self.colorSlider.tintColor = [UIColor colorWithHue:themeHue saturation:1 brightness:1 alpha:1];
+    self.colorSlider.minimumTrackTintColor = [UIColor colorWithHue:themeHue saturation:0.3 brightness:1 alpha:1];
+    self.emailField.tintColor = [UIColor colorWithHue:themeHue saturation:0.5 brightness:1 alpha:1];
 }
 
 - (IBAction)sliderChanged:(UISlider *)sender {
-    self.themeColor = sender.value;
-    [self setupThemeColors];
+    CGFloat sv = sender.value;
+    self.themeColor = sv;
+    [self setupThemeColorWithHue:sv];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -389,6 +389,7 @@
                     <navigationItem key="navigationItem" title="About" id="6QG-VX-XT3"/>
                     <connections>
                         <outlet property="colorSlider" destination="8DU-Fo-Rr7" id="ySh-e8-KE2"/>
+                        <outlet property="emailField" destination="w42-6Y-Okk" id="Msk-hf-g5V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ilm-Rf-kMi" userLabel="First Responder" sceneMemberID="firstResponder"/>

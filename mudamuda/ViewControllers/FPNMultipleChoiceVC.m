@@ -87,7 +87,7 @@
         self.questionView.layer.transform = flattened3d;
         [self.questionView shadowOpacityTo:0.5 from:0];
         
-        [self setRandomThemeColorChangeWithDelta:0.1];
+//        [self setRandomThemeColorChangeWithDelta:0.1];
         [self setupThemeColors];
         [self.view layoutSubviews];
 

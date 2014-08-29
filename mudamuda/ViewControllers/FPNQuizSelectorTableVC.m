@@ -101,7 +101,6 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    [self setThemeColor:0];
     self.view.backgroundColor = [UIColor colorWithHue:self.themeColor saturation:0.5 brightness:0.8 alpha:1];
     [self.tableView reloadData];
 }

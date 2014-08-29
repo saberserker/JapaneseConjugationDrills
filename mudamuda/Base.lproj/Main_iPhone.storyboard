@@ -320,7 +320,7 @@
         <!--About-->
         <scene sceneID="Fif-yx-SFy">
             <objects>
-                <viewController id="UGe-V3-hSr" sceneMemberID="viewController">
+                <viewController id="UGe-V3-hSr" customClass="FPNAboutVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pmt-jl-TVP"/>
                         <viewControllerLayoutGuide type="bottom" id="S4u-nw-IbJ"/>
@@ -329,7 +329,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTG-B7-Np6">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTG-B7-Np6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -359,9 +359,12 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8DU-Fo-Rr7">
                                 <rect key="frame" x="14" y="314" width="292" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="UGe-V3-hSr" eventType="valueChanged" id="Rbx-aD-R5w"/>
+                                </connections>
                             </slider>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1ZR-xz-RY9" firstAttribute="leading" secondItem="VUl-h0-bau" secondAttribute="leadingMargin" id="4kZ-gF-8nh"/>
                             <constraint firstItem="S4u-nw-IbJ" firstAttribute="top" secondItem="PTG-B7-Np6" secondAttribute="bottom" id="CPL-MO-W6v"/>
@@ -384,6 +387,9 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="6QG-VX-XT3"/>
+                    <connections>
+                        <outlet property="colorSlider" destination="8DU-Fo-Rr7" id="ySh-e8-KE2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ilm-Rf-kMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

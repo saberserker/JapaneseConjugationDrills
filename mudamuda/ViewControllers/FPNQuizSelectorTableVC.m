@@ -196,6 +196,9 @@
         [self performSegueWithIdentifier:@"toMultipleChoice" sender:indexPath];
         return;
     }
+    else {
+        [self performSegueWithIdentifier:@"toAbout" sender:indexPath];
+    }
 }
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

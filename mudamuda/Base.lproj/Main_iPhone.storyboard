@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="nut-dc-nFb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="nut-dc-nFb">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Quiz Selector TableVC - Exercises-->
+        <!--Exercises-->
         <scene sceneID="081-h1-nzu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NYl-MU-dXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="rwH-BB-NuE" customClass="FPNQuizSelectorTableVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pp6-2k-kxV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -31,11 +34,11 @@
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="push" identifier="toMultipleChoice" id="NzL-eN-VtD"/>
                         <segue destination="8Ki-W2-rvz" kind="push" identifier="toConjugationMultipleChoice" id="Wa4-fv-hq9"/>
+                        <segue destination="UGe-V3-hSr" kind="push" identifier="toAbout" id="KQZ-1k-NLy"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NYl-MU-dXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8" y="-15"/>
+            <point key="canvasLocation" x="-26" y="11"/>
         </scene>
         <!--Conjugation Multiple ChoiceVC-->
         <scene sceneID="ckr-En-3Gz">
@@ -51,11 +54,9 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nai-5V-9tO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goT-t8-3zS" customClass="FPNQuizAnswerButton">
                                         <rect key="frame" x="20" y="454" width="136" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Ka">
@@ -79,7 +80,6 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4P0-gN-Iap" customClass="FPNQuizAnswerButton">
                                         <rect key="frame" x="20" y="510" width="136" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Ka">
@@ -103,7 +103,6 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWe-0z-FmY" customClass="FPNQuizAnswerButton">
                                         <rect key="frame" x="166" y="454" width="136" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Ka">
@@ -127,7 +126,6 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oy-gp-Ud3" customClass="FPNQuizAnswerButton">
                                         <rect key="frame" x="166" y="510" width="136" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Ka">
@@ -151,7 +149,6 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRM-8G-cjw" customClass="FPNQuizAnswerButton">
                                         <rect key="frame" x="20" y="398" width="136" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" priority="990" constant="60" id="SPp-n2-drI"/>
@@ -180,7 +177,6 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0V0-ei-1Tt" customClass="FPNQuizAnswerButton">
                                         <rect key="frame" x="166" y="398" width="136" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Ka">
@@ -204,7 +200,6 @@
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="弾幕する" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qgp-mt-2Xt">
                                         <rect key="frame" x="0.0" y="64" width="320" height="73"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.90716287364130432" green="0.90716287364130432" blue="0.90716287364130432" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="5kY-D4-5Hm"/>
@@ -215,7 +210,6 @@
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="だんまくする" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mc2-lD-1rd">
                                         <rect key="frame" x="0.0" y="145" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.90716287364130432" green="0.90716287364130432" blue="0.90716287364130432" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="xpI-9B-EgF"/>
@@ -226,7 +220,6 @@
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ichidan Verb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ohl-Kh-aLF">
                                         <rect key="frame" x="0.0" y="197" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.90716287364130432" green="0.90716287364130432" blue="0.90716287364130432" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="3f3-LV-Xe5"/>
@@ -237,7 +230,6 @@
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To make due; to make due to make due; to make due to anger to anger to anger" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000002" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="1Mj-Pg-Gra">
                                         <rect key="frame" x="0.0" y="249" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.90716287364130432" green="0.90716287364130432" blue="0.90716287364130432" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="isZ-Hb-9JO"/>
@@ -323,7 +315,79 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Mp-7O-XSG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="539" y="371"/>
+            <point key="canvasLocation" x="539" y="253"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="Fif-yx-SFy">
+            <objects>
+                <viewController id="UGe-V3-hSr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pmt-jl-TVP"/>
+                        <viewControllerLayoutGuide type="bottom" id="S4u-nw-IbJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VUl-h0-bau" customClass="FPNViewBorderColorizer">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTG-B7-Np6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZR-xz-RY9">
+                                <rect key="frame" x="16" y="72" width="288" height="162.5"/>
+                                <string key="text">This was a free app made with hopes that it was helpful in your learning of the Japanese language. If you have any suggestions for making this app better or would like to report omissions/errors/mistakes, feel free to send an email to be below address.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="devappfeedback@icloud.com" translatesAutoresizingMaskIntoConstraints="NO" id="w42-6Y-Okk">
+                                <rect key="frame" x="16" y="242" width="288" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="OqE-6m-ewX"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Adjustment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOn-83-DAO">
+                                <rect key="frame" x="16" y="290" width="134" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8DU-Fo-Rr7">
+                                <rect key="frame" x="14" y="314" width="292" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1ZR-xz-RY9" firstAttribute="leading" secondItem="VUl-h0-bau" secondAttribute="leadingMargin" id="4kZ-gF-8nh"/>
+                            <constraint firstItem="S4u-nw-IbJ" firstAttribute="top" secondItem="PTG-B7-Np6" secondAttribute="bottom" id="CPL-MO-W6v"/>
+                            <constraint firstItem="1ZR-xz-RY9" firstAttribute="top" secondItem="pmt-jl-TVP" secondAttribute="bottom" constant="8" id="Ith-Ph-32d"/>
+                            <constraint firstItem="PTG-B7-Np6" firstAttribute="top" secondItem="VUl-h0-bau" secondAttribute="top" id="Ivz-W5-ofF"/>
+                            <constraint firstAttribute="trailing" secondItem="PTG-B7-Np6" secondAttribute="trailing" id="Mh3-wQ-4aL"/>
+                            <constraint firstItem="8DU-Fo-Rr7" firstAttribute="top" secondItem="mOn-83-DAO" secondAttribute="bottom" constant="3.5" id="Rsm-aT-D8a"/>
+                            <constraint firstItem="1ZR-xz-RY9" firstAttribute="leading" secondItem="mOn-83-DAO" secondAttribute="leading" id="arl-0N-AJJ"/>
+                            <constraint firstItem="w42-6Y-Okk" firstAttribute="top" secondItem="1ZR-xz-RY9" secondAttribute="bottom" constant="7.5" id="c0P-Bp-aA6"/>
+                            <constraint firstItem="mOn-83-DAO" firstAttribute="top" secondItem="w42-6Y-Okk" secondAttribute="bottom" constant="8" id="ekW-9D-IY0"/>
+                            <constraint firstItem="w42-6Y-Okk" firstAttribute="trailing" secondItem="1ZR-xz-RY9" secondAttribute="trailing" id="iNN-tg-Xzf"/>
+                            <constraint firstItem="1ZR-xz-RY9" firstAttribute="trailing" secondItem="VUl-h0-bau" secondAttribute="trailingMargin" id="oY2-79-JD2"/>
+                            <constraint firstItem="1ZR-xz-RY9" firstAttribute="leading" secondItem="8DU-Fo-Rr7" secondAttribute="leading" id="rJ2-sa-d3H"/>
+                            <constraint firstItem="1ZR-xz-RY9" firstAttribute="trailing" secondItem="8DU-Fo-Rr7" secondAttribute="trailing" id="u1e-sp-CGf"/>
+                            <constraint firstItem="PTG-B7-Np6" firstAttribute="leading" secondItem="VUl-h0-bau" secondAttribute="leading" id="uIV-iN-RTv"/>
+                            <constraint firstItem="w42-6Y-Okk" firstAttribute="leading" secondItem="1ZR-xz-RY9" secondAttribute="leading" id="v45-VT-Aiw"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="coloredViews" destination="PTG-B7-Np6" id="n7E-V6-9ka"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="6QG-VX-XT3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ilm-Rf-kMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539" y="1071"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ogr-iW-dSM">
@@ -352,9 +416,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6q9-7C-f6t" customClass="FPNQuizAnswerButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6q9-7C-f6t" customClass="FPNQuizAnswerButton">
                                 <rect key="frame" x="20" y="450" width="136" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Ka">
@@ -376,9 +439,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHv-9L-WXE" customClass="FPNQuizAnswerButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHv-9L-WXE" customClass="FPNQuizAnswerButton">
                                 <rect key="frame" x="20" y="508" width="136" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Ka">
@@ -400,9 +462,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8s-oj-WYw" customClass="FPNQuizAnswerButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8s-oj-WYw" customClass="FPNQuizAnswerButton">
                                 <rect key="frame" x="166" y="450" width="136" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Ka">
@@ -424,9 +485,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEZ-ZI-h2l" customClass="FPNQuizAnswerButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEZ-ZI-h2l" customClass="FPNQuizAnswerButton">
                                 <rect key="frame" x="166" y="508" width="136" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Ka">
@@ -448,9 +508,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9P-13-KSk" customClass="FPNQuizAnswerButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9P-13-KSk" customClass="FPNQuizAnswerButton">
                                 <rect key="frame" x="20" y="392" width="136" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="nj1-o3-i5O"/>
@@ -475,9 +534,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ird-pb-Seg" customClass="FPNQuizAnswerButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ird-pb-Seg" customClass="FPNQuizAnswerButton">
                                 <rect key="frame" x="166" y="392" width="136" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Ka">
@@ -499,9 +557,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <textView multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="単語" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls9-cf-SBy">
+                            <textView multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="単語" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls9-cf-SBy">
                                 <rect key="frame" x="20" y="74" width="282" height="310"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90716287360000003" green="0.90716287360000003" blue="0.90716287360000003" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="90"/>
@@ -577,30 +634,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="557" y="-421"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="eZP-Uq-iPO">
-            <objects>
-                <viewController id="zGT-Ck-Nlj" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cms-Rk-ZYD"/>
-                        <viewControllerLayoutGuide type="bottom" id="Kyx-7V-dqd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XH1-yh-oa6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="idg-6Q-03a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-56" y="849"/>
+            <point key="canvasLocation" x="539" y="-423"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
     </simulatedMetricsContainer>
 </document>

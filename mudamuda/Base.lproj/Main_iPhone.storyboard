@@ -9,7 +9,6 @@
         <!--Exercises-->
         <scene sceneID="081-h1-nzu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NYl-MU-dXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="rwH-BB-NuE" customClass="FPNQuizSelectorTableVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pp6-2k-kxV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -37,6 +36,7 @@
                         <segue destination="UGe-V3-hSr" kind="push" identifier="toAbout" id="KQZ-1k-NLy"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NYl-MU-dXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-26" y="11"/>
         </scene>
@@ -198,17 +198,21 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="弾幕する" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qgp-mt-2Xt">
+                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="弾幕する" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qgp-mt-2Xt" customClass="FPNConcealableQuestionLabel">
                                         <rect key="frame" x="0.0" y="64" width="320" height="73"/>
                                         <color key="backgroundColor" red="0.90716287364130432" green="0.90716287364130432" blue="0.90716287364130432" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="5kY-D4-5Hm"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="qGE-Dr-BD9" appends="YES" id="Ejt-w9-wiZ"/>
+                                        </connections>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="だんまくする" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mc2-lD-1rd">
+                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="だんまくする" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mc2-lD-1rd" customClass="FPNConcealableQuestionLabel">
                                         <rect key="frame" x="0.0" y="145" width="320" height="44"/>
                                         <color key="backgroundColor" red="0.90716287364130432" green="0.90716287364130432" blue="0.90716287364130432" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -217,8 +221,11 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="qGE-Dr-BD9" appends="YES" id="VkW-At-cMu"/>
+                                        </connections>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ichidan Verb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ohl-Kh-aLF">
+                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ichidan Verb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ohl-Kh-aLF" customClass="FPNConcealableQuestionLabel">
                                         <rect key="frame" x="0.0" y="197" width="320" height="44"/>
                                         <color key="backgroundColor" red="0.90716287364130432" green="0.90716287364130432" blue="0.90716287364130432" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -227,16 +234,23 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="qGE-Dr-BD9" appends="YES" id="LlX-lG-p8l"/>
+                                        </connections>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To make due; to make due to make due; to make due to anger to anger to anger" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000002" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="1Mj-Pg-Gra">
+                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To make due; to make due to make due; to make due to anger to anger to anger" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000002" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="1Mj-Pg-Gra" customClass="FPNConcealableQuestionLabel">
                                         <rect key="frame" x="0.0" y="249" width="320" height="44"/>
                                         <color key="backgroundColor" red="0.90716287364130432" green="0.90716287364130432" blue="0.90716287364130432" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="isZ-Hb-9JO"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="qGE-Dr-BD9" appends="YES" id="d9B-MW-bel"/>
+                                        </connections>
                                     </label>
                                 </subviews>
                                 <constraints>
@@ -314,6 +328,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Mp-7O-XSG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qGE-Dr-BD9">
+                    <connections>
+                        <action selector="labelTapped:" destination="8Ki-W2-rvz" id="3T9-oU-5jy"/>
+                        <outlet property="delegate" destination="8Ki-W2-rvz" id="ZZX-qk-M2Y"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="539" y="253"/>
         </scene>

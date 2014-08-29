@@ -34,14 +34,17 @@
     }];
 }
 
+- (NSArray*) questionViews {
+    return @[self.wordLabel,self.furiganaLabel,self.wordTypeLabel,self.definitionLabel];
+}
+
 - (void) setupQuestionsWithAnimation {
     [super setupQuestionsWithAnimation];
     
-    NSArray* questionViews = @[self.wordLabel,self.furiganaLabel,self.wordTypeLabel,self.definitionLabel];
-    NSRange viewRange = [self rangeBasedOnCollectionOfViews:questionViews];
+    NSRange viewRange = [self rangeBasedOnCollectionOfViews:[self questionViews]];
     
     
-    for (UIView* v in questionViews) {
+    for (UIView* v in [self questionViews]) {
         CGFloat animTime = 0.05 + 0.35 * [self stepBasedOnRange:viewRange forView:v];
         [UIView animateWithDuration:animTime animations:^{
             v.alpha = 0.0;
@@ -52,6 +55,29 @@
         }];
         
     }
+}
+- (IBAction)labelTapped:(UITapGestureRecognizer *)sender {
+    if (sender.state == UIGestureRecognizerStateEnded && [sender.view isKindOfClass:[UILabel class]]) {
+        CGPoint tp = [sender locationOfTouch:0 inView:self.view];
+        for (UILabel* l in [self questionViews]) {
+            if (CGRectContainsPoint(l.frame, tp)) {
+                [self setLabelState:l];
+                break;
+            }
+        }
+    }
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    return YES;
+}
+
+- (void) setLabelState: (UILabel*) label {
+    if ([label isKindOfClass:[FPNConcealableQuestionLabel class]]) {
+        [((FPNConcealableQuestionLabel*)label) toggleConcealed];
+    }
+//    label.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
 }
 
 @end

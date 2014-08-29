@@ -8,8 +8,9 @@
 
 #import "FPNMultipleChoiceVC.h"
 #import "FPNConjugateJapaneseQuizGenerator.h"
+#import "FPNConcealableQuestionLabel.h"
 
-@interface FPNConjugationMultipleChoiceVC : FPNMultipleChoiceVC
+@interface FPNConjugationMultipleChoiceVC : FPNMultipleChoiceVC <UIGestureRecognizerDelegate>
 @property (nonatomic,strong, setter = setConjugationGenerator:) FPNConjugateJapaneseQuizGenerator* conjugationGenerator;
 
 @end

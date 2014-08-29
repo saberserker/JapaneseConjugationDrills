@@ -10,6 +10,7 @@
 		F10519DD19343AA900FD6C79 /* FPNConjugationMultipleChoiceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F10519DC19343AA900FD6C79 /* FPNConjugationMultipleChoiceVC.m */; };
 		F10519E0195CBBA700FD6C79 /* FPNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F10519DF195CBBA700FD6C79 /* FPNViewController.m */; };
 		F111393F19B03DAD00874832 /* FPNAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F111393E19B03DAD00874832 /* FPNAboutVC.m */; };
+		F111394219B0E5F200874832 /* FPNConcealableQuestionLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F111394119B0E5F200874832 /* FPNConcealableQuestionLabel.m */; };
 		F191A80E190A1794004836F2 /* FPNViewBorderColorizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F191A80D190A1794004836F2 /* FPNViewBorderColorizer.m */; };
 		F191A812190A2050004836F2 /* FPNAllRomanjiForKana.m in Sources */ = {isa = PBXBuildFile; fileRef = F191A811190A2050004836F2 /* FPNAllRomanjiForKana.m */; };
 		F191A817190AFD4E004836F2 /* FPNQuizSelectorTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F191A816190AFD4E004836F2 /* FPNQuizSelectorTableVC.m */; };
@@ -59,6 +60,8 @@
 		F10519DF195CBBA700FD6C79 /* FPNViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNViewController.m; path = ../FPNViewController.m; sourceTree = "<group>"; };
 		F111393D19B03DAD00874832 /* FPNAboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNAboutVC.h; path = ViewControllers/FPNAboutVC.h; sourceTree = "<group>"; };
 		F111393E19B03DAD00874832 /* FPNAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNAboutVC.m; path = ViewControllers/FPNAboutVC.m; sourceTree = "<group>"; };
+		F111394019B0E5F200874832 /* FPNConcealableQuestionLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNConcealableQuestionLabel.h; path = Views/FPNConcealableQuestionLabel.h; sourceTree = "<group>"; };
+		F111394119B0E5F200874832 /* FPNConcealableQuestionLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNConcealableQuestionLabel.m; path = Views/FPNConcealableQuestionLabel.m; sourceTree = "<group>"; };
 		F191A80C190A1794004836F2 /* FPNViewBorderColorizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNViewBorderColorizer.h; path = Views/FPNViewBorderColorizer.h; sourceTree = "<group>"; };
 		F191A80D190A1794004836F2 /* FPNViewBorderColorizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPNViewBorderColorizer.m; path = Views/FPNViewBorderColorizer.m; sourceTree = "<group>"; };
 		F191A810190A2050004836F2 /* FPNAllRomanjiForKana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPNAllRomanjiForKana.h; path = Models/FPNAllRomanjiForKana.h; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				F191A81B190DC4EE004836F2 /* FPNQuizAnswerButton.m */,
 				F1CB90D3190F4EE9004BFC47 /* UIView+Tools.h */,
 				F1CB90D4190F4EE9004BFC47 /* UIView+Tools.m */,
+				F111394019B0E5F200874832 /* FPNConcealableQuestionLabel.h */,
+				F111394119B0E5F200874832 /* FPNConcealableQuestionLabel.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -388,6 +393,7 @@
 				F10519DD19343AA900FD6C79 /* FPNConjugationMultipleChoiceVC.m in Sources */,
 				F191A812190A2050004836F2 /* FPNAllRomanjiForKana.m in Sources */,
 				F191A81C190DC4EE004836F2 /* FPNQuizAnswerButton.m in Sources */,
+				F111394219B0E5F200874832 /* FPNConcealableQuestionLabel.m in Sources */,
 				F1EA9B4719070201007F9F5C /* FPNMultipleChoiceVC.m in Sources */,
 				F1CB90D2190F4865004BFC47 /* FPNHangulQuizGenerator.m in Sources */,
 				F1C17FA31917D5FE003102E6 /* NSArray+Tools.m in Sources */,

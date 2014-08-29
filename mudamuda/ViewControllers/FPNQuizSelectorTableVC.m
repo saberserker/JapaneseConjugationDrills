@@ -37,9 +37,14 @@
     return self;
 }
 
+- (void)defaultsChanged:(NSNotification *)notification {
+    [self setupColor];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(defaultsChanged:) name:NSUserDefaultsDidChangeNotification object:nil];
     
 //    NSArray* kana = @[@"Hiragana Basic", @"Hiragana Marked", @"Hiragana Doubled", @"Hiragana Doubled and Marked", @"Hiragana All", @"Katakana Basic", @"Katakana Marked", @"Katakana Doubled", @"Katakana Doubled and Marked", @"Katakana All", @"Everything Kana"];
     NSArray* conju = @[                        @"て-form",
@@ -101,6 +106,10 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
+    [self setupColor];
+}
+
+- (void) setupColor {
     self.view.backgroundColor = [UIColor colorWithHue:self.themeColor saturation:0.5 brightness:0.8 alpha:1];
     [self.tableView reloadData];
 }
@@ -217,5 +226,8 @@
     [nextVC setThemeColor: self.themeColor];
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 @end

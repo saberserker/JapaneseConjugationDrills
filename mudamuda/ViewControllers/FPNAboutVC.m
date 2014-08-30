@@ -52,5 +52,9 @@
     [self setupThemeColorWithHue:sv];
 }
 
+- (IBAction)colorChangeDidEnd:(UISlider *)sender {
+    CGFloat sv = sender.value;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ThemeColorDidChange" object:nil];
+}
 
 @end

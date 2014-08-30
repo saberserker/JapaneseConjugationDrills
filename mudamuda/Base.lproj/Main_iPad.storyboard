@@ -75,9 +75,9 @@
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wch-nA-Exj">
                         <rect key="frame" x="0.0" y="0.0" width="308" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="quizSelect" id="3u6-E3-fNa">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="quizSelect" id="3u6-E3-fNa">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3u6-E3-fNa" id="J4O-AP-I7a">
@@ -95,6 +95,7 @@
                     <connections>
                         <segue destination="jH0-FB-J6T" kind="replace" identifier="toConjugationMultipleChoice" splitViewControllerTargetIndex="1" id="UzE-ly-Wvz"/>
                         <segue destination="QbP-Jq-Yet" kind="replace" identifier="toAbout" splitViewControllerTargetIndex="1" id="Jbf-Ob-fkg"/>
+                        <segue destination="NRg-2l-kpd" kind="replace" identifier="toMultipleChoice" splitViewControllerTargetIndex="1" id="Vue-Ra-LAg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7na-lb-dP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -117,10 +118,10 @@
                                 <rect key="frame" x="0.0" y="-44" width="768" height="1068"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNx-rL-uCc" customClass="FPNQuizAnswerButton">
-                                        <rect key="frame" x="18" y="954" width="361" height="48"/>
+                                        <rect key="frame" x="18" y="850" width="361" height="100"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Ka">
+                                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                        <state key="normal" title="-">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -140,10 +141,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbK-Hu-Asl" customClass="FPNQuizAnswerButton">
-                                        <rect key="frame" x="18" y="1010" width="361" height="48"/>
+                                        <rect key="frame" x="18" y="958" width="361" height="100"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Ka">
+                                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                        <state key="normal" title="-">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -163,10 +164,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbp-Xn-H9S" customClass="FPNQuizAnswerButton">
-                                        <rect key="frame" x="389" y="954" width="361" height="48"/>
+                                        <rect key="frame" x="389" y="850" width="361" height="100"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Ka">
+                                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                        <state key="normal" title="-">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -186,10 +187,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eon-HX-1CG" customClass="FPNQuizAnswerButton">
-                                        <rect key="frame" x="389" y="1010" width="361" height="48"/>
+                                        <rect key="frame" x="389" y="958" width="361" height="100"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Ka">
+                                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                        <state key="normal" title="-">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -209,14 +210,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isq-iN-rc0" customClass="FPNQuizAnswerButton">
-                                        <rect key="frame" x="18" y="898" width="361" height="48"/>
+                                        <rect key="frame" x="18" y="742" width="361" height="100"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="LoC-dK-o44"/>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" priority="990" constant="60" id="QdO-cR-Qyk"/>
+                                            <constraint firstAttribute="height" constant="100" id="LoC-dK-o44"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Ka">
+                                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                        <state key="normal" title="-">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -236,10 +236,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrz-4E-PAh" customClass="FPNQuizAnswerButton">
-                                        <rect key="frame" x="389" y="898" width="361" height="48"/>
+                                        <rect key="frame" x="389" y="742" width="361" height="100"/>
                                         <color key="backgroundColor" red="0.54766049589999999" green="0.54766049589999999" blue="0.54766049589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Ka">
+                                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                        <state key="normal" title="-">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -259,13 +259,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="弾幕する" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wy8-3W-1aU" customClass="FPNConcealableQuestionLabel">
-                                        <rect key="frame" x="0.0" y="64" width="768" height="73"/>
+                                        <rect key="frame" x="0.0" y="64" width="768" height="119.5"/>
                                         <color key="backgroundColor" red="0.90716287360000003" green="0.90716287360000003" blue="0.90716287360000003" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="hFG-3N-4XY"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <connections>
@@ -273,12 +273,12 @@
                                         </connections>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="だんまくする" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="alK-pd-zyb" customClass="FPNConcealableQuestionLabel">
-                                        <rect key="frame" x="0.0" y="145" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="191.5" width="768" height="60"/>
                                         <color key="backgroundColor" red="0.90716287360000003" green="0.90716287360000003" blue="0.90716287360000003" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="evq-Xy-smV"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <connections>
@@ -286,12 +286,12 @@
                                         </connections>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ichidan Verb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CjL-VC-s6E" customClass="FPNConcealableQuestionLabel">
-                                        <rect key="frame" x="0.0" y="197" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="259.5" width="768" height="48"/>
                                         <color key="backgroundColor" red="0.90716287360000003" green="0.90716287360000003" blue="0.90716287360000003" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="FFd-yf-Yic"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <connections>
@@ -299,13 +299,13 @@
                                         </connections>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To make due; to make due to make due; to make due to anger to anger to anger" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="vRv-Vi-7Dz" customClass="FPNConcealableQuestionLabel">
-                                        <rect key="frame" x="0.0" y="249" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="315.5" width="768" height="153"/>
                                         <color key="backgroundColor" red="0.90716287360000003" green="0.90716287360000003" blue="0.90716287360000003" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="QKa-CB-TCx"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <connections>
@@ -441,6 +441,8 @@
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cBb-cb-ffc">
                                 <rect key="frame" x="14" y="314" width="292" height="31"/>
                                 <connections>
+                                    <action selector="colorChangeDidEnd:" destination="QbP-Jq-Yet" eventType="touchUpOutside" id="LTu-b1-KvR"/>
+                                    <action selector="colorChangeDidEnd:" destination="QbP-Jq-Yet" eventType="touchUpInside" id="TX0-md-YlF"/>
                                     <action selector="sliderChanged:" destination="QbP-Jq-Yet" eventType="valueChanged" id="5XV-7c-lrf"/>
                                 </connections>
                             </slider>
@@ -476,6 +478,238 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QW1-sU-BIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1823" y="2175"/>
+        </scene>
+        <!--Multiple Choice Large Display-->
+        <scene sceneID="ieO-hM-N4g">
+            <objects>
+                <viewController id="NRg-2l-kpd" userLabel="Multiple Choice Large Display" customClass="FPNMultipleChoiceVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e53-nr-jF4"/>
+                        <viewControllerLayoutGuide type="bottom" id="mTg-ai-tUZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A87-2X-9Di" customClass="FPNViewBorderColorizer">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwH-AM-Zpy" customClass="FPNQuizAnswerButton">
+                                <rect key="frame" x="20" y="806" width="359" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.0" green="0.50493036049999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W81-4g-JAM" customClass="FPNQuizAnswerButton">
+                                <rect key="frame" x="20" y="914" width="359" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.0" green="0.50493036049999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djp-qA-eYC" customClass="FPNQuizAnswerButton">
+                                <rect key="frame" x="389" y="806" width="359" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.0" green="0.50493036049999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dST-qq-lbN" customClass="FPNQuizAnswerButton">
+                                <rect key="frame" x="389" y="914" width="359" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.0" green="0.50493036049999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nf-hD-fZp" customClass="FPNQuizAnswerButton">
+                                <rect key="frame" x="389" y="698" width="359" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.0" green="0.50493036049999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textView multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="単語" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0y3-gW-68k">
+                                <rect key="frame" x="20" y="30" width="728" height="660"/>
+                                <color key="backgroundColor" red="0.90716287360000003" green="0.90716287360000003" blue="0.90716287360000003" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="120"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIv-i0-gXg" customClass="FPNQuizAnswerButton">
+                                <rect key="frame" x="20" y="698" width="359" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="hzx-YS-7rS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.0" green="0.50493036049999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dST-qq-lbN" firstAttribute="trailing" secondItem="0nf-hD-fZp" secondAttribute="trailing" id="0rs-Er-g0d"/>
+                            <constraint firstItem="dST-qq-lbN" firstAttribute="leading" secondItem="djp-qA-eYC" secondAttribute="leading" id="5UC-NW-mGm"/>
+                            <constraint firstItem="pIv-i0-gXg" firstAttribute="leading" secondItem="W81-4g-JAM" secondAttribute="leading" id="6F1-6k-Hpg"/>
+                            <constraint firstItem="0nf-hD-fZp" firstAttribute="top" secondItem="pIv-i0-gXg" secondAttribute="top" id="73v-N0-qTm"/>
+                            <constraint firstItem="pIv-i0-gXg" firstAttribute="leading" secondItem="0y3-gW-68k" secondAttribute="leading" id="9Zn-AB-1Ki"/>
+                            <constraint firstItem="pIv-i0-gXg" firstAttribute="trailing" secondItem="cwH-AM-Zpy" secondAttribute="trailing" id="9hW-Me-DOl"/>
+                            <constraint firstItem="djp-qA-eYC" firstAttribute="height" secondItem="0nf-hD-fZp" secondAttribute="height" id="BH3-Yg-htH"/>
+                            <constraint firstItem="W81-4g-JAM" firstAttribute="top" secondItem="cwH-AM-Zpy" secondAttribute="bottom" constant="8" id="HHO-ag-knG"/>
+                            <constraint firstItem="pIv-i0-gXg" firstAttribute="height" secondItem="cwH-AM-Zpy" secondAttribute="height" id="HWV-XI-FzL"/>
+                            <constraint firstItem="pIv-i0-gXg" firstAttribute="trailing" secondItem="W81-4g-JAM" secondAttribute="trailing" id="IWX-SS-pcT"/>
+                            <constraint firstItem="0nf-hD-fZp" firstAttribute="bottom" secondItem="pIv-i0-gXg" secondAttribute="bottom" id="M94-qW-PDl"/>
+                            <constraint firstItem="dST-qq-lbN" firstAttribute="height" secondItem="0nf-hD-fZp" secondAttribute="height" id="NRN-Pb-ips"/>
+                            <constraint firstItem="dST-qq-lbN" firstAttribute="top" secondItem="djp-qA-eYC" secondAttribute="bottom" constant="8" id="S9I-mt-jFJ"/>
+                            <constraint firstItem="0nf-hD-fZp" firstAttribute="leading" secondItem="pIv-i0-gXg" secondAttribute="trailing" constant="10" id="W8W-od-1z4"/>
+                            <constraint firstItem="0y3-gW-68k" firstAttribute="trailing" secondItem="0nf-hD-fZp" secondAttribute="trailing" id="Z4n-Cm-rpb"/>
+                            <constraint firstItem="0y3-gW-68k" firstAttribute="top" secondItem="e53-nr-jF4" secondAttribute="bottom" constant="10" id="ftO-rj-GnU"/>
+                            <constraint firstItem="mTg-ai-tUZ" firstAttribute="top" secondItem="W81-4g-JAM" secondAttribute="bottom" constant="10" id="g1n-qz-WXM"/>
+                            <constraint firstItem="pIv-i0-gXg" firstAttribute="width" secondItem="0nf-hD-fZp" secondAttribute="width" id="gyb-OX-Fij"/>
+                            <constraint firstItem="pIv-i0-gXg" firstAttribute="leading" secondItem="cwH-AM-Zpy" secondAttribute="leading" id="htO-7E-xL0"/>
+                            <constraint firstItem="djp-qA-eYC" firstAttribute="leading" secondItem="0nf-hD-fZp" secondAttribute="leading" id="kDq-kA-UXh"/>
+                            <constraint firstItem="djp-qA-eYC" firstAttribute="trailing" secondItem="0nf-hD-fZp" secondAttribute="trailing" id="lZK-2G-xaw"/>
+                            <constraint firstItem="djp-qA-eYC" firstAttribute="top" secondItem="0nf-hD-fZp" secondAttribute="bottom" constant="8" id="pFp-iM-O35"/>
+                            <constraint firstItem="pIv-i0-gXg" firstAttribute="top" secondItem="0y3-gW-68k" secondAttribute="bottom" constant="8" id="vjl-OW-DBe"/>
+                            <constraint firstItem="0y3-gW-68k" firstAttribute="leading" secondItem="A87-2X-9Di" secondAttribute="leading" constant="20" id="wWm-WU-Lso"/>
+                            <constraint firstAttribute="trailing" secondItem="0y3-gW-68k" secondAttribute="trailing" constant="20" id="xB2-yA-7m1"/>
+                            <constraint firstItem="W81-4g-JAM" firstAttribute="height" secondItem="pIv-i0-gXg" secondAttribute="height" id="xN4-eF-e61"/>
+                            <constraint firstItem="cwH-AM-Zpy" firstAttribute="top" secondItem="pIv-i0-gXg" secondAttribute="bottom" constant="8" id="y7U-mY-5bE"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="templateBorderColor">
+                                <color key="value" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outletCollection property="coloredViews" destination="pIv-i0-gXg" id="NOY-4z-OM2"/>
+                            <outletCollection property="coloredViews" destination="0nf-hD-fZp" id="6yK-aO-GGv"/>
+                            <outletCollection property="coloredViews" destination="dST-qq-lbN" id="AYc-hZ-NV5"/>
+                            <outletCollection property="coloredViews" destination="djp-qA-eYC" id="TSW-nd-nF1"/>
+                            <outletCollection property="coloredViews" destination="W81-4g-JAM" id="VW3-iH-fri"/>
+                            <outletCollection property="coloredViews" destination="cwH-AM-Zpy" id="Sq7-Js-HWM"/>
+                            <outletCollection property="coloredViews" destination="0y3-gW-68k" id="mfe-sj-vDg"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="hAK-g9-JBE"/>
+                    <connections>
+                        <outlet property="questionView" destination="0y3-gW-68k" id="QFD-cx-hwS"/>
+                        <outletCollection property="answerButton" destination="pIv-i0-gXg" id="ydD-fM-xPZ"/>
+                        <outletCollection property="answerButton" destination="cwH-AM-Zpy" id="t5g-Ta-zE2"/>
+                        <outletCollection property="answerButton" destination="W81-4g-JAM" id="A7h-qK-vYP"/>
+                        <outletCollection property="answerButton" destination="0nf-hD-fZp" id="EEH-mO-uwu"/>
+                        <outletCollection property="answerButton" destination="djp-qA-eYC" id="ZVx-vf-L2v"/>
+                        <outletCollection property="answerButton" destination="dST-qq-lbN" id="hlM-y8-keM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KAP-9X-kNA" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1951" y="-241"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

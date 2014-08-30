@@ -44,9 +44,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(defaultsChanged:) name:NSUserDefaultsDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(defaultsChanged:) name:@"ThemeColorDidChange" object:nil];
     
 //    NSArray* kana = @[@"Hiragana Basic", @"Hiragana Marked", @"Hiragana Doubled", @"Hiragana Doubled and Marked", @"Hiragana All", @"Katakana Basic", @"Katakana Marked", @"Katakana Doubled", @"Katakana Doubled and Marked", @"Katakana All", @"Everything Kana"];
+//    NSArray* kana = @[@"Hiragana & Katakana"];
+
     NSArray* conju = @[                        @"て-form",
                                                @"た-form",
                                                @"ない-form",
@@ -58,7 +60,7 @@
                                                @"Imperative form",
                                                @"Volitional form"];
 //    NSArray* bonus = @[@"Hangul Jamo", @"About"];
-    NSArray* bonus = @[@"About"];
+    NSArray* bonus = @[@"Hiragana & Katakana",@"About"];
 
     
 //    NSArray* kanaVCs = @[[FPNAllRomanjiForKana quizWithType: kHiraganaBasic],
@@ -85,7 +87,7 @@
                           [FPNConjugateJapaneseQuizGenerator newWithConjugation:@"VOLITIONALFORM"]];
     
 //    NSArray* otherVCs = @[[FPNHangulQuizGenerator new], [FPNHangulQuizGenerator new]];
-    NSArray* otherVCs = @[[NSNull null]];
+    NSArray* otherVCs = @[[FPNAllRomanjiForKana quizWithType: kKanaAll],[NSNull null]];
 //    self.vcs = @[kanaVCs,conjuVCs,otherVCs];
     self.vcs = @[conjuVCs,otherVCs];
 
@@ -151,6 +153,11 @@
     CGFloat ds  = 0.4 / [self tableView:tableView numberOfRowsInSection:0];
     CGFloat final = min - ds * indexPath.row;
     cell.backgroundColor = [UIColor colorWithHue:self.themeColor saturation:(final )  brightness:final / 2 alpha:1];
+    UIView* coloredBackgroundView = [UIView new];
+    coloredBackgroundView.frame = cell.frame;
+    coloredBackgroundView.backgroundColor = [UIColor colorWithHue:self.themeColor saturation:1 brightness: 0.8 alpha:1];
+//    [cell.selectedBackgroundView addSubview:coloredBackgroundView];
+    cell.selectedBackgroundView = coloredBackgroundView;
     return cell;
 }
 

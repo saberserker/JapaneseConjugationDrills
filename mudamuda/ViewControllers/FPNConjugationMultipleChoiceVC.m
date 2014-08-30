@@ -57,11 +57,12 @@
     }
 }
 - (IBAction)labelTapped:(UITapGestureRecognizer *)sender {
-    if (sender.state == UIGestureRecognizerStateEnded && [sender.view isKindOfClass:[UILabel class]]) {
-        CGPoint tp = [sender locationOfTouch:0 inView:self.view];
+    if (sender.state == UIGestureRecognizerStateEnded) {
         for (UILabel* l in [self questionViews]) {
+            CGPoint tp = [sender locationOfTouch:0 inView:l.superview];
             if (CGRectContainsPoint(l.frame, tp)) {
                 [self setLabelState:l];
+                [self.view layoutIfNeeded];
                 break;
             }
         }
@@ -77,7 +78,6 @@
     if ([label isKindOfClass:[FPNConcealableQuestionLabel class]]) {
         [((FPNConcealableQuestionLabel*)label) toggleConcealed];
     }
-//    label.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
 }
 
 @end

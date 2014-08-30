@@ -48,7 +48,7 @@
         self.questionView.text = question;
         [self.questionView setFont:[UIFont boldSystemFontOfSize:90]];
         [self.questionView setTextAlignment:NSTextAlignmentCenter];
-        [self.questionView setTextColor:[UIColor colorWithHue:self.themeColor saturation:0.2 brightness:1 alpha:1]];
+        [self.questionView setTextColor:[UIColor whiteColor]];
         [self assignToButtonsPossibleAnswers:possibleAnswers];
     }];
 }

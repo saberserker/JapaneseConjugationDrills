@@ -663,7 +663,6 @@
                             <outletCollection property="coloredViews" destination="djp-qA-eYC" id="TSW-nd-nF1"/>
                             <outletCollection property="coloredViews" destination="W81-4g-JAM" id="VW3-iH-fri"/>
                             <outletCollection property="coloredViews" destination="cwH-AM-Zpy" id="Sq7-Js-HWM"/>
-                            <outletCollection property="coloredViews" destination="0y3-gW-68k" id="mfe-sj-vDg"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="hAK-g9-JBE"/>

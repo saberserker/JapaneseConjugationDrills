@@ -645,7 +645,6 @@
                             <outletCollection property="coloredViews" destination="z8s-oj-WYw" id="zLp-u4-tbv"/>
                             <outletCollection property="coloredViews" destination="GHv-9L-WXE" id="BjK-vS-azc"/>
                             <outletCollection property="coloredViews" destination="6q9-7C-f6t" id="a5y-8y-5K9"/>
-                            <outletCollection property="coloredViews" destination="ls9-cf-SBy" id="dWj-7S-IQS"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="4AO-jK-s4N"/>

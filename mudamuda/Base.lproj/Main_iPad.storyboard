@@ -6,37 +6,6 @@
         <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="MEh-5L-kPj">
-            <objects>
-                <viewController id="qYy-hJ-VdE" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dHk-2T-xR8"/>
-                        <viewControllerLayoutGuide type="bottom" id="M8F-ag-BPw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Vzu-WV-6p9">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick an exercise on the nav bar to get started" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTh-oV-Q9H">
-                                <rect key="frame" x="20" y="463" width="728" height="98"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="fTh-oV-Q9H" secondAttribute="trailing" id="IkW-of-5Pt"/>
-                            <constraint firstAttribute="centerY" secondItem="fTh-oV-Q9H" secondAttribute="centerY" id="Jbb-F6-SXW"/>
-                            <constraint firstItem="fTh-oV-Q9H" firstAttribute="leading" secondItem="Vzu-WV-6p9" secondAttribute="leadingMargin" id="dDe-mx-1aW"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VDD-gN-Ri2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="933" y="2255"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Zo-Va-tj7">
             <objects>
@@ -57,10 +26,11 @@
         <scene sceneID="dEK-21-znT">
             <objects>
                 <splitViewController id="Swh-cJ-saJ" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <connections>
                         <outlet property="delegate" destination="NVN-Ew-kfE" id="q4I-Ge-Q2X"/>
                         <segue destination="p7d-so-Ju0" kind="relationship" relationship="masterViewController" id="2Gk-Ig-yCc"/>
-                        <segue destination="qYy-hJ-VdE" kind="relationship" relationship="detailViewController" id="bcO-Rx-YbW"/>
+                        <segue destination="2gg-W1-JWE" kind="relationship" relationship="detailViewController" id="3Uo-Us-Gfe"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mIs-p4-X4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -710,6 +680,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAP-9X-kNA" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1951" y="-241"/>
+        </scene>
+        <!--GETTING STARTED VIEW-->
+        <scene sceneID="hmq-p4-ggs">
+            <objects>
+                <viewController title="GETTING STARTED VIEW" id="2gg-W1-JWE" customClass="FPNAboutVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KDU-ro-BVM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bqi-LR-hDV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="beU-MB-DZA" customClass="FPNViewBorderColorizer">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b25-xK-KYQ">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick an exercise to the right to get started" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1O-DW-T7l">
+                                <rect key="frame" x="24" y="424" width="720" height="177"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="74"/>
+                                <color key="textColor" red="0.85719799901185767" green="0.85719799901185767" blue="0.85719799901185767" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="w1O-DW-T7l" secondAttribute="centerY" constant="-0.5" id="9WO-ZY-1tI"/>
+                            <constraint firstItem="w1O-DW-T7l" firstAttribute="leading" secondItem="beU-MB-DZA" secondAttribute="leadingMargin" constant="4" id="QD4-Ai-pSK"/>
+                            <constraint firstItem="Bqi-LR-hDV" firstAttribute="top" secondItem="b25-xK-KYQ" secondAttribute="bottom" id="TUc-0r-od5"/>
+                            <constraint firstAttribute="trailing" secondItem="b25-xK-KYQ" secondAttribute="trailing" id="enb-uc-YXm"/>
+                            <constraint firstItem="b25-xK-KYQ" firstAttribute="top" secondItem="beU-MB-DZA" secondAttribute="topMargin" id="hqC-Pw-bzB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w1O-DW-T7l" secondAttribute="trailing" constant="4" id="kiY-eO-H0p"/>
+                            <constraint firstItem="b25-xK-KYQ" firstAttribute="top" secondItem="beU-MB-DZA" secondAttribute="top" id="lCR-Ad-WyR"/>
+                            <constraint firstItem="Bqi-LR-hDV" firstAttribute="top" secondItem="b25-xK-KYQ" secondAttribute="bottom" id="qKV-Pc-nK0"/>
+                            <constraint firstItem="b25-xK-KYQ" firstAttribute="leading" secondItem="beU-MB-DZA" secondAttribute="leading" id="v8v-SY-zGq"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="coloredViews" destination="b25-xK-KYQ" id="uWr-bL-070"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="m8U-6T-sgv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="73d-EQ-yc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="43" y="2703"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

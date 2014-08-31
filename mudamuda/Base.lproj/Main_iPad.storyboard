@@ -229,7 +229,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="弾幕する" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wy8-3W-1aU" customClass="FPNConcealableQuestionLabel">
-                                        <rect key="frame" x="0.0" y="64" width="768" height="119.5"/>
+                                        <rect key="frame" x="0.0" y="64" width="768" height="120"/>
                                         <color key="backgroundColor" red="0.90716287360000003" green="0.90716287360000003" blue="0.90716287360000003" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -243,7 +243,7 @@
                                         </connections>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="だんまくする" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="alK-pd-zyb" customClass="FPNConcealableQuestionLabel">
-                                        <rect key="frame" x="0.0" y="191.5" width="768" height="60"/>
+                                        <rect key="frame" x="0.0" y="192" width="768" height="60"/>
                                         <color key="backgroundColor" red="0.90716287360000003" green="0.90716287360000003" blue="0.90716287360000003" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="evq-Xy-smV"/>
@@ -256,7 +256,7 @@
                                         </connections>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ichidan Verb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CjL-VC-s6E" customClass="FPNConcealableQuestionLabel">
-                                        <rect key="frame" x="0.0" y="259.5" width="768" height="48"/>
+                                        <rect key="frame" x="0.0" y="260" width="768" height="48"/>
                                         <color key="backgroundColor" red="0.90716287360000003" green="0.90716287360000003" blue="0.90716287360000003" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="FFd-yf-Yic"/>
@@ -269,7 +269,7 @@
                                         </connections>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To make due; to make due to make due; to make due to anger to anger to anger" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="vRv-Vi-7Dz" customClass="FPNConcealableQuestionLabel">
-                                        <rect key="frame" x="0.0" y="315.5" width="768" height="153"/>
+                                        <rect key="frame" x="0.0" y="316" width="768" height="153"/>
                                         <color key="backgroundColor" red="0.90716287360000003" green="0.90716287360000003" blue="0.90716287360000003" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -384,15 +384,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNR-FS-clv">
-                                <rect key="frame" x="16" y="72" width="288" height="162"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNR-FS-clv">
+                                <rect key="frame" x="20" y="28" width="728" height="61"/>
                                 <string key="text">This was a free app made with hopes that it was helpful in your learning of the Japanese language. If you have any suggestions for making this app better or would like to report omissions/errors/mistakes, feel free to send an email to be below address.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="devappfeedback@icloud.com" translatesAutoresizingMaskIntoConstraints="NO" id="0lU-Hq-e4o">
-                                <rect key="frame" x="16" y="242" width="288" height="40"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="freezedpeanuts@icloud.com" translatesAutoresizingMaskIntoConstraints="NO" id="0lU-Hq-e4o">
+                                <rect key="frame" x="20" y="97" width="728" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="4cU-yo-FIh"/>
@@ -402,14 +402,14 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Color Adjustment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5A4-Q8-v4x">
-                                <rect key="frame" x="16" y="290" width="134" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Adjustment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5A4-Q8-v4x">
+                                <rect key="frame" x="20" y="145" width="134" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cBb-cb-ffc">
-                                <rect key="frame" x="14" y="314" width="292" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cBb-cb-ffc">
+                                <rect key="frame" x="18" y="169" width="732" height="31"/>
                                 <connections>
                                     <action selector="colorChangeDidEnd:" destination="QbP-Jq-Yet" eventType="touchUpOutside" id="LTu-b1-KvR"/>
                                     <action selector="colorChangeDidEnd:" destination="QbP-Jq-Yet" eventType="touchUpInside" id="TX0-md-YlF"/>

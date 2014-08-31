@@ -87,7 +87,7 @@
 		F1CB90D4190F4EE9004BFC47 /* UIView+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Tools.m"; path = "Views/UIView+Tools.m"; sourceTree = "<group>"; };
 		F1CB9125191280A0004BFC47 /* about.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = about.plist; path = assets/about.plist; sourceTree = "<group>"; };
 		F1CB91401916F9F4004BFC47 /* japanese_words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = japanese_words.plist; path = assets/japanese_words.plist; sourceTree = "<group>"; };
-		F1EA9B061906CCD4007F9F5C /* mudamuda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mudamuda.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1EA9B061906CCD4007F9F5C /* JapaneseGrammarConjugation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaneseGrammarConjugation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EA9B091906CCD4007F9F5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F1EA9B0B1906CCD4007F9F5C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F1EA9B0D1906CCD4007F9F5C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -187,7 +187,7 @@
 		F1EA9B071906CCD4007F9F5C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F1EA9B061906CCD4007F9F5C /* mudamuda.app */,
+				F1EA9B061906CCD4007F9F5C /* JapaneseGrammarConjugation.app */,
 				F1EA9B2A1906CCD4007F9F5C /* mudamudaTests.xctest */,
 			);
 			name = Products;
@@ -288,9 +288,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F1EA9B051906CCD4007F9F5C /* mudamuda */ = {
+		F1EA9B051906CCD4007F9F5C /* JapaneseGrammarConjugation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F1EA9B3B1906CCD4007F9F5C /* Build configuration list for PBXNativeTarget "mudamuda" */;
+			buildConfigurationList = F1EA9B3B1906CCD4007F9F5C /* Build configuration list for PBXNativeTarget "JapaneseGrammarConjugation" */;
 			buildPhases = (
 				F1EA9B021906CCD4007F9F5C /* Sources */,
 				F1EA9B031906CCD4007F9F5C /* Frameworks */,
@@ -300,9 +300,9 @@
 			);
 			dependencies = (
 			);
-			name = mudamuda;
-			productName = mudamuda;
-			productReference = F1EA9B061906CCD4007F9F5C /* mudamuda.app */;
+			name = JapaneseGrammarConjugation;
+			productName = JapaneseGrammarConjugation;
+			productReference = F1EA9B061906CCD4007F9F5C /* JapaneseGrammarConjugation.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F1EA9B291906CCD4007F9F5C /* mudamudaTests */ = {
@@ -354,7 +354,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F1EA9B051906CCD4007F9F5C /* mudamuda */,
+				F1EA9B051906CCD4007F9F5C /* JapaneseGrammarConjugation */,
 				F1EA9B291906CCD4007F9F5C /* mudamudaTests */,
 			);
 		};
@@ -426,7 +426,7 @@
 /* Begin PBXTargetDependency section */
 		F1EA9B301906CCD4007F9F5C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F1EA9B051906CCD4007F9F5C /* mudamuda */;
+			target = F1EA9B051906CCD4007F9F5C /* JapaneseGrammarConjugation */;
 			targetProxy = F1EA9B2F1906CCD4007F9F5C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -550,7 +550,7 @@
 				GCC_PREFIX_HEADER = "mudamuda/mudamuda-Prefix.pch";
 				INFOPLIST_FILE = "mudamuda/mudamuda-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5A5F6F54-2D45-4FA0-8562-EA0EFBA25370";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos7.1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -567,7 +567,7 @@
 				GCC_PREFIX_HEADER = "mudamuda/mudamuda-Prefix.pch";
 				INFOPLIST_FILE = "mudamuda/mudamuda-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5A5F6F54-2D45-4FA0-8562-EA0EFBA25370";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos7.1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -625,7 +625,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F1EA9B3B1906CCD4007F9F5C /* Build configuration list for PBXNativeTarget "mudamuda" */ = {
+		F1EA9B3B1906CCD4007F9F5C /* Build configuration list for PBXNativeTarget "JapaneseGrammarConjugation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F1EA9B3C1906CCD4007F9F5C /* Debug */,

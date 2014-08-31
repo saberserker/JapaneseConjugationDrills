@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F1EA9B051906CCD4007F9F5C"
-               BuildableName = "mudamuda.app"
-               BlueprintName = "mudamuda"
+               BuildableName = "JapaneseGrammarConjugation.app"
+               BlueprintName = "JapaneseGrammarConjugation"
                ReferencedContainer = "container:mudamuda.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F1EA9B051906CCD4007F9F5C"
-            BuildableName = "mudamuda.app"
-            BlueprintName = "mudamuda"
+            BuildableName = "JapaneseGrammarConjugation.app"
+            BlueprintName = "JapaneseGrammarConjugation"
             ReferencedContainer = "container:mudamuda.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F1EA9B051906CCD4007F9F5C"
-            BuildableName = "mudamuda.app"
-            BlueprintName = "mudamuda"
+            BuildableName = "JapaneseGrammarConjugation.app"
+            BlueprintName = "JapaneseGrammarConjugation"
             ReferencedContainer = "container:mudamuda.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -80,8 +80,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F1EA9B051906CCD4007F9F5C"
-            BuildableName = "mudamuda.app"
-            BlueprintName = "mudamuda"
+            BuildableName = "JapaneseGrammarConjugation.app"
+            BlueprintName = "JapaneseGrammarConjugation"
             ReferencedContainer = "container:mudamuda.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

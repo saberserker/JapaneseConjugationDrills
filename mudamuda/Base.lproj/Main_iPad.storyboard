@@ -622,8 +622,8 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dST-qq-lbN" firstAttribute="trailing" secondItem="0nf-hD-fZp" secondAttribute="trailing" id="0rs-Er-g0d"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tBi-2P-kRd" secondAttribute="trailing" constant="-20" id="1mE-hb-DEA"/>
-                            <constraint firstItem="tBi-2P-kRd" firstAttribute="leading" secondItem="A87-2X-9Di" secondAttribute="leadingMargin" constant="-20" id="42j-a4-8Ey"/>
+                            <constraint firstAttribute="trailing" secondItem="tBi-2P-kRd" secondAttribute="trailing" id="1mE-hb-DEA"/>
+                            <constraint firstItem="tBi-2P-kRd" firstAttribute="leading" secondItem="A87-2X-9Di" secondAttribute="leading" id="42j-a4-8Ey"/>
                             <constraint firstItem="dST-qq-lbN" firstAttribute="leading" secondItem="djp-qA-eYC" secondAttribute="leading" id="5UC-NW-mGm"/>
                             <constraint firstItem="pIv-i0-gXg" firstAttribute="leading" secondItem="W81-4g-JAM" secondAttribute="leading" id="6F1-6k-Hpg"/>
                             <constraint firstItem="0nf-hD-fZp" firstAttribute="top" secondItem="pIv-i0-gXg" secondAttribute="top" id="73v-N0-qTm"/>
@@ -731,40 +731,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73d-EQ-yc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="43" y="2703"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="pX9-Mr-GK5">
-            <objects>
-                <viewController id="dla-4X-SIP" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NE1-nn-0ur"/>
-                        <viewControllerLayoutGuide type="bottom" id="9HZ-UI-pJF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="U7P-e4-W33">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNf-RV-HlK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="62p-vd-vuQ">
-            <objects>
-                <viewController id="Feg-fG-sSc" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="c8T-4W-nMM"/>
-                        <viewControllerLayoutGuide type="bottom" id="VdH-vi-yZs"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NFj-qc-sVG">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PUt-vj-DZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

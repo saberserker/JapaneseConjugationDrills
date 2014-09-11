@@ -45,7 +45,7 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "app_icon_120x120-1.png",
+      "filename" : "app_icon_120x120.png",
       "scale" : "2x"
     },
     {
@@ -57,13 +57,13 @@
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "app_icon_29x29-1.png",
+      "filename" : "app_icon_29x29.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "app_icon_58x58-1.png",
+      "filename" : "app_icon_58x58.png",
       "scale" : "2x"
     },
     {
@@ -75,7 +75,7 @@
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "app_icon_80x80-1.png",
+      "filename" : "app_icon_80x80.png",
       "scale" : "2x"
     },
     {
@@ -117,7 +117,7 @@
     {
       "size" : "120x120",
       "idiom" : "car",
-      "filename" : "app_icon_120x120-3.png",
+      "filename" : "app_icon_120x120.png",
       "scale" : "1x"
     }
   ],

@@ -25,6 +25,7 @@
 		F1CB90D5190F4EE9004BFC47 /* UIView+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CB90D4190F4EE9004BFC47 /* UIView+Tools.m */; };
 		F1CB9126191280A0004BFC47 /* about.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1CB9125191280A0004BFC47 /* about.plist */; };
 		F1CB91411916F9F4004BFC47 /* japanese_words.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1CB91401916F9F4004BFC47 /* japanese_words.plist */; };
+		F1CF0C6019C233F9001D8DA8 /* AppIcon120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = F1CF0C5F19C233F9001D8DA8 /* AppIcon120x120.png */; };
 		F1EA9B0A1906CCD4007F9F5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EA9B091906CCD4007F9F5C /* Foundation.framework */; };
 		F1EA9B0C1906CCD4007F9F5C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EA9B0B1906CCD4007F9F5C /* CoreGraphics.framework */; };
 		F1EA9B0E1906CCD4007F9F5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EA9B0D1906CCD4007F9F5C /* UIKit.framework */; };
@@ -87,6 +88,7 @@
 		F1CB90D4190F4EE9004BFC47 /* UIView+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Tools.m"; path = "Views/UIView+Tools.m"; sourceTree = "<group>"; };
 		F1CB9125191280A0004BFC47 /* about.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = about.plist; path = assets/about.plist; sourceTree = "<group>"; };
 		F1CB91401916F9F4004BFC47 /* japanese_words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = japanese_words.plist; path = assets/japanese_words.plist; sourceTree = "<group>"; };
+		F1CF0C5F19C233F9001D8DA8 /* AppIcon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon120x120.png; sourceTree = "<group>"; };
 		F1EA9B061906CCD4007F9F5C /* JapaneseGrammarConjugation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaneseGrammarConjugation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EA9B091906CCD4007F9F5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F1EA9B0B1906CCD4007F9F5C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -227,6 +229,7 @@
 		F1EA9B101906CCD4007F9F5C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F1CF0C5F19C233F9001D8DA8 /* AppIcon120x120.png */,
 				F1EA9B111906CCD4007F9F5C /* mudamuda-Info.plist */,
 				F1EA9B121906CCD4007F9F5C /* InfoPlist.strings */,
 				F1EA9B151906CCD4007F9F5C /* main.m */,
@@ -368,6 +371,7 @@
 				F1CB9126191280A0004BFC47 /* about.plist in Resources */,
 				F1CB91411916F9F4004BFC47 /* japanese_words.plist in Resources */,
 				F1EA9B201906CCD4007F9F5C /* Main_iPad.storyboard in Resources */,
+				F1CF0C6019C233F9001D8DA8 /* AppIcon120x120.png in Resources */,
 				F1EA9B251906CCD4007F9F5C /* Images.xcassets in Resources */,
 				F1EA9B1D1906CCD4007F9F5C /* Main_iPhone.storyboard in Resources */,
 				F191A819190B3877004836F2 /* hiragana.plist in Resources */,

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Swh-cJ-saJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Swh-cJ-saJ">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
-        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -697,21 +697,20 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick an exercise to the right to get started" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1O-DW-T7l">
-                                <rect key="frame" x="24" y="424" width="720" height="177"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="74"/>
+                                <rect key="frame" x="112" y="494" width="545" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.85719799901185767" green="0.85719799901185767" blue="0.85719799901185767" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="w1O-DW-T7l" secondAttribute="centerY" constant="-0.5" id="9WO-ZY-1tI"/>
-                            <constraint firstItem="w1O-DW-T7l" firstAttribute="leading" secondItem="beU-MB-DZA" secondAttribute="leadingMargin" constant="4" id="QD4-Ai-pSK"/>
+                            <constraint firstAttribute="centerY" secondItem="w1O-DW-T7l" secondAttribute="centerY" id="9WO-ZY-1tI"/>
+                            <constraint firstItem="w1O-DW-T7l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="beU-MB-DZA" secondAttribute="leadingMargin" id="QD4-Ai-pSK"/>
                             <constraint firstItem="Bqi-LR-hDV" firstAttribute="top" secondItem="b25-xK-KYQ" secondAttribute="bottom" id="TUc-0r-od5"/>
                             <constraint firstAttribute="trailing" secondItem="b25-xK-KYQ" secondAttribute="trailing" id="enb-uc-YXm"/>
+                            <constraint firstAttribute="centerX" secondItem="w1O-DW-T7l" secondAttribute="centerX" id="gXB-Ll-tuh"/>
                             <constraint firstItem="b25-xK-KYQ" firstAttribute="top" secondItem="beU-MB-DZA" secondAttribute="topMargin" id="hqC-Pw-bzB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="w1O-DW-T7l" secondAttribute="trailing" constant="4" id="kiY-eO-H0p"/>
-                            <constraint firstItem="b25-xK-KYQ" firstAttribute="top" secondItem="beU-MB-DZA" secondAttribute="top" id="lCR-Ad-WyR"/>
                             <constraint firstItem="Bqi-LR-hDV" firstAttribute="top" secondItem="b25-xK-KYQ" secondAttribute="bottom" id="qKV-Pc-nK0"/>
                             <constraint firstItem="b25-xK-KYQ" firstAttribute="leading" secondItem="beU-MB-DZA" secondAttribute="leading" id="v8v-SY-zGq"/>
                         </constraints>
@@ -729,9 +728,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination">
-            <size key="portraitSize" width="768" height="1024"/>
-            <size key="landscapeSize" width="1024" height="768"/>
-        </simulatedScreenMetrics>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

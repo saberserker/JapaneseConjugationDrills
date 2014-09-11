@@ -29,6 +29,7 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     self.colorSlider.value = self.themeColor;
     [self setupThemeColors];
 }

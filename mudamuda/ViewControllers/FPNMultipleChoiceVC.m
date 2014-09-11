@@ -13,7 +13,8 @@
 #import "UIViewController+Colors.h"
 
 @interface FPNMultipleChoiceVC ()
-@property (weak, nonatomic) IBOutlet UITextView *questionView;
+@property (strong, nonatomic) IBOutlet UIView *questionLabelBackgroundView;
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @end
 
 @implementation FPNMultipleChoiceVC
@@ -31,8 +32,6 @@
 
 - (void) setupThemeColors {
     CGFloat themeHue = self.themeColor;
-    self.questionView.backgroundColor = [UIColor colorWithHue:themeHue saturation:0.4 brightness:0.6 alpha:1];
-    self.questionView.layer.borderColor = [UIColor colorWithHue:themeHue saturation:0.8 brightness:0.8 alpha:1].CGColor;
     for (FPNQuizAnswerButton* button in self.answerButton) {
         [button resetButtonWithHue:themeHue];
     }
@@ -45,10 +44,7 @@
     self.correctAnswerSelected = false;
     
     [self.quizGenerator generateMultipleChoice:^(NSString *question, NSArray *possibleAnswers) {
-        self.questionView.text = question;
-        [self.questionView setFont:[UIFont boldSystemFontOfSize:90]];
-        [self.questionView setTextAlignment:NSTextAlignmentCenter];
-        [self.questionView setTextColor:[UIColor whiteColor]];
+        self.questionLabel.text = question;
         [self assignToButtonsPossibleAnswers:possibleAnswers];
     }];
 }
@@ -83,10 +79,10 @@
     
     [self.view layoutSubviews];
     [UIView animateWithDuration:0.4 animations:^{
-        self.questionView.layer.transform = flattened3d;
-        [self.questionView shadowOpacityTo:0.5 from:0];
+        self.questionLabel.layer.transform = flattened3d;
+        self.questionLabelBackgroundView.layer.transform = CATransform3DScale(flattened3d, 2, 1, 1);
+        [self.questionLabelBackgroundView shadowOpacityTo:0.5 from:0];
         
-//        [self setRandomThemeColorChangeWithDelta:0.1];
         [self setupThemeColors];
         [self.view layoutSubviews];
 
@@ -94,13 +90,15 @@
         [self setupQuestions];
         CATransform3D flattenedover3d = flattened3d;
         flattenedover3d.m24 = 0.000005;
-        //animate self.questionView
-        self.questionView.layer.transform = flattenedover3d;
+        //animate questionLabel
+        self.questionLabel.layer.transform = flattenedover3d;
+        self.questionLabelBackgroundView.layer.transform = CATransform3DScale(flattenedover3d, 2, 1, 1);
         [UIView animateWithDuration:0.4 animations:^{
-            self.questionView.layer.transform = CATransform3DIdentity;
+            self.questionLabel.layer.transform = CATransform3DIdentity;
+            self.questionLabelBackgroundView.layer.transform = CATransform3DIdentity;
             [self.view layoutSubviews];
         }];
-        [self.questionView shadowOpacityTo:0 from:0.5];
+        [self.questionLabelBackgroundView shadowOpacityTo:0 from:0.5];
         for (FPNQuizAnswerButton* b in self.answerButton) {
             b.layer.transform = CATransform3DMakeTranslation(1000, 0, 0);
             CGFloat animTime = 0.37 + 0.3 * [self stepBasedOnRange:viewRange forView:b];
@@ -141,7 +139,7 @@
         return;
     }
     
-    if ([self.quizGenerator is:sender.titleLabel.text correctforQuestion: self.questionView.text]) {
+    if ([self.quizGenerator is:sender.titleLabel.text correctforQuestion: self.questionLabel.text]) {
         [sender buttonLooksRight];
         self.correctAnswerSelected = YES;
     } else {

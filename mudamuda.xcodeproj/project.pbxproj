@@ -330,7 +330,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = FPN;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = FreezedPeanuts;
 				TargetAttributes = {
 					F1EA9B051906CCD4007F9F5C = {
@@ -549,9 +549,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mudamuda/mudamuda-Prefix.pch";
 				INFOPLIST_FILE = "mudamuda/mudamuda-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos7.1;
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -566,9 +567,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mudamuda/mudamuda-Prefix.pch";
 				INFOPLIST_FILE = "mudamuda/mudamuda-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos7.1;
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

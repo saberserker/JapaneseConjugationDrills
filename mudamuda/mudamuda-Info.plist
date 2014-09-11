@@ -8,10 +8,6 @@
 	<string>Conjugation</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIcons</key>
-	<array>
-		<string>AppIcon120x120</string>
-	</array>
 	<key>CFBundleIdentifier</key>
 	<string>com.freezedpeanuts.$(PRODUCT_NAME:rfc1034identifier)</string>
 	<key>CFBundleInfoDictionaryVersion</key>

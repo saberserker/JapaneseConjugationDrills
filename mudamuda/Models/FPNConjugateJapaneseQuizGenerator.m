@@ -101,6 +101,9 @@
             NSLog(@"There was an error! plain form: %@ resultForm:%@",plainForm,retval);
             NSLog(@"wordtype:%@ conjugationType:%@",wordType,conjugationType);
         }
+        if ([retval isEqualToString:plainForm] != true) {
+            break;
+        }
     }
     return retval;
 }
